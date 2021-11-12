@@ -1,10 +1,10 @@
- <h1>RonaldoCMS</h1>
+  <h1>RonaldoCMS</h1>
         <p>Hi, my name's Fabio and I am App developer. follow me for learn or
             ispiration. Don't worry man, my repositories are always upgrade!</p>
         <table style="width:100%">
             <tr>
                 <td><a
-                        href="https://www.linkedin.com/in/fabio-danubbio-52149219a/">
+                        href="https://it.quora.com/profile/Fabio-Ronaldo">
                         <img
                             src="https://www.iconpacks.net/icons/2/free-quora-logo-icon-2439-thumb.png"
                             width="100" height="100"/>
@@ -16,13 +16,13 @@
                             width="90" height="90"/>
                     </a> </td>
                     <td><a
-                        href="https://www.linkedin.com/in/fabio-danubbio-52149219a/">
+                        href="https://www.instagram.com/notdeveloper.py/">
                         <img
                             src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
                             width="100" height="100"/>
                     </a> </td>
-                <td><a href="https://www.instagram.com/notdeveloper.py/">
+                <td><a href="https://www.github.com/RonaldoCMS">
                         <img
-                            src="https://www.corsinvest.it/wp-content/uploads/2019/10/github-logo.png"  width="100" height="100"></td>
+                            src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/46/2019/04/GitHub-Mark.png"  width="100" height="100"></td>
                 </tr>
             </table>
