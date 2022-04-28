@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
 <h1>RonaldoCMS</h1>
     <div style="border-color: black; border-width: 1000px; border-radius: 3%; width: 100%; display:flex; flex-direction: row; text-align: center; justify-content: center;">
         <img style="border-radius: 100%;" width="150px" height="150px" src="https://media-exp1.licdn.com/dms/image/C4D03AQFGGnsz1SrVEw/profile-displayphoto-shrink_200_200/0/1645467069254?e=1656547200&v=beta&t=8M9iUZ0yYkHn1AsFtVUGZlZPUetjBWWkQNX_9E_gt2k"/>   
@@ -39,6 +28,3 @@
 <h4>MY CV: <a href="https://cvapp.it/r/pD1rMpMZz">CLICK ME!</a></h4>
 </blockquote>
 <p>&nbsp;</p>
-
-</body>
-</html>
