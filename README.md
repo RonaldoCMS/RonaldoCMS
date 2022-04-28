@@ -1,14 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
 <h1>RonaldoCMS</h1>
-    <div style="background-color: red"> ciao</div>
-
-<p style="text-align: center;">Hi, my name's Fabio and I am App developer. follow me for learn or ispiration. Don't worry man, my repositories are always upgrade!</p>
+    <div style="border-color: black; border-width: 1000px; border-radius: 3%; width: 100%; display:flex; flex-direction: row; text-align: center; justify-content: center;">
+        <img style="border-radius: 100%;" width="150px" height="150px" src="https://media-exp1.licdn.com/dms/image/C4D03AQFGGnsz1SrVEw/profile-displayphoto-shrink_200_200/0/1645467069254?e=1656547200&v=beta&t=8M9iUZ0yYkHn1AsFtVUGZlZPUetjBWWkQNX_9E_gt2k"/>   
+        <div>
+            <p style="width: 90%; font-size: 1.5rem;">Hi, my name's <b>Fabio</b> and I am App developer. follow me for learn or ispiration. Don't worry man, my repositories are always upgrade!</p>
+            <div style="position: relative; display:flex; background-color: red;" >
+                <p>Follow me</p>
+                <a href="https://it.quora.com/profile/Fabio-Ronaldo"> <img style=                   "border-radius: 100px;  width:50px; height:50px;" src="https://www.iconpacks.net/icons/2/free-quora-logo-icon-2439-thumb.png"  /> </a>
+                <a href="https://www.linkedin.com/in/fabio-danubbio-52149219a/"> <img style=        "border-radius: 100px;  width:50px; height:50px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png"/> </a>
+                <a href="https://www.instagram.com/notdeveloper.py/"> <img style=                   "border-radius: 100px;  width:50px; height:50px;" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png" /> </a>
+                <a href="https://www.github.com/RonaldoCMS"> <img style=                            "border-radius: 100px;  width:50px; height:50px;" src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/46/2019/04/GitHub-Mark.png" /></a>
+            </div>
+        </div>
+    </div>
 <table style="width: 59.375%; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
-<td style="width: 9.65905%;"><a href="https://it.quora.com/profile/Fabio-Ronaldo"> <img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.iconpacks.net/icons/2/free-quora-logo-icon-2439-thumb.png" width="100" height="100" /> </a></td>
-<td style="width: 5.82392%;"><a href="https://www.linkedin.com/in/fabio-danubbio-52149219a/"> <img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" width="90" height="90" /> </a></td>
-<td style="width: 9.09096%;"><a href="https://www.instagram.com/notdeveloper.py/"> <img style="display: block; margin-left: auto; margin-right: auto;" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png" width="100" height="100" /> </a></td>
-<td style="width: 14.6306%;"><a href="https://www.github.com/RonaldoCMS"> <img style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/46/2019/04/GitHub-Mark.png" width="100" height="100" /></a></td>
 </tr>
 </tbody>
 </table>
@@ -22,3 +39,6 @@
 <h4>MY CV: <a href="https://cvapp.it/r/pD1rMpMZz">CLICK ME!</a></h4>
 </blockquote>
 <p>&nbsp;</p>
+
+</body>
+</html>
