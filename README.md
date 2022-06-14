@@ -63,16 +63,15 @@
 
 ## <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="50px" height="50px"> For More Information, Please Check Out or Connect Me Via
   
-  <a href="https://www.linkedin.com/in/fabio-danubbio-52149219a/" target="_blank">
-    <img align="center" alt="ronaldocms | Linkedin" width="24px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Linkedin.svg" />
-  </a> &nbsp;&nbsp;
-  
-  <a href="https://www.instagram.com/is_not_a_developer/" target="_blank">
-    <img align="center" alt="ronaldocms | Instagram" width="24px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Instagram.svg" />
-  </a> &nbsp;&nbsp;
-
-  </a> &nbsp;&nbsp;
-<p> 
+  <div align="center">
+    <a href="https://www.linkedin.com/in/fabio-danubbio-52149219a/" target="_blank">
+      <img align="center" alt="ronaldocms | Linkedin" width="24px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Linkedin.svg" />
+    </a> &nbsp;&nbsp;
+    
+    <a href="https://www.instagram.com/is_not_a_developer/" target="_blank">
+      <img align="center" alt="ronaldocms | Instagram" width="24px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Instagram.svg" />
+    </a> &nbsp;&nbsp;
+  </div>
 
 <div align="center">
   :heart_eyes: Thanks for watching my profile! Have a nice day! :wink: <br/>
