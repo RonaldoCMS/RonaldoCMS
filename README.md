@@ -34,6 +34,8 @@
 ## <img src="https://media0.giphy.com/media/cNZqrH5IzOG0xrlWks/giphy.gif?cid=ecf05e47map255q427en9uprqc1sb0unjq5k4fnqg5pmhhs4&rid=giphy.gif&ct=s" width="50px" height="50px"> About Some Stats
 <div align="center">
 
+ <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ronaldocms&layout=compact&show_icon=true&theme=algolia%22%20alt=%22ronaldocms-langs%22" alt="ronaldocms-stats"/>
+
 <img height="150em" src="https://github-readme-stats.vercel.app/api/?username=ronaldocms&layout=compact&show_icon=true&theme=algolia" alt="ronaldocms-stats"/>
 </div>
 
