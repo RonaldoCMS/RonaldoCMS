@@ -31,15 +31,15 @@ import {
 
 export const navLinks = [
   {
-    id: "about",
+    id: "#about",
     title: "About",
   },
   {
-    id: "work",
+    id: "#work",
     title: "Work",
   },
   {
-    id: "contact",
+    id: "https://www.linkedin.com/in/fabio-danubbio-52149219a/",
     title: "Contact",
   },
 ];
