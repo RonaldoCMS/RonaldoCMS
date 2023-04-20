@@ -16,7 +16,7 @@
 
 ## <img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" width="50px" height="50px"></img> About Me
 
-💳 My full name is Fabio Danubbio
+💳 My full name is Fabio
 🏫 I have a diploma as a computer expert at ITGC Masullo Theti
 📚 My major is Mobile Applications
 🌏 I currently live in Nola (NA), Italy
