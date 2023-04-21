@@ -26,7 +26,10 @@ import {
   jotto,
   accenture,
   dhonko,
-  promedya
+  promedya,
+  java,
+  flutter,
+  spring
 } from "../assets";
 
 export const navLinks = [
@@ -88,10 +91,10 @@ const technologies = [
     name: "Redux Toolkit",
     icon: redux,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+  // {
+  //   name: "Tailwind CSS",
+  //   icon: tailwind,
+  // },
   {
     name: "Node JS",
     icon: nodejs,
@@ -100,21 +103,33 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+   {
+     name: "git",
+     icon: git,
+   },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Java",
+    icon: java,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Flutter",
+    icon: flutter,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "Spring Boot",
+    icon: spring,
   },
 ];
 
@@ -202,20 +217,20 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Dhonko",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Travel social, which allows you to book, make friends, meet new friends and travel all together! Discover new places and share your experiences with other people!",
     tags: [
       {
-        name: "react",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Laravel",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "MySQL",
         color: "pink-text-gradient",
       },
     ],
@@ -223,28 +238,130 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Jotto+",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Italian chronothermostat that allows you to configure temperatures even away from home thanks to an internet connection. The configuration device is located in the cloud using the surrounding connection via wifi or bluetooth",
     tags: [
       {
-        name: "react",
+        name: "AWS",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Flutter",
         color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
       },
     ],
     image: jobit,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Italia.it",
+    description:
+      "Breathtaking landscapes, a rich history and lots of delicious food will make your trip to Italy unforgettable.",
+    tags: [
+      {
+        name: "Java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Spid",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Promedya SmartAgent",
+    description:
+      "Application that allows you to place B2B orders via smartphone",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spring boot",
+        color: "green-text-gradient",
+      },
+      {
+        name: "SQL Server",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Tic Tac Toe",
+    description:
+     "Arcade game",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Tetris",
+    description:
+    "Arcade game",
+      tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  
+  {
+    name: "Calculator",
+    description:
+      "",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Formula One",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
@@ -264,6 +381,28 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/",
   },
+  {
+    name: "Sport app",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };

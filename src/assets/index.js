@@ -33,7 +33,9 @@ import jotto from "./jotto.jpeg";
 import accenture from "./accenture.jpeg";
 import dhonko from "./dhonko.png";
 import promedya from "./promedya.jpeg";
-
+import flutter from "./tech/flutter.png";
+import spring from "./tech/spring.svg";
+import java from "./tech/java.svg";
 
 export {
   logo,
@@ -67,5 +69,8 @@ export {
   jotto,
   accenture,
   dhonko,
-  promedya
+  promedya,
+  java,
+  spring,
+  flutter
 };
