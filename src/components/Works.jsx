@@ -32,11 +32,12 @@ const ProjectCard = ({
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img
+            {(github != null) ? <img
                 src={github}
                 alt="github"
                 className="w-1/2 h-1/2 object-contain"
-              />
+              /> : null
+            }
             </div>
           </div>
         </div>
@@ -64,8 +65,8 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
-<p>Work in Progress...</p>
-      {/* <div className="w-full flex">
+ 
+      <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
@@ -82,7 +83,7 @@ const Works = () => {
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
-      </div> */}
+      </div>  
     </>
   );
 };

@@ -39,10 +39,14 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
-            window.scrollTo(0, 0);
+              <p className="text-white text-[18px] font-bold cursor-pointer flex "></p>
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+
+          
+<img src={logo} alt="logo" className="w-9 h-9 object-contain rounded-full" />
+
+
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Fabio &nbsp;
             <span className="sm:block hidden"> | RonaldoCMS</span>

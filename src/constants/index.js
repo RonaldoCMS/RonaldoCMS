@@ -146,6 +146,7 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
+    content: "I'm an experienced developer specializing in home automation, with a wealth of experience in designing and developing applications for smart home management. I've had the privilege of working on an exciting project called Jotto, an application that allows users to control and automate a wide range of home devices via their smartphones or other connected devices. Throughout my work on Jotto, I've undertaken various tasks, including designing an intuitive and user-friendly interface to enable users to easily control their home devices. I've integrated various IoT technologies to ensure compatibility with a variety of devices and communication protocols. Additionally, I've paid close attention to data security, implementing robust security measures to ensure user privacy and safety. I've also worked hard to optimize the application's performance, ensuring it's responsive and reliable in all situations. My goal was to create an application that simplifies users' daily lives, offering them intuitive and flexible control over their home devices while also improving energy efficiency and convenience. I'm proud of my contribution to Jotto and am excited to continue innovating in the field of home automation.",
   },
   {
     title: "Full Stack Developer",
@@ -159,9 +160,10 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
+    content: "I led the authentication and authorization phase for the italia.it project at Accenture, focusing on integrating JSON Web Tokens (JWT) with Adobe Experience Manager (AEM). My responsibilities included designing and implementing secure authentication mechanisms to ensure seamless user access to the platform. I collaborated closely with the development team to integrate JWT into AEM, leveraging its capabilities for efficient user management and authorization. This experience equipped me with valuable skills in identity management, security, and system integration within a complex digital ecosystem",
   },
   {
-    title: "Full tack Developer",
+    title: "Full Stack Developer",
     company_name: "Promedya",
     icon: promedya,
     iconBg: "#FFF",
@@ -172,6 +174,7 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
+    content: "At Promedya, I specialized in designing and developing applications tailored to enterprise management, covering areas such as accounting, warehouse management, and production. My role involved understanding the specific needs of businesses and crafting software solutions to streamline their operations and enhance efficiency. I collaborated closely with clients to gather requirements, design user-friendly interfaces, and implement robust functionalities. Additionally, I focused on integrating these applications seamlessly with existing systems to ensure smooth workflow and data synchronization. This experience honed my skills in software development, project management, and business analysis within the context of enterprise resource planning (ERP) systems"
   },
   // {
   //   title: "Full stack Developer",
@@ -251,8 +254,9 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: jotto,
+    source_code_link: null,
+    link: "https://apps.apple.com/th/app/jotto-plus/id1588095848",
   },
   {
     name: "Italia.it",

@@ -29,6 +29,7 @@ const ExperienceCard = ({ experience }) => {
             alt={experience.company_name}
             className="w-[60%] h-[60%] object-contain"
           />
+          
         </div>
       }
     >
@@ -38,7 +39,8 @@ const ExperienceCard = ({ experience }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+         <span> {experience.company_name} </span> <br/>
+          {experience.content}
         </p>
       </div>
 
