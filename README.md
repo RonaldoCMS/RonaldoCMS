@@ -59,13 +59,13 @@
   &copy; 2022 ronaldocms
 </div> -->
 
-# 👋 Ciao! Mi chiamo Fabio Danubbio | Hi! I'm Fabio Danubbio
+# 👋 Ciao! | Hi!
 
 Benvenuto nel mio profilo GitHub! | Welcome to my GitHub profile!
 
 ## Chi sono | About Me
 
-Ciao! Mi chiamo Fabio Danubbio e sono un Full Stack Developer! In generale analizzo e sviluppo applicativi usufruendo di tutta l'architettura informatica. Costruisco per te un modello Database, sicurezza e integrità dei dati, la costruzione di un backend usufruendo in base alla tipologia di progetto le tecnologie più innovative dalle funzioni Statefull API, Streams e/o GraphQL fino alla costruzione di frontend usufruendo tecnologie che ti permettono la gestione degli stati come Redux o BLoC anche usufruendo mockup provenienti da Figma o altri siti simili.
+Ciao! Mi chiamo Fabio e sono un Full Stack Developer! In generale analizzo e sviluppo applicativi usufruendo di tutta l'architettura informatica. Costruisco per te un modello Database, sicurezza e integrità dei dati, la costruzione di un backend usufruendo in base alla tipologia di progetto le tecnologie più innovative dalle funzioni Statefull API, Streams e/o GraphQL fino alla costruzione di frontend usufruendo tecnologie che ti permettono la gestione degli stati come Redux o BLoC anche usufruendo mockup provenienti da Figma o altri siti simili.
 
 Hi! My name is Fabio Danubbio and I am a Full Stack Developer! I generally analyze and develop applications using the entire IT architecture. I build for you a database model, ensure data security and integrity, create a backend using the most innovative technologies based on the type of project, from Stateful APIs, Streams, and/or GraphQL to building a frontend using technologies that allow state management like Redux or BLoC, even using mockups from Figma or similar sites.
 
@@ -81,7 +81,7 @@ Amo l'informatica e ogni progetto o argomento che affronto lo prendo come una sf
 
 I love IT and every project or topic I tackle I take as a personal challenge to improve myself and deepen my knowledge.
 
-## Progetti e contributi | Projects and Contributions
+## 🚀 Progetti e contributi | Projects and Contributions
 
 - Ho contribuito alla nuova applicazione "Jotto+" disponibile su Google Play e App Store che è un applicativo che permette di gestire tramite Wireless o Bluetooth i gateway sviluppati dalla omonima app per la gestione di strumenti di domestici collegati ad esso.
 - I contributed to the new application "Jotto+" available on Google Play and App Store, which is an application that allows managing gateways developed by the same app for the management of domestic devices connected to it via Wireless or Bluetooth.
@@ -94,30 +94,30 @@ I love IT and every project or topic I tackle I take as a personal challenge to 
 - Ho sviluppato diversi applicativi sempre per la produzione che gestiscono i tempi e i costi, la distinta base ed altri inerenti alle statistiche o utilizzo di strumenti di lavoro di produzione per facilitare e velocizzare i tempi di produzione.
 - I have developed several applications, always for production, that manage time and costs, bills of materials, and others related to statistics or the use of production work tools to facilitate and speed up production times.
 
-## Obiettivi attuali | Current Goals
+## 🎯 Obiettivi attuali | Current Goals
 
 Cerco di migliorarmi giorno per giorno per essere invogliato a partecipare a progetti di spicco con persone sempre più professioniste in quanto mi piacerebbe un giorno progettare un sistema utile a scala larga.
 
 I strive to improve myself day by day to be motivated to participate in high-profile projects with increasingly professional people, as I would like to one day design a useful system on a large scale.
 
-## Interessi e hobby | Interests and Hobbies
+## 🌟 Interessi e hobby | Interests and Hobbies
 
 Sono un ragazzo che ha moltissimi interessi nella vita. Mi piace fare sport e vado in palestra, ma sto imparando a suonare la chitarra, andare al cinema, teatro e partecipare ad eventi socialmente utili. Mi piace viaggiare e da quando ho un veicolo cerco almeno una volta al mese di visitare qualche posto culturalmente affascinante o comunque un luogo di interesse diverso.
 
 I am a guy with many interests in life. I like to play sports and go to the gym, but I am learning to play the guitar, go to the cinema, theater, and participate in socially useful events. I like to travel, and since I have a vehicle, I try to visit culturally fascinating places or different places of interest at least once a month.
 
-## Contatti | Contacts
+## 📫 Contatti | Contacts
 
 - LinkedIn: [Fabio Danubbio](https://www.linkedin.com/in/fabio-danubbio-52149219a/)
 - Sito Web: [Ronaldocms](https://www.ronaldocms.it/)
 
-## Linguaggi e Strumenti | Languages and Tools
+## 🛠 Linguaggi e Strumenti | Languages and Tools
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## GitHub Statistiche | GitHub Stats
+## 📊 GitHub Statistiche | GitHub Stats
 
-![Fabio's GitHub stats](https://github-readme-stats.vercel.app/api?username=tuo-username&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=tuo-username&layout=compact&theme=radical)
+![Fabio's GitHub stats](https://github-readme-stats.vercel.app/api?username=ronaldocms&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ronaldocms&layout=compact&theme=radical)
