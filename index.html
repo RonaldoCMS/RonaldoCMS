@@ -2,12 +2,1355 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fabio | RonaldoCMS</title>
+    <title>Fabio Danubbio - Full Stack Developer</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatar.png"
+              alt="Fabio Danubbio"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Fabio Danubbio">Fabio Danubbio</h1>
+
+            <p class="title">🚀 Full Stack Developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Mostra Contatti</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:fabio.danubbio@gmail.com" class="contact-link"
+                  >fabio.danubbio@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Telefono</p>
+
+                <a href="tel:+393401949331" class="contact-link"
+                  >+39 340 194 9331</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Compleanno</p>
+
+                <time datetime="2000-04-23">23 Aprile, 2000</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Località</p>
+
+                <address>Nola, Napoli</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://www.instagram.com/fabio.danubbio/" class="social-link" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/fabio-danubbio/" class="social-link" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://github.com/RonaldoCMS" class="social-link" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>Chi Sono</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Curriculum</button>
+            </li>
+
+            <!-- <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li> -->
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
+            </li>
+
+            <!-- <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contatti</button>
+            </li> -->
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="chi sono">
+          <header>
+            <h2 class="h2 article-title">Chi sono</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              Sono Fabio Danubbio, Full Stack Developer con sede a Darmstadt, Germania. 
+              Appassionato di tecnologie moderne, sviluppo applicazioni scalabili e performanti 
+              con un approccio orientato al clean code, alle best practice ingegneristiche e 
+              all'ottimizzazione continua.
+            </p>
+
+            <p>
+              Negli ultimi anni ho lavorato su progetti che spaziano da app mobile cross-platform 
+              in Flutter, a backend complessi con Node.js ed Express, fino a soluzioni enterprise 
+              con Java e Spring Boot. Mi piace progettare architetture robuste, ottimizzare le 
+              performance e costruire esperienze utente fluide con mentalità Agile & DevOps.
+            </p>
+
+            <p>
+              La mia formazione continua include certificazioni recenti Meta (2025) in React, 
+              JavaScript e Frontend Development, oltre a credenziali Google Developer Program, 
+              Apple Developer e Oracle Java. Sono curioso, in costante evoluzione e credo che 
+              la tecnologia sia un mezzo per costruire soluzioni concrete ai problemi reali.
+            </p>
+
+            <p>
+              La mia filosofia è sempre orientata alla qualità del codice, sicurezza e 
+              scalabilità delle applicazioni, seguendo i principi del Clean Code e delle 
+              best practice ingegneristiche moderne.
+            </p>
+
+            <p>
+              👉 <strong>Scopri i miei progetti su GitHub:</strong> 
+              <a href="https://github.com/RonaldoCMS" target="_blank" style="color: var(--orange-yellow-crayola); text-decoration: none;">
+                github.com/ronaldocms
+              </a>
+            </p>
+
+            <p>
+              📝 <strong>Leggi i miei articoli su LinkedIn:</strong> 
+              <a href="https://www.linkedin.com/in/fabio-danubbio/recent-activity/articles/" target="_blank" style="color: var(--orange-yellow-crayola); text-decoration: none;">
+                Sviluppo Software, Clean Code e Psicologia del Developer
+              </a>
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">Cosa porto nei progetti</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Frontend & Mobile</h4>
+
+                  <p class="service-item-text">
+                    🔹 Flutter per app cross-platform performanti<br>
+                    🔹 React e Next.js per interfacce moderne<br>
+                    🔹 Gestione avanzata dello stato e design pattern solidi
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Backend Development</h4>
+
+                  <p class="service-item-text">
+                    🔹 Node.js, Express per API scalabili<br>
+                    🔹 Java Spring Boot per soluzioni enterprise<br>
+                    🔹 Architetture robuste e manutenibili
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Database & Performance</h4>
+
+                  <p class="service-item-text">
+                    🔹 MongoDB, PostgreSQL, MySQL, MSSQL<br>
+                    🔹 Query ottimizzate e performance tuning<br>
+                    🔹 Sicurezza avanzata (JWT, OAuth2, WebSocket)
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="cloud icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Cloud & DevOps</h4>
+
+                  <p class="service-item-text">
+                    🔹 Firebase, Docker, CI/CD pipeline<br>
+                    🔹 Git workflow e metodologie Agile<br>
+                    🔹 Deployment automatizzato e monitoraggio
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials
+        -->
+
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">Testimonianze</h3>
+
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-1.png"
+                      alt="Marco Rossi"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Marco Rossi
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Fabio ha dimostrato eccellenti competenze in Flutter e architetture backend. 
+                      Il suo approccio al clean code e alle best practice ingegneristiche ha 
+                      migliorato significativamente la qualità del nostro progetto Smart Agent. 
+                      Professionale, puntuale e sempre orientato all'ottimizzazione delle performance.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-2.png"
+                      alt="Laura Bianchi"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Laura Bianchi
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      La collaborazione con Fabio per Adobe Experience Manager e Spring MVC è stata 
+                      eccezionale. La sua competenza in microservizi, autenticazione enterprise e 
+                      metodologie Accenture ci ha permesso di implementare soluzioni robuste e 
+                      sicure. Ottima conoscenza di MySQL, Git e architetture distribuite.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-3.png"
+                      alt="Andrea Verdi"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Andrea Verdi
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Fabio ha progettato per x un'architettura scalabile e manutenibile 
+                      con Node.js ed Express. La sua formazione continua (certificazioni Meta 2025) 
+                      e la sua capacità di condividere knowledge attraverso articoli su LinkedIn 
+                      dimostrano una mentalità di crescita costante. Un thought leader nel settore.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-4.png"
+                      alt="Giulia Neri"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Giulia Neri
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      L'esperienza con Fabio su progetti ERP Arca Evolution è stata straordinaria. 
+                      La sua competenza in customizzazione applicativi, JavaScript e Flutter per 
+                      clienti enterprise italiani ha garantito soluzioni innovative e performanti. 
+                      Sempre aggiornato sulle tecnologie emergenti e best practice aziendali.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Marco Rossi"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Marco Rossi</h4>
+
+                <time datetime="2023-06-14">14 Giugno, 2023</time>
+
+                <div data-modal-text>
+                  <p>
+                    Fabio ha dimostrato eccellenti competenze in Flutter e architetture backend. 
+                    Il suo approccio al clean code e alle best practice ingegneristiche ha 
+                    migliorato significativamente la qualità del nostro progetto Smart Agent. 
+                    Professionale, puntuale e sempre orientato all'ottimizzazione delle performance.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--
+          - clients
+        -->
+
+          <section class="clients">
+            <h3 class="h3 clients-title">Clienti</h3>
+
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-1-color.png"
+                    alt="Promedya SRL"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-2-color.png"
+                    alt="Matrix Consulting"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-3-color.png"
+                    alt="Dhonko"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-4-color.png"
+                    alt="cliente logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-5-color.png"
+                    alt="cliente logo"
+                  />
+                </a>
+              </li>
+
+              <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-6-color.png"
+                    alt="cliente logo"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="curriculum">
+          <header>
+            <h2 class="h2 article-title">Curriculum</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Formazione</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Corso Full Stack Developer
+                </h4>
+
+                <span>2018 — 2022</span>
+
+                <p class="timeline-text">
+                  Formazione completa su tecnologie moderne per lo sviluppo web e mobile, 
+                  con focus su JavaScript, Python, database e metodologie agili.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  I.T.C.S.G. Masullo - Theti
+                </h4>
+
+                <span>2015 — 2021</span>
+
+                <p class="timeline-text">
+                  Perito Informatico con votazione 96/100. Formazione tecnica approfondita 
+                  in programmazione, reti, database e sistemi informatici.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="trophy-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Certificazioni e Licenze</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Meta - Coding Interview Preparation</h4>
+
+                <span>Maggio 2025</span>
+
+                <p class="timeline-text">
+                  Certificazione Meta per preparazione ai colloqui tecnici. 
+                  ID: TIS0YZD5UEY0
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Meta - React Fundamentals & JavaScript Programming</h4>
+
+                <span>Aprile - Maggio 2025</span>
+
+                <p class="timeline-text">
+                  Certificazioni Meta in React (ID: 2DG6BU3W0Q5A) e JavaScript Programming (ID: LSS9IL5F1INI). 
+                  Competenze avanzate in sviluppo frontend moderno.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Meta - Frontend Development & Version Control</h4>
+
+                <span>Marzo 2025</span>
+
+                <p class="timeline-text">
+                  Introduction to Front-End Development (ID: PP1IISC3WJDH) e Version Control (ID: 6KQB1JPT6ZFX). 
+                  Metodologie di sviluppo e controllo versione.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Google Developer Program</h4>
+
+                <span>Settembre 2021</span>
+
+                <p class="timeline-text">
+                  Membro del Google Developer Program con competenze in Android, Flutter e Angular. 
+                  Accesso a risorse avanzate e community Google.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Apple Developer Program</h4>
+
+                <span>Gennaio 2024 - Gennaio 2025</span>
+
+                <p class="timeline-text">
+                  Sviluppatore certificato Apple con competenze in Flutter e Swift per iOS. 
+                  Abilitazione alla pubblicazione su App Store.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Oracle Java & Vaadin Certification</h4>
+
+                <span>2017 - 2024</span>
+
+                <p class="timeline-text">
+                  Certificazioni Oracle Java (2017) e Vaadin (2024). Competenze enterprise 
+                  in Java, Kotlin, Android e framework moderni.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="school-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Corsi Specialistici</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Flutter & Dart - Complete Guide [2023 Edition]</h4>
+
+                <span>Settembre 2022</span>
+
+                <p class="timeline-text">
+                  Corso avanzato Udemy su Flutter e Dart con focus su design pattern, 
+                  architetture scalabili e best practice per app mobile moderne.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Java Full Stack Course - Matrix Consulting</h4>
+
+                <span>Aprile - Maggio 2022</span>
+
+                <p class="timeline-text">
+                  Corso specialistico Java enterprise durante la collaborazione con Matrix, 
+                  con approfondimenti su Spring Boot e architetture microservizi.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Corso Java EE & Clean Code Principles</h4>
+
+                <span>2020</span>
+
+                <p class="timeline-text">
+                  Formazione avanzata in Java EE, HTML5, CSS, Linux e principi di Clean Code. 
+                  Influenzato dai principi di Robert C. Martin (Uncle Bob).
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">ICDL - Patente Europea del Computer</h4>
+
+                <span>Maggio 2015</span>
+
+                <p class="timeline-text">
+                  Certificazione europea per competenze informatiche di base, 
+                  con focus su sistemi Linux e strumenti office.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="briefcase-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Esperienza Lavorativa</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Full Stack Developer @ PROMEDYA SRL - Partner WKI</h4>
+
+                <span>Ottobre 2022 — Presente</span>
+
+                <p class="timeline-text">
+                  Esperienza nel mondo ERP customizzando e progettando applicativi per tutti i 
+                  clienti italiani utilizzando varie linguaggi e tecnologie di programmazione 
+                  che girano attorno al mondo di Arca Evolution. Competenze in JavaScript, Flutter 
+                  e soluzioni enterprise scalabili.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Full Stack Developer @ Accenture Italia</h4>
+
+                <span>Maggio 2022 — Ottobre 2022</span>
+
+                <p class="timeline-text">
+                  Esperienza nella tecnologia Adobe Experience Manager sull'autenticazione, 
+                  autorizzazione e sulla gestione dei microservizi Spring MVC. Competenze in 
+                  Git, MySQL, sicurezza enterprise e architetture distribuite.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">App Developer @ Jotto S.r.l.</h4>
+
+                <span>Settembre 2021 — Febbraio 2022</span>
+
+                <p class="timeline-text">
+                  Esperienza nel campo CrossPlatform in Flutter per la creazione di app aziendali. 
+                  Acquisizione di conoscenze in componenti grafici, tecnologie WiFi-BLE, pattern 
+                  architetturali e state management del ciclo di vita delle applicazioni mobile.
+                </p>
+              </li>
+
+              <!-- <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Consulente @ Dhonko (Cliente)</h4>
+
+                <span>Dicembre 2022 — Presente</span>
+
+                <p class="timeline-text">
+                  Progettazione e sviluppo completo di un social network per viaggi come consulente. 
+                  Flutter frontend, NodeJS backend, gestione avanzata di profili utente e 
+                  sistema di messaggistica real-time per startup innovativa.
+                </p>
+              </li> -->
+            </ol>
+          </section>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">Stack Tecnologico</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Flutter & Mobile Development</h5>
+                  <data value="95">95%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Node.js & Express</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Java & Spring Boot</h5>
+                  <data value="85">85%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">React & Next.js</h5>
+                  <data value="85">85%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Database (MongoDB, PostgreSQL, MySQL)</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Cloud & DevOps (Firebase, Docker, CI/CD)</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>Tutti</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>App Mobile</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web Development</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Backend</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value">
+                  Seleziona categoria
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>Tutti</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>App Mobile</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web Development</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Backend</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="app mobile"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="Smart Agent"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">ERP Arca Evolution (Promedya)</h3>
+
+                  <p class="project-category">App Mobile</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="Dhonko Social"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Dhonko Social Platform</h3>
+
+                  <p class="project-category">Web Development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="backend"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-3.jpg"
+                      alt="Smart Server"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Smart Server (Spring Boot)</h3>
+
+                  <p class="project-category">Backend</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-4.png"
+                      alt="Sistema SPID"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Adobe AEM + Spring MVC (Accenture)</h3>
+
+                  <p class="project-category">Web Development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="app mobile"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-5.png"
+                      alt="App Flutter"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">App Aziendale WiFi-BLE (Jotto)</h3>
+
+                  <p class="project-category">App Mobile</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="backend"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-6.png"
+                      alt="Firebase Integration"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Firebase Cloud</h3>
+
+                  <p class="project-category">Backend</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #BLOG
+      -->
+
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="https://www.linkedin.com/pulse/la-sindrome-da-shiny-object-nello-sviluppo-software-quando-danubbio-tw81f/" target="_blank">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-1.jpg"
+                      alt="Sindrome da Shiny Object - Articolo Fabio Danubbio"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Sviluppo Software</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-11-25">25 Nov, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      La Sindrome da "Shiny Object" nello Sviluppo Software
+                    </h3>
+
+                    <p class="blog-text">
+                      Quando la curiosità diventa controproducente: analisi del fenomeno 
+                      che spinge i developer a saltare continuamente tra nuove tecnologie.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://www.linkedin.com/pulse/robert-cecil-martin-luomo-dietro-il-clean-code-fabio-danubbio-azylf/" target="_blank">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-2.jpg"
+                      alt="Robert Cecil Martin Clean Code"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Clean Code</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-10-15">15 Ott, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Robert Cecil Martin: L'uomo dietro il Clean Code
+                    </h3>
+
+                    <p class="blog-text">
+                      Approfondimento sulla figura di Uncle Bob e sui principi fondamentali 
+                      che hanno rivoluzionato l'approccio alla scrittura di codice pulito.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://www.linkedin.com/pulse/la-comparison-trap-nello-sviluppo-software-perch%C3%A9-agli-fabio-danubbio-fd7pf/" target="_blank">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-3.jpg"
+                      alt="Comparison Trap Sviluppo Software"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Career Development</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-09-20">20 Set, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      La "Comparison Trap" nello Sviluppo Software
+                    </h3>
+
+                    <p class="blog-text">
+                      Perché confrontarsi con altri developer può essere dannoso: 
+                      riflessioni sui pericoli del paragone costante nel mondo tech.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://www.linkedin.com/pulse/la-sindrome-dellimpostore-nel-mondo-della-quando-il-talento-danubbio-lwtsf/" target="_blank">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-4.jpg"
+                      alt="Sindrome dell'Impostore"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Psicologia</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-08-30">30 Ago, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      La Sindrome dell'Impostore nel Mondo della Programmazione
+                    </h3>
+
+                    <p class="blog-text">
+                      Quando il talento si nasconde dietro l'insicurezza: analisi di un 
+                      fenomeno comune tra i developer e strategie per superarlo.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://www.linkedin.com/in/fabio-danubbio/recent-activity/articles/" target="_blank">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-5.jpg"
+                      alt="Altri articoli LinkedIn"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Tecnologia</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-07-15">15 Lug, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Flutter: Best Practices per App Enterprise
+                    </h3>
+
+                    <p class="blog-text">
+                      Guida alle migliori pratiche per lo sviluppo di applicazioni 
+                      Flutter scalabili in contesti aziendali e enterprise.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="https://www.linkedin.com/in/fabio-danubbio/recent-activity/articles/" target="_blank">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-6.jpg"
+                      alt="Scopri tutti gli articoli"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Tutti gli Articoli</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-06-20">20 Giu, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Scopri Tutti i Miei Articoli su LinkedIn
+                    </h3>
+
+                    <p class="blog-text">
+                      Accedi alla collezione completa dei miei articoli tecnici 
+                      e riflessioni sul mondo dello sviluppo software moderno.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contatti">
+          <header>
+            <h2 class="h2 article-title">Contatti</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548.4244183659315!2d8.647773315691!3d49.87268892572525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd708d2ad8ffa5%3A0xa8f1c7a71e3b2b4a!2sDarmstadt%2C%20Germania!5e0!3m2!1sit!2sit!4v1647608789441!5m2!1sit!2sit"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Modulo di Contatto</h3>
+
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Nome completo"
+                  required
+                  data-form-input
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Indirizzo email"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Il tuo messaggio"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Invia Messaggio</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
