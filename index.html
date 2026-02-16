@@ -32,6 +32,12 @@
   </head>
 
   <body>
+    <!-- 3D Particle Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Custom Cursor Follower -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
     <!--
     - #MAIN
   -->
@@ -58,7 +64,7 @@
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
-            <span>Mostra Contatti</span>
+            <span data-i18n="sidebar.showContacts">Mostra Contatti</span>
 
             <ion-icon name="chevron-down"></ion-icon>
           </button>
@@ -74,7 +80,7 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Email</p>
+                <p class="contact-title" data-i18n="sidebar.email">Email</p>
 
                 <a href="mailto:fabio.danubbio@gmail.com" class="contact-link"
                   >fabio.danubbio@gmail.com</a
@@ -88,7 +94,7 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Telefono</p>
+                <p class="contact-title" data-i18n="sidebar.phone">Telefono</p>
 
                 <a href="tel:+393401949331" class="contact-link"
                   >+39 340 194 9331</a
@@ -102,9 +108,9 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Compleanno</p>
+                <p class="contact-title" data-i18n="sidebar.birthday">Compleanno</p>
 
-                <time datetime="2000-04-23">23 Aprile, 2000</time>
+                <time datetime="2000-04-23" data-i18n="sidebar.birthdayDate">23 Aprile, 2000</time>
               </div>
             </li>
 
@@ -114,7 +120,7 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Località</p>
+                <p class="contact-title" data-i18n="sidebar.location">Località</p>
 
                 <address>Nola, Napoli</address>
               </div>
@@ -157,24 +163,34 @@
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>Chi Sono</button>
+              <button class="navbar-link active" data-nav-link data-page-target="about" data-i18n="nav.about">Chi Sono</button>
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Curriculum</button>
+              <button class="navbar-link" data-nav-link data-page-target="resume" data-i18n="nav.resume">Curriculum</button>
             </li>
 
             <!-- <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Portfolio</button>
+              <button class="navbar-link" data-nav-link data-page-target="portfolio">Portfolio</button>
             </li> -->
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Blog</button>
+              <button class="navbar-link" data-nav-link data-page-target="blog" data-i18n="nav.blog">Blog</button>
             </li>
 
             <!-- <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contatti</button>
+              <button class="navbar-link" data-nav-link data-page-target="contact" data-i18n="nav.contact">Contatti</button>
             </li> -->
+
+            <li class="navbar-item lang-switcher-item">
+              <button class="lang-switcher" id="lang-switcher" title="Switch Language">
+                <span class="lang-flag-active">🇮🇹</span>
+                <span class="lang-label-active">IT</span>
+                <span class="lang-divider">/</span>
+                <span class="lang-flag-inactive">🇬🇧</span>
+                <span class="lang-label-inactive">EN</span>
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -182,34 +198,34 @@
         - #ABOUT
       -->
 
-        <article class="about active" data-page="chi sono">
+        <article class="about active" data-page="about">
           <header>
-            <h2 class="h2 article-title">Chi sono</h2>
+            <h2 class="h2 article-title" data-i18n="about.title">Chi sono</h2>
           </header>
 
           <section class="about-text">
-            <p>
+            <p data-i18n="about.text1">
               Sono Fabio Danubbio, Full Stack Developer con sede a Nola, Napoli. 
               Appassionato di tecnologie moderne, sviluppo applicazioni scalabili e performanti 
               con un approccio orientato al clean code, alle best practice ingegneristiche e 
               all'ottimizzazione continua.
             </p>
 
-            <p>
+            <p data-i18n="about.text2">
               Negli ultimi anni ho lavorato su progetti che spaziano da app mobile cross-platform 
               in Flutter, a backend complessi con Node.js ed Express, fino a soluzioni enterprise 
               con Java e Spring Boot. Mi piace progettare architetture robuste, ottimizzare le 
               performance e costruire esperienze utente fluide con mentalità Agile & DevOps.
             </p>
 
-            <p>
+            <p data-i18n="about.text3">
               La mia formazione continua include certificazioni recenti Meta (2025) in React, 
               JavaScript e Frontend Development, oltre a credenziali Google Developer Program, 
               Apple Developer e Oracle Java. Sono curioso, in costante evoluzione e credo che 
               la tecnologia sia un mezzo per costruire soluzioni concrete ai problemi reali.
             </p>
 
-            <p>
+            <p data-i18n="about.text4">
               La mia filosofia è sempre orientata alla qualità del codice, sicurezza e 
               scalabilità delle applicazioni, seguendo i principi del Clean Code e delle 
               best practice ingegneristiche moderne.
@@ -223,7 +239,7 @@
         -->
 
           <section class="service">
-            <h3 class="h3 service-title">Cosa porto nei progetti</h3>
+            <h3 class="h3 service-title" data-i18n="service.title">Cosa porto nei progetti</h3>
 
             <ul class="service-list">
               <li class="service-item">
@@ -236,9 +252,9 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Frontend & Mobile</h4>
+                  <h4 class="h4 service-item-title" data-i18n="service.1.title">Frontend & Mobile</h4>
 
-                  <p class="service-item-text">
+                  <p class="service-item-text" data-i18n-html="service.1.text">
                     🔹 Flutter per app cross-platform performanti<br>
                     🔹 React e Next.js per interfacce moderne<br>
                     🔹 Gestione avanzata dello stato e design pattern solidi
@@ -256,9 +272,9 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Backend Development</h4>
+                  <h4 class="h4 service-item-title" data-i18n="service.2.title">Backend Development</h4>
 
-                  <p class="service-item-text">
+                  <p class="service-item-text" data-i18n-html="service.2.text">
                     🔹 Node.js, Express per API scalabili<br>
                     🔹 Java Spring Boot per soluzioni enterprise<br>
                     🔹 Architetture robuste e manutenibili
@@ -276,9 +292,9 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Database & Performance</h4>
+                  <h4 class="h4 service-item-title" data-i18n="service.3.title">Database & Performance</h4>
 
-                  <p class="service-item-text">
+                  <p class="service-item-text" data-i18n-html="service.3.text">
                     🔹 MongoDB, PostgreSQL, MySQL, MSSQL<br>
                     🔹 Query ottimizzate e performance tuning<br>
                     🔹 Sicurezza avanzata (JWT, OAuth2, WebSocket)
@@ -296,9 +312,9 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Cloud & DevOps</h4>
+                  <h4 class="h4 service-item-title" data-i18n="service.4.title">Cloud & DevOps</h4>
 
-                  <p class="service-item-text">
+                  <p class="service-item-text" data-i18n-html="service.4.text">
                     🔹 Firebase, Docker, CI/CD pipeline<br>
                     🔹 Git workflow e metodologie Agile<br>
                     🔹 Deployment automatizzato e monitoraggio
@@ -543,9 +559,9 @@
  
 
 
-        <article class="resume" data-page="curriculum">
+        <article class="resume" data-page="resume">
           <header>
-            <h2 class="h2 article-title">Curriculum</h2>
+            <h2 class="h2 article-title" data-i18n="resume.title">Curriculum</h2>
           </header>
 
           <section class="timeline">
@@ -554,31 +570,31 @@
                 <ion-icon name="book-outline"></ion-icon>
               </div>
 
-              <h3 class="h3">Formazione</h3>
+              <h3 class="h3" data-i18n="resume.education">Formazione</h3>
             </div>
 
             <ol class="timeline-list">
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
+                <h4 class="h4 timeline-item-title" data-i18n="resume.edu1.title">
                   Corso Full Stack Developer
                 </h4>
 
-                <span>2018 — 2022</span>
+                <span data-i18n="resume.edu1.date">2018 — 2022</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.edu1.text">
                   Formazione completa su tecnologie moderne per lo sviluppo web e mobile, 
                   con focus su JavaScript, Python, database e metodologie agili.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
+                <h4 class="h4 timeline-item-title" data-i18n="resume.edu2.title">
                   I.T.C.S.G. Masullo - Theti
                 </h4>
 
-                <span>2015 — 2021</span>
+                <span data-i18n="resume.edu2.date">2015 — 2021</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.edu2.text">
                   Perito Informatico con votazione 96/100. Formazione tecnica approfondita 
                   in programmazione, reti, database e sistemi informatici.
                 </p>
@@ -592,71 +608,71 @@
                 <ion-icon name="trophy-outline"></ion-icon>
               </div>
 
-              <h3 class="h3">Certificazioni e Licenze</h3>
+              <h3 class="h3" data-i18n="resume.certs">Certificazioni e Licenze</h3>
             </div>
 
             <ol class="timeline-list">
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Meta - Coding Interview Preparation</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.cert1.title">Meta - Coding Interview Preparation</h4>
 
-                <span>Maggio 2025</span>
+                <span data-i18n="resume.cert1.date">Maggio 2025</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.cert1.text">
                   Certificazione Meta per preparazione ai colloqui tecnici. 
                   ID: TIS0YZD5UEY0
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Meta - React Fundamentals & JavaScript Programming</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.cert2.title">Meta - React Fundamentals & JavaScript Programming</h4>
 
-                <span>Aprile - Maggio 2025</span>
+                <span data-i18n="resume.cert2.date">Aprile - Maggio 2025</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.cert2.text">
                   Certificazioni Meta in React (ID: 2DG6BU3W0Q5A) e JavaScript Programming (ID: LSS9IL5F1INI). 
                   Competenze avanzate in sviluppo frontend moderno.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Meta - Frontend Development & Version Control</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.cert3.title">Meta - Frontend Development & Version Control</h4>
 
-                <span>Marzo 2025</span>
+                <span data-i18n="resume.cert3.date">Marzo 2025</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.cert3.text">
                   Introduction to Front-End Development (ID: PP1IISC3WJDH) e Version Control (ID: 6KQB1JPT6ZFX). 
                   Metodologie di sviluppo e controllo versione.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Google Developer Program</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.cert4.title">Google Developer Program</h4>
 
-                <span>Settembre 2021</span>
+                <span data-i18n="resume.cert4.date">Settembre 2021</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.cert4.text">
                   Membro del Google Developer Program con competenze in Android, Flutter e Angular. 
                   Accesso a risorse avanzate e community Google.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Apple Developer Program</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.cert5.title">Apple Developer Program</h4>
 
-                <span>Gennaio 2024 - Gennaio 2025</span>
+                <span data-i18n="resume.cert5.date">Gennaio 2024 - Gennaio 2025</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.cert5.text">
                   Sviluppatore certificato Apple con competenze in Flutter e Swift per iOS. 
                   Abilitazione alla pubblicazione su App Store.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Oracle Java & Vaadin Certification</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.cert6.title">Oracle Java & Vaadin Certification</h4>
 
-                <span>2017 - 2024</span>
+                <span data-i18n="resume.cert6.date">2017 - 2024</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.cert6.text">
                   Certificazioni Oracle Java (2017) e Vaadin (2024). Competenze enterprise 
                   in Java, Kotlin, Android e framework moderni.
                 </p>
@@ -670,49 +686,49 @@
                 <ion-icon name="school-outline"></ion-icon>
               </div>
 
-              <h3 class="h3">Corsi Specialistici</h3>
+              <h3 class="h3" data-i18n="resume.courses">Corsi Specialistici</h3>
             </div>
 
             <ol class="timeline-list">
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Flutter & Dart - Complete Guide [2023 Edition]</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.course1.title">Flutter & Dart - Complete Guide [2023 Edition]</h4>
 
-                <span>Settembre 2022</span>
+                <span data-i18n="resume.course1.date">Settembre 2022</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.course1.text">
                   Corso avanzato Udemy su Flutter e Dart con focus su design pattern, 
                   architetture scalabili e best practice per app mobile moderne.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Java Full Stack Course - Matrix Consulting</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.course2.title">Java Full Stack Course - Matrix Consulting</h4>
 
-                <span>Aprile - Maggio 2022</span>
+                <span data-i18n="resume.course2.date">Aprile - Maggio 2022</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.course2.text">
                   Corso specialistico Java enterprise durante la collaborazione con Matrix, 
                   con approfondimenti su Spring Boot e architetture microservizi.
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Corso Java EE & Clean Code Principles</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.course3.title">Corso Java EE & Clean Code Principles</h4>
 
-                <span>2020</span>
+                <span data-i18n="resume.course3.date">2020</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.course3.text">
                   Formazione avanzata in Java EE, HTML5, CSS, Linux e principi di Clean Code. 
                   Influenzato dai principi di Robert C. Martin (Uncle Bob).
                 </p>
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">ICDL - Patente Europea del Computer</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.course4.title">ICDL - Patente Europea del Computer</h4>
 
-                <span>Maggio 2015</span>
+                <span data-i18n="resume.course4.date">Maggio 2015</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.course4.text">
                   Certificazione europea per competenze informatiche di base, 
                   con focus su sistemi Linux e strumenti office.
                 </p>
@@ -726,16 +742,16 @@
                 <ion-icon name="briefcase-outline"></ion-icon>
               </div>
 
-              <h3 class="h3">Esperienza Lavorativa</h3>
+              <h3 class="h3" data-i18n="resume.experience">Esperienza Lavorativa</h3>
             </div>
 
             <ol class="timeline-list">
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Full Stack Developer @ PROMEDYA SRL - Partner WKI</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.exp1.title">Full Stack Developer @ PROMEDYA SRL - Partner WKI</h4>
 
-                <span>Ottobre 2022 — Presente</span>
+                <span data-i18n="resume.exp1.date">Ottobre 2022 — Presente</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.exp1.text">
                   Esperienza nel mondo ERP customizzando e progettando applicativi per tutti i 
                   clienti italiani utilizzando varie linguaggi e tecnologie di programmazione 
                   che girano attorno al mondo di Arca Evolution. Competenze in JavaScript, Flutter 
@@ -744,11 +760,11 @@
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Full Stack Developer @ Accenture Italia</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.exp2.title">Full Stack Developer @ Accenture Italia</h4>
 
-                <span>Maggio 2022 — Ottobre 2022</span>
+                <span data-i18n="resume.exp2.date">Maggio 2022 — Ottobre 2022</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.exp2.text">
                   Esperienza nella tecnologia Adobe Experience Manager sull'autenticazione, 
                   autorizzazione e sulla gestione dei microservizi Spring MVC. Competenze in 
                   Git, MySQL, sicurezza enterprise e architetture distribuite.
@@ -756,11 +772,11 @@
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">App Developer @ Jotto S.r.l.</h4>
+                <h4 class="h4 timeline-item-title" data-i18n="resume.exp3.title">App Developer @ Jotto S.r.l.</h4>
 
-                <span>Settembre 2021 — Febbraio 2022</span>
+                <span data-i18n="resume.exp3.date">Settembre 2021 — Febbraio 2022</span>
 
-                <p class="timeline-text">
+                <p class="timeline-text" data-i18n="resume.exp3.text">
                   Esperienza nel campo CrossPlatform in Flutter per la creazione di app aziendali. 
                   Acquisizione di conoscenze in componenti grafici, tecnologie WiFi-BLE, pattern 
                   architetturali e state management del ciclo di vita delle applicazioni mobile.
@@ -782,7 +798,7 @@
           </section>
 
           <section class="skill">
-            <h3 class="h3 skills-title">Stack Tecnologico</h3>
+            <h3 class="h3 skills-title" data-i18n="resume.skills">Stack Tecnologico</h3>
 
             <ul class="skills-list content-card">
               <li class="skills-item">
@@ -860,13 +876,13 @@
 
         <article class="portfolio" data-page="portfolio">
           <header>
-            <h2 class="h2 article-title">Portfolio</h2>
+            <h2 class="h2 article-title" data-i18n="portfolio.title">Portfolio</h2>
           </header>
 
           <section class="projects">
             <ul class="filter-list">
               <li class="filter-item">
-                <button class="active" data-filter-btn>Tutti</button>
+                <button class="active" data-filter-btn data-i18n="portfolio.filterAll">Tutti</button>
               </li>
 
               <li class="filter-item">
@@ -885,7 +901,7 @@
             <div class="filter-select-box">
               <button class="filter-select" data-select>
                 <div class="select-value" data-selecct-value">
-                  Seleziona categoria
+                  <span data-i18n="portfolio.selectCategory">Seleziona categoria</span>
                 </div>
 
                 <div class="select-icon">
@@ -895,7 +911,7 @@
 
               <ul class="select-list">
                 <li class="select-item">
-                  <button data-select-item>Tutti</button>
+                  <button data-select-item data-i18n="portfolio.filterAll">Tutti</button>
                 </li>
 
                 <li class="select-item">
@@ -1066,7 +1082,7 @@
 
         <article class="blog" data-page="blog">
           <header>
-            <h2 class="h2 article-title">Blog</h2>
+            <h2 class="h2 article-title" data-i18n="blog.title">Blog</h2>
           </header>
 
           <section class="blog-posts">
@@ -1083,18 +1099,18 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Sviluppo Software</p>
+                      <p class="blog-category" data-i18n="blog.cat1">Sviluppo Software</p>
 
                       <span class="dot"></span>
 
                       <time datetime="2024-11-25">25 Nov, 2024</time>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
+                    <h3 class="h3 blog-item-title" data-i18n="blog.post1.title">
                       La Sindrome da "Shiny Object" nello Sviluppo Software
                     </h3>
 
-                    <p class="blog-text">
+                    <p class="blog-text" data-i18n="blog.post1.text">
                       Quando la curiosità diventa controproducente: analisi del fenomeno 
                       che spinge i developer a saltare continuamente tra nuove tecnologie.
                     </p>
@@ -1114,18 +1130,18 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Clean Code</p>
+                      <p class="blog-category" data-i18n="blog.cat2">Clean Code</p>
 
                       <span class="dot"></span>
 
                       <time datetime="2024-10-15">15 Ott, 2024</time>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
+                    <h3 class="h3 blog-item-title" data-i18n="blog.post2.title">
                       Robert Cecil Martin: L'uomo dietro il Clean Code
                     </h3>
 
-                    <p class="blog-text">
+                    <p class="blog-text" data-i18n="blog.post2.text">
                       Approfondimento sulla figura di Uncle Bob e sui principi fondamentali 
                       che hanno rivoluzionato l'approccio alla scrittura di codice pulito.
                     </p>
@@ -1145,18 +1161,18 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Career Development</p>
+                      <p class="blog-category" data-i18n="blog.cat3">Career Development</p>
 
                       <span class="dot"></span>
 
                       <time datetime="2024-09-20">20 Set, 2024</time>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
+                    <h3 class="h3 blog-item-title" data-i18n="blog.post3.title">
                       La "Comparison Trap" nello Sviluppo Software
                     </h3>
 
-                    <p class="blog-text">
+                    <p class="blog-text" data-i18n="blog.post3.text">
                       Perché confrontarsi con altri developer può essere dannoso: 
                       riflessioni sui pericoli del paragone costante nel mondo tech.
                     </p>
@@ -1176,18 +1192,18 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Psicologia</p>
+                      <p class="blog-category" data-i18n="blog.cat4">Psicologia</p>
 
                       <span class="dot"></span>
 
                       <time datetime="2024-08-30">30 Ago, 2024</time>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
+                    <h3 class="h3 blog-item-title" data-i18n="blog.post4.title">
                       La Sindrome dell'Impostore nel Mondo della Programmazione
                     </h3>
 
-                    <p class="blog-text">
+                    <p class="blog-text" data-i18n="blog.post4.text">
                       Quando il talento si nasconde dietro l'insicurezza: analisi di un 
                       fenomeno comune tra i developer e strategie per superarlo.
                     </p>
@@ -1207,18 +1223,18 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Tecnologia</p>
+                      <p class="blog-category" data-i18n="blog.cat5">Tecnologia</p>
 
                       <span class="dot"></span>
 
                       <time datetime="2024-07-15">15 Lug, 2024</time>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
+                    <h3 class="h3 blog-item-title" data-i18n="blog.post5.title">
                       Flutter: Best Practices per App Enterprise
                     </h3>
 
-                    <p class="blog-text">
+                    <p class="blog-text" data-i18n="blog.post5.text">
                       Guida alle migliori pratiche per lo sviluppo di applicazioni 
                       Flutter scalabili in contesti aziendali e enterprise.
                     </p>
@@ -1238,18 +1254,18 @@
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Tutti gli Articoli</p>
+                      <p class="blog-category" data-i18n="blog.cat6">Tutti gli Articoli</p>
 
                       <span class="dot"></span>
 
                       <time datetime="2024-06-20">20 Giu, 2024</time>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
+                    <h3 class="h3 blog-item-title" data-i18n="blog.post6.title">
                       Scopri Tutti i Miei Articoli su LinkedIn
                     </h3>
 
-                    <p class="blog-text">
+                    <p class="blog-text" data-i18n="blog.post6.text">
                       Accedi alla collezione completa dei miei articoli tecnici 
                       e riflessioni sul mondo dello sviluppo software moderno.
                     </p>
@@ -1264,9 +1280,9 @@
         - #CONTACT
       -->
 
-        <article class="contact" data-page="contatti">
+        <article class="contact" data-page="contact">
           <header>
-            <h2 class="h2 article-title">Contatti</h2>
+            <h2 class="h2 article-title" data-i18n="contact.title">Contatti</h2>
           </header>
 
           <section class="mapbox" data-mapbox>
@@ -1281,7 +1297,7 @@
           </section>
 
           <section class="contact-form">
-            <h3 class="h3 form-title">Modulo di Contatto</h3>
+            <h3 class="h3 form-title" data-i18n="contact.formTitle">Modulo di Contatto</h3>
 
             <form action="#" class="form" data-form>
               <div class="input-wrapper">
@@ -1290,6 +1306,7 @@
                   name="fullname"
                   class="form-input"
                   placeholder="Nome completo"
+                  data-i18n-placeholder="contact.namePlaceholder"
                   required
                   data-form-input
                 />
@@ -1299,6 +1316,7 @@
                   name="email"
                   class="form-input"
                   placeholder="Indirizzo email"
+                  data-i18n-placeholder="contact.emailPlaceholder"
                   required
                   data-form-input
                 />
@@ -1308,13 +1326,14 @@
                 name="message"
                 class="form-input"
                 placeholder="Il tuo messaggio"
+                data-i18n-placeholder="contact.messagePlaceholder"
                 required
                 data-form-input
               ></textarea>
 
               <button class="form-btn" type="submit" disabled data-form-btn>
                 <ion-icon name="paper-plane"></ion-icon>
-                <span>Invia Messaggio</span>
+                <span data-i18n="contact.sendBtn">Invia Messaggio</span>
               </button>
             </form>
           </section>
@@ -1325,6 +1344,7 @@
     <!--
     - custom js link
   -->
+    <script src="./assets/js/i18n.js"></script>
     <script src="./assets/js/script.js"></script>
 
     <!--
