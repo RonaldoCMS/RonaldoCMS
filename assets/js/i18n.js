@@ -6,261 +6,95 @@
 
 const translations = {
   it: {
-    // Sidebar
-    "sidebar.showContacts": "Mostra Contatti",
-    "sidebar.email": "Email",
-    "sidebar.phone": "Telefono",
-    "sidebar.birthday": "Compleanno",
-    "sidebar.birthdayDate": "23 Aprile, 2000",
-    "sidebar.location": "Località",
+    // UI General Elements
+    "ui.explorerTitle": "ESPLORATORE",
+    "ui.openEditors": "EDITOR APERTI",
+    "ui.ronaldocms": "RONALDO_CMS",
+    "ui.terminalTitle": "Terminale",
+    "ui.problemsTitle": "Problemi",
+    "ui.outputTitle": "Output",
+    "ui.runCodeBtn": "Esegui",
+    "ui.saveSettingsBtn": "Salva",
+    "ui.welcomeTab": "Benvenuto.txt",
+    "ui.sidebarShowContacts": "Mostra Contatti",
+    "github.desc": "Progetti live caricati dal mio profilo GitHub (@RonaldoCMS) tramite API in tempo reale.",
+    
+    // Terminal Messages
+    "terminal.welcome": "SISTEMA OPERATIVO RONALDOCMS v3.5.0-high\n(c) 2026 Fabio Danubbio. Tutti i diritti riservati.\n\nDigitare 'help' per la lista dei comandi disponibili.\n",
+    "terminal.help": "Comandi disponibili:\n  ls               Mostra l'elenco dei file virtuali\n  cat <file>       Mostra il contenuto di un file (es: cat About_Me.md)\n  node <file>      Esegue un file JavaScript (es: node Sandbox.js)\n  theme <nome>     Cambia il tema del sistema (matrix, dracula, cyber-glow, monokai)\n  git log          Mostra la cronologia professionale come commit git\n  git status       Mostra lo stato attuale del sistema\n  clear            Pulisce la console del terminale\n",
+    "terminal.invalidCommand": "Comando non trovato: '{cmd}'. Digitare 'help' per assistenza.\n",
+    "terminal.fileNotFound": "File non trovato: '{file}'. Digitare 'ls' per vedere i file disponibili.\n",
+    "terminal.nodeExecute": "Esecuzione in corso di '{file}' in Sandbox JS...\n",
+    "terminal.themeChanged": "Tema modificato in: '{theme}'.\n",
+    "terminal.themeNotFound": "Tema '{theme}' non riconosciuto. Temi disponibili: cyber-glow, matrix, dracula, monokai.\n",
+    "terminal.settingsSaved": "Impostazioni salvate ed applicate con successo.\n",
+    "terminal.settingsError": "Errore di parsing JSON nelle impostazioni! Controlla la sintassi.\n",
+    
+    // Virtual Files Content
+    "files.welcome": "Benvenuto nella mia Web IDE!\n===========================\n\nHo creato questo template interattivo per sorprenderti. \nPuoi esplorare il mio profilo modificando ed eseguendo codice reale.\n\n💻 Usa l'Explorer a sinistra per navigare tra i file:\n  - About_Me.md          -> Informazioni su di me\n  - Tech_Stack.json       -> Il mio stack tecnologico\n  - Experience.ts        -> Formazione e lavori in formato TypeScript\n  - Projects_Showcase.js -> Progetti realizzati\n  - Articles.txt         -> I miei articoli tecnici su LinkedIn\n  - Contact.css          -> Informazioni di contatto e modulo in formato CSS\n  - Sandbox.js           -> Area di gioco JavaScript modificabile ed eseguibile!\n  - Settings.json        -> Configurazione dell'interfaccia (modificala per cambiare tema!)\n\n⌨️ Usa il Terminale in basso per inserire comandi.\n🔥 Modifica 'Sandbox.js' e premi il tasto 'Esegui' in alto a destra per far girare il tuo codice.\n",
 
-    // Navbar
-    "nav.about": "Chi Sono",
-    "nav.resume": "Curriculum",
-    "nav.blog": "Blog",
-    "nav.contact": "Contatti",
+    "files.about": "# Chi Sono | Fabio Danubbio\n\n![Fabio Danubbio](./assets/images/my-avatar.jpg)\n\nSono un Full Stack Developer con sede a Nola, Napoli. Appassionato di tecnologie moderne, sviluppo applicazioni scalabili e performanti con un approccio orientato al clean code, alle best practice ingegneristiche e all'ottimizzazione continua.\n\n## Cosa porto nei progetti\n- **Frontend & Mobile**: Sviluppo in Flutter per app cross-platform e React/Next.js per interfacce web moderne.\n- **Backend**: API scalabili con Node.js/Express e architetture enterprise solide con Java Spring Boot.\n- **Database**: Ottimizzazione query e gestione dati complessi con MongoDB, PostgreSQL e MySQL.\n- **Cloud & DevOps**: Pipeline di integrazione continua (CI/CD), Docker, e deployment scalabili su Firebase/AWS.\n\n## La mia filosofia\n> \"Lento per essere veloci nei casi di urgenza.\"\nCredo nella progettazione di architetture robuste e manutenibili per ridurre al minimo il debito tecnologico e facilitare l'evoluzione aziendale nel lungo termine.\n",
 
-    // About
-    "about.title": "Chi sono",
-    "about.text1": "Sono Fabio Danubbio, Full Stack Developer con sede a Nola, Napoli. Appassionato di tecnologie moderne, sviluppo applicazioni scalabili e performanti con un approccio orientato al clean code, alle best practice ingegneristiche e all'ottimizzazione continua.",
-    "about.text2": "Negli ultimi anni ho lavorato su progetti che spaziano da app mobile cross-platform in Flutter, a backend complessi con Node.js ed Express, fino a soluzioni enterprise con Java e Spring Boot. Mi piace progettare architetture robuste, ottimizzare le performance e costruire esperienze utente fluide con mentalità Agile & DevOps.",
-    "about.text3": "La mia formazione continua include certificazioni recenti Meta (2025) in React, JavaScript e Frontend Development, oltre a credenziali Google Developer Program, Apple Developer e Oracle Java. Sono curioso, in costante evoluzione e credo che la tecnologia sia un mezzo per costruire soluzioni concrete ai problemi reali.",
-    "about.text4": "La mia filosofia è sempre orientata alla qualità del codice, sicurezza e scalabilità delle applicazioni, seguendo i principi del Clean Code e delle best practice ingegneristiche moderne.",
+    "files.tech": "{\n  \"name\": \"Fabio Danubbio\",\n  \"role\": \"Full Stack Developer\",\n  \"skills\": {\n    \"Mobile\": [\"Flutter\", \"Dart\", \"Android SDK\", \"Swift/iOS basics\"],\n    \"Frontend\": [\"React.js\", \"Next.js\", \"JavaScript (ES6+)\", \"HTML5 & CSS3\"],\n    \"Backend\": [\"Node.js\", \"Express.js\", \"Java\", \"Spring Boot\", \"RESTful APIs\"],\n    \"Databases\": [\"MongoDB\", \"PostgreSQL\", \"MySQL\", \"MSSQL\"],\n    \"DevOps\": [\"Docker\", \"Firebase\", \"CI/CD (GitHub Actions)\", \"Git & GitFlow\"]\n  },\n  \"certifications\": [\n    \"Meta Coding Interview Preparation (2025)\",\n    \"Meta React & JavaScript Programming (2025)\",\n    \"Google Developer Program Member\",\n    \"Apple Developer Program Accredited\",\n    \"Oracle Java & Vaadin Accredited\"\n  ]\n}\n",
 
-    // Services
-    "service.title": "Cosa porto nei progetti",
-    "service.1.title": "Frontend & Mobile",
-    "service.1.text": "🔹 Flutter per app cross-platform performanti<br>🔹 React e Next.js per interfacce moderne<br>🔹 Gestione avanzata dello stato e design pattern solidi",
-    "service.2.title": "Backend Development",
-    "service.2.text": "🔹 Node.js, Express per API scalabili<br>🔹 Java Spring Boot per soluzioni enterprise<br>🔹 Architetture robuste e manutenibili",
-    "service.3.title": "Database & Performance",
-    "service.3.text": "🔹 MongoDB, PostgreSQL, MySQL, MSSQL<br>🔹 Query ottimizzate e performance tuning<br>🔹 Sicurezza avanzata (JWT, OAuth2, WebSocket)",
-    "service.4.title": "Cloud & DevOps",
-    "service.4.text": "🔹 Firebase, Docker, CI/CD pipeline<br>🔹 Git workflow e metodologie Agile<br>🔹 Deployment automatizzato e monitoraggio",
+    "files.experience": "import { Developer, Job, Education } from './fabio-danubbio';\n\n// Cronologia dell'esperienza professionale e formativa\n\nconst lavoro: Job[] = [\n  {\n    role: \"Full Stack Developer\",\n    company: \"PROMEDYA SRL - Partner WKI\",\n    period: \"Ottobre 2022 — Presente\",\n    description: \"Sviluppo ed evoluzione di soluzioni collegate al gestionale ERP Arca Evolution. Integrazioni in JavaScript, moduli desktop e applicazioni mobili cross-platform in Flutter.\"\n  },\n  {\n    role: \"Full Stack Developer\",\n    company: \"Accenture Italia\",\n    period: \"Maggio 2022 — Ottobre 2022\",\n    description: \"Gestione dell'autenticazione ed autorizzazione enterprise sul portale italia.it tramite tecnologia Adobe Experience Manager e microservizi Spring MVC Java.\"\n  },\n  {\n    role: \"App Developer\",\n    company: \"Jotto S.r.l.\",\n    period: \"Settembre 2021 — Febbraio 2022\",\n    description: \"Creazione di applicazioni mobile aziendali in Flutter integrate con hardware di domotica domestica tramite protocolli WiFi e Bluetooth BLE.\"\n  }\n];\n\nconst formazione: Education[] = [\n  {\n    course: \"Corso Specialistico Java Enterprise & Clean Code\",\n    institute: \"Matrix Consulting / Oracle Academy\",\n    period: \"2022\",\n    details: \"Pattern architetturali, programmazione a oggetti avanzata e microservizi.\"\n  },\n  {\n    course: \"Diploma di Perito Informatico\",\n    institute: \"I.T.C.S.G. Masullo - Theti (Nola)\",\n    period: \"2015 — 2021\",\n    score: \"96/100\"\n  }\n];\n",
 
-    // Resume
-    "resume.title": "Curriculum",
-    "resume.education": "Formazione",
-    "resume.edu1.title": "Corso Full Stack Developer",
-    "resume.edu1.date": "2018 — 2022",
-    "resume.edu1.text": "Formazione completa su tecnologie moderne per lo sviluppo web e mobile, con focus su JavaScript, Python, database e metodologie agili.",
-    "resume.edu2.title": "I.T.C.S.G. Masullo - Theti",
-    "resume.edu2.date": "2015 — 2021",
-    "resume.edu2.text": "Perito Informatico con votazione 96/100. Formazione tecnica approfondita in programmazione, reti, database e sistemi informatici.",
+    "files.projects": "// Modulo dei Progetti in evidenza\n\nexport const getProjects = () => {\n  return [\n    {\n      id: 1,\n      title: \"ERP Arca Evolution (Promedya)\",\n      category: \"App Mobile\",\n      techStack: [\"Flutter\", \"Dart\", \"SQLite\", \"Node.js\"],\n      description: \"Ricostruzione mobile del gestionale Arca Evolution per agenti commerciali. Permette la gestione offline del carrello prodotti e invio sincrono dei documenti al server.\"\n    },\n    {\n      id: 2,\n      title: \"Dhonko Travel Platform\",\n      category: \"Web Development\",\n      techStack: [\"React\", \"Node.js\", \"Express\", \"MongoDB\", \"WebSockets\"],\n      description: \"Social network volto alla creazione e condivisione di viaggi, itinerari e interazione real-time tra partecipanti.\"\n    },\n    {\n      id: 3,\n      title: \"Smart Server API\",\n      category: \"Backend\",\n      techStack: [\"Java\", \"Spring Boot\", \"PostgreSQL\", \"Docker\", \"JWT\"],\n      description: \"Backend enterprise sicuro e robusto per l'interazione tra database ERP desktop e client mobili.\"\n    },\n    {\n      id: 4,\n      title: \"Adobe AEM Custom Auth (Accenture)\",\n      category: \"Backend\",\n      techStack: [\"Java\", \"Spring MVC\", \"Adobe AEM\", \"SPID / CIE Auth\"],\n      description: \"Sviluppo dei meccanismi di integrazione per credenziali e sicurezza degli accessi istituzionali.\"\n    },\n    {\n      id: 5,\n      title: \"App Domotica WiFi-BLE (Jotto)\",\n      category: \"App Mobile\",\n      techStack: [\"Flutter\", \"Dart\", \"Bluetooth BLE\", \"WiFi Link\"],\n      description: \"App cross-platform per il controllo a distanza e accoppiamento locale di gateway per riscaldamento ed elettrodomestici.\"\n    }\n  ];\n};\n",
 
-    // Certifications
-    "resume.certs": "Certificazioni e Licenze",
-    "resume.cert1.title": "Meta - Coding Interview Preparation",
-    "resume.cert1.date": "Maggio 2025",
-    "resume.cert1.text": "Certificazione Meta per preparazione ai colloqui tecnici. ID: TIS0YZD5UEY0",
-    "resume.cert2.title": "Meta - React Fundamentals & JavaScript Programming",
-    "resume.cert2.date": "Aprile - Maggio 2025",
-    "resume.cert2.text": "Certificazioni Meta in React (ID: 2DG6BU3W0Q5A) e JavaScript Programming (ID: LSS9IL5F1INI). Competenze avanzate in sviluppo frontend moderno.",
-    "resume.cert3.title": "Meta - Frontend Development & Version Control",
-    "resume.cert3.date": "Marzo 2025",
-    "resume.cert3.text": "Introduction to Front-End Development (ID: PP1IISC3WJDH) e Version Control (ID: 6KQB1JPT6ZFX). Metodologie di sviluppo e controllo versione.",
-    "resume.cert4.title": "Google Developer Program",
-    "resume.cert4.date": "Settembre 2021",
-    "resume.cert4.text": "Membro del Google Developer Program con competenze in Android, Flutter e Angular. Accesso a risorse avanzate e community Google.",
-    "resume.cert5.title": "Apple Developer Program",
-    "resume.cert5.date": "Gennaio 2024 - Gennaio 2025",
-    "resume.cert5.text": "Sviluppatore certificato Apple con competenze in Flutter e Swift per iOS. Abilitazione alla pubblicazione su App Store.",
-    "resume.cert6.title": "Oracle Java & Vaadin Certification",
-    "resume.cert6.date": "2017 - 2024",
-    "resume.cert6.text": "Certificazioni Oracle Java (2017) e Vaadin (2024). Competenze enterprise in Java, Kotlin, Android e framework moderni.",
+    "files.articles": "=== ARTICOLI TECNICI SU LINKEDIN ===\n\n1. La Sindrome da \"Shiny Object\" nello Sviluppo Software\n   - Data di pubblicazione: 25 Nov, 2024\n   - Link: https://www.linkedin.com/pulse/la-sindrome-da-shiny-object-nello-sviluppo-software-quando-danubbio-tw81f/\n   - Sintesi: Analisi di quando la continua rincorsa delle ultime librerie o framework frammenta le competenze e rallenta i reali progetti in produzione.\n\n2. Robert Cecil Martin: L'uomo dietro il Clean Code\n   - Data di pubblicazione: 15 Ott, 2024\n   - Link: https://www.linkedin.com/pulse/robert-cecil-martin-luomo-dietro-il-clean-code-fabio-danubbio-azylf/\n   - Sintesi: Focus sulla scrittura di codice ordinato, leggibile, manutenibile e le buone pratiche di sviluppo.\n\n3. La \"Comparison Trap\" nello Sviluppo Software\n   - Data di pubblicazione: 20 Set, 2024\n   - Link: https://www.linkedin.com/pulse/la-comparison-trap-nello-sviluppo-software-perch%C3%A9-agli-fabio-danubbio-fd7pf/\n   - Sintesi: Le ripercussioni psicologiche e di carriera nel paragonarsi costantemente agli altri su GitHub o LinkedIn.\n\n4. La Sindrome dell'Impostore nel Mondo della Programmazione\n   - Data di pubblicazione: 30 Ago, 2024\n   - Link: https://www.linkedin.com/pulse/la-sindrome-dellimpostore-nel-mondo-della-quando-il-talento-danubbio-lwtsf/\n   - Sintesi: Perché i programmatori si sentono spesso inadeguati e come superare questa barriera psicologica.\n",
 
-    // Courses
-    "resume.courses": "Corsi Specialistici",
-    "resume.course1.title": "Flutter & Dart - Complete Guide [2023 Edition]",
-    "resume.course1.date": "Settembre 2022",
-    "resume.course1.text": "Corso avanzato Udemy su Flutter e Dart con focus su design pattern, architetture scalabili e best practice per app mobile moderne.",
-    "resume.course2.title": "Java Full Stack Course - Matrix Consulting",
-    "resume.course2.date": "Aprile - Maggio 2022",
-    "resume.course2.text": "Corso specialistico Java enterprise durante la collaborazione con Matrix, con approfondimenti su Spring Boot e architetture microservizi.",
-    "resume.course3.title": "Corso Java EE & Clean Code Principles",
-    "resume.course3.date": "2020",
-    "resume.course3.text": "Formazione avanzata in Java EE, HTML5, CSS, Linux e principi di Clean Code. Influenzato dai principi di Robert C. Martin (Uncle Bob).",
-    "resume.course4.title": "ICDL - Patente Europea del Computer",
-    "resume.course4.date": "Maggio 2015",
-    "resume.course4.text": "Certificazione europea per competenze informatiche di base, con focus su sistemi Linux e strumenti office.",
+    "files.contact": "/* FOGLIO DI STILE DI CONTATTO - FABIO DANUBBIO */\n\n#profile-card {\n  fullname: \"Fabio Danubbio\";\n  title: \"Full Stack Developer\";\n  email: \"fabio.danubbio@gmail.com\";\n  phone: \"+39 340 194 9331\";\n  birthday: \"23 Aprile, 2000\";\n  location: \"Nola, Napoli, Italia\";\n}\n\n#social-networks {\n  linkedin: \"linkedin.com/in/fabio-danubbio\";\n  github: \"github.com/RonaldoCMS\";\n  instagram: \"instagram.com/fabio.danubbio\";\n}\n\n/* \n  Puoi inviare un messaggio reale compilando il modulo\n  nello schermo a destra o premendo Invia!\n*/\n.form-sender {\n  status: \"In Attesa\";\n  action: \"Compila i campi nome, email e messaggio ed invia.\";\n}\n",
 
-    // Experience
-    "resume.experience": "Esperienza Lavorativa",
-    "resume.exp1.title": "Full Stack Developer @ PROMEDYA SRL - Partner WKI",
-    "resume.exp1.date": "Ottobre 2022 — Presente",
-    "resume.exp1.text": "Esperienza nel mondo ERP customizzando e progettando applicativi per tutti i clienti italiani utilizzando varie linguaggi e tecnologie di programmazione che girano attorno al mondo di Arca Evolution. Competenze in JavaScript, Flutter e soluzioni enterprise scalabili.",
-    "resume.exp2.title": "Full Stack Developer @ Accenture Italia",
-    "resume.exp2.date": "Maggio 2022 — Ottobre 2022",
-    "resume.exp2.text": "Esperienza nella tecnologia Adobe Experience Manager sull'autenticazione, autorizzazione e sulla gestione dei microservizi Spring MVC. Competenze in Git, MySQL, sicurezza enterprise e architetture distribuite.",
-    "resume.exp3.title": "App Developer @ Jotto S.r.l.",
-    "resume.exp3.date": "Settembre 2021 — Febbraio 2022",
-    "resume.exp3.text": "Esperienza nel campo CrossPlatform in Flutter per la creazione di app aziendali. Acquisizione di conoscenze in componenti grafici, tecnologie WiFi-BLE, pattern architetturali e state management del ciclo di vita delle applicazioni mobile.",
+    "files.sandbox": "// ==================================================================\n// Sandbox JavaScript - Fabio Danubbio\n// ==================================================================\n//\n// Scrivi qui del codice JavaScript ed esegui premendo il tasto \"Esegui\"\n// in alto a destra o digitando 'node Sandbox.js' nel terminale.\n//\n\nfunction salutaVisitatore(nome) {\n  console.log(\"Inizializzazione della sandbox...\");\n  console.log(\"Benvenuto, \" + nome + \"!\");\n  console.log(\"Stato di Fabio: Disponibile per nuovi progetti professionali.\");\n  console.log(\"Motto: 'Lento per essere veloci nei casi di urgenza.'\");\n  \n  return \"Sandbox testata ed eseguita correttamente.\";\n}\n\nsalutaVisitatore(\"Ospite Tech\");\n",
 
-    // Skills
-    "resume.skills": "Stack Tecnologico",
-
-    // Portfolio
-    "portfolio.title": "Portfolio",
-    "portfolio.filterAll": "Tutti",
-    "portfolio.selectCategory": "Seleziona categoria",
-
-    // Blog
-    "blog.title": "Blog",
-    "blog.cat1": "Sviluppo Software",
-    "blog.post1.title": "La Sindrome da \"Shiny Object\" nello Sviluppo Software",
-    "blog.post1.text": "Quando la curiosità diventa controproducente: analisi del fenomeno che spinge i developer a saltare continuamente tra nuove tecnologie.",
-    "blog.cat2": "Clean Code",
-    "blog.post2.title": "Robert Cecil Martin: L'uomo dietro il Clean Code",
-    "blog.post2.text": "Approfondimento sulla figura di Uncle Bob e sui principi fondamentali che hanno rivoluzionato l'approccio alla scrittura di codice pulito.",
-    "blog.cat3": "Career Development",
-    "blog.post3.title": "La \"Comparison Trap\" nello Sviluppo Software",
-    "blog.post3.text": "Perché confrontarsi con altri developer può essere dannoso: riflessioni sui pericoli del paragone costante nel mondo tech.",
-    "blog.cat4": "Psicologia",
-    "blog.post4.title": "La Sindrome dell'Impostore nel Mondo della Programmazione",
-    "blog.post4.text": "Quando il talento si nasconde dietro l'insicurezza: analisi di un fenomeno comune tra i developer e strategie per superarlo.",
-    "blog.cat5": "Tecnologia",
-    "blog.post5.title": "Flutter: Best Practices per App Enterprise",
-    "blog.post5.text": "Guida alle migliori pratiche per lo sviluppo di applicazioni Flutter scalabili in contesti aziendali e enterprise.",
-    "blog.cat6": "Tutti gli Articoli",
-    "blog.post6.title": "Scopri Tutti i Miei Articoli su LinkedIn",
-    "blog.post6.text": "Accedi alla collezione completa dei miei articoli tecnici e riflessioni sul mondo dello sviluppo software moderno.",
-
-    // Contact
-    "contact.title": "Contatti",
-    "contact.formTitle": "Modulo di Contatto",
-    "contact.namePlaceholder": "Nome completo",
-    "contact.emailPlaceholder": "Indirizzo email",
-    "contact.messagePlaceholder": "Il tuo messaggio",
-    "contact.sendBtn": "Invia Messaggio"
+    "files.settings": "{\n  \"theme\": \"cyber-glow\",\n  \"fontSize\": \"14px\",\n  \"terminalCursor\": \"block\",\n  \"hologramEffect\": true,\n  \"language\": \"it\"\n}\n",
+    "files.github": "[\n  {\n    \"info\": \"Caricamento repository in corso da api.github.com...\",\n    \"user\": \"RonaldoCMS\"\n  }\n]\n"
   },
 
   en: {
-    // Sidebar
-    "sidebar.showContacts": "Show Contacts",
-    "sidebar.email": "Email",
-    "sidebar.phone": "Phone",
-    "sidebar.birthday": "Birthday",
-    "sidebar.birthdayDate": "April 23, 2000",
-    "sidebar.location": "Location",
+    // UI General Elements
+    "ui.explorerTitle": "EXPLORER",
+    "ui.openEditors": "OPEN EDITORS",
+    "ui.ronaldocms": "RONALDO_CMS",
+    "ui.terminalTitle": "Terminal",
+    "ui.problemsTitle": "Problems",
+    "ui.outputTitle": "Output",
+    "ui.runCodeBtn": "Run",
+    "ui.saveSettingsBtn": "Save",
+    "ui.welcomeTab": "Welcome.txt",
+    "ui.sidebarShowContacts": "Show Contacts",
+    "github.desc": "Live projects fetched from my GitHub profile (@RonaldoCMS) via real-time API.",
 
-    // Navbar
-    "nav.about": "About Me",
-    "nav.resume": "Resume",
-    "nav.blog": "Blog",
-    "nav.contact": "Contact",
+    // Terminal Messages
+    "terminal.welcome": "RONALDOCMS OPERATING SYSTEM v3.5.0-high\n(c) 2026 Fabio Danubbio. All rights reserved.\n\nType 'help' to see list of available commands.\n",
+    "terminal.help": "Available commands:\n  ls               List virtual files\n  cat <file>       Print file contents (e.g. cat About_Me.md)\n  node <file>      Execute a JavaScript file (e.g. node Sandbox.js)\n  theme <name>     Change environment color theme (matrix, dracula, cyber-glow, monokai)\n  git log          Display professional journey as git commits\n  git status       Display system status info\n  clear            Clear the terminal console\n",
+    "terminal.invalidCommand": "Command not found: '{cmd}'. Type 'help' for support.\n",
+    "terminal.fileNotFound": "File not found: '{file}'. Type 'ls' to see available files.\n",
+    "terminal.nodeExecute": "Executing '{file}' in JS Sandbox...\n",
+    "terminal.themeChanged": "Theme successfully changed to: '{theme}'.\n",
+    "terminal.themeNotFound": "Theme '{theme}' unrecognized. Available themes: cyber-glow, matrix, dracula, monokai.\n",
+    "terminal.settingsSaved": "Settings saved and applied successfully.\n",
+    "terminal.settingsError": "JSON parsing error in settings! Check your syntax.\n",
 
-    // About
-    "about.title": "About Me",
-    "about.text1": "I'm Fabio Danubbio, a Full Stack Developer based in Nola, Naples. Passionate about modern technologies, I build scalable and high-performance applications with a clean code approach, engineering best practices, and continuous optimization.",
-    "about.text2": "Over the past few years, I've worked on projects ranging from cross-platform mobile apps in Flutter, to complex backends with Node.js and Express, to enterprise solutions with Java and Spring Boot. I enjoy designing robust architectures, optimizing performance, and building seamless user experiences with an Agile & DevOps mindset.",
-    "about.text3": "My continuous learning includes recent Meta certifications (2025) in React, JavaScript, and Frontend Development, along with Google Developer Program, Apple Developer, and Oracle Java credentials. I'm curious, constantly evolving, and I believe technology is a means to build real solutions to real problems.",
-    "about.text4": "My philosophy is always oriented towards code quality, security, and application scalability, following Clean Code principles and modern engineering best practices.",
+    // Virtual Files Content
+    "files.welcome": "Welcome to my Web IDE!\n===========================\n\nI built this interactive template to surprise you.\nYou can explore my profile, edit files, and execute live code.\n\n💻 Use the Explorer on the left to navigate files:\n  - About_Me.md          -> About me info\n  - Tech_Stack.json       -> My developer tech stack\n  - Experience.ts        -> Education & Career details in TypeScript format\n  - Projects_Showcase.js -> Completed projects list\n  - Articles.txt         -> My technical LinkedIn articles\n  - Contact.css          -> Contact details and form mapping in CSS format\n  - Sandbox.js           -> Editable and runnable JavaScript playground!\n  - Settings.json        -> Workspace configuration (edit to change colors!)\n\n⌨️ Use the Terminal panel at the bottom to write commands.\n🔥 Edit 'Sandbox.js' and press the 'Run' button on the top right to run your code.\n",
 
-    // Services
-    "service.title": "What I Bring to Projects",
-    "service.1.title": "Frontend & Mobile",
-    "service.1.text": "🔹 Flutter for high-performance cross-platform apps<br>🔹 React and Next.js for modern interfaces<br>🔹 Advanced state management and solid design patterns",
-    "service.2.title": "Backend Development",
-    "service.2.text": "🔹 Node.js, Express for scalable APIs<br>🔹 Java Spring Boot for enterprise solutions<br>🔹 Robust and maintainable architectures",
-    "service.3.title": "Database & Performance",
-    "service.3.text": "🔹 MongoDB, PostgreSQL, MySQL, MSSQL<br>🔹 Optimized queries and performance tuning<br>🔹 Advanced security (JWT, OAuth2, WebSocket)",
-    "service.4.title": "Cloud & DevOps",
-    "service.4.text": "🔹 Firebase, Docker, CI/CD pipeline<br>🔹 Git workflow and Agile methodologies<br>🔹 Automated deployment and monitoring",
+    "files.about": "# About Me | Fabio Danubbio\n\n![Fabio Danubbio](./assets/images/my-avatar.jpg)\n\nI am a Full Stack Developer based in Nola, Naples. Passionate about modern technologies, I build scalable and high-performance applications with a clean code approach, engineering best practices, and continuous optimization.\n\n## What I Bring to Projects\n- **Frontend & Mobile**: Cross-platform development in Flutter and React/Next.js for modern web interfaces.\n- **Backend**: Scalable APIs with Node.js/Express and solid enterprise architectures with Java Spring Boot.\n- **Database**: Query optimization and complex data handling with MongoDB, PostgreSQL, and MySQL.\n- **Cloud & DevOps**: Continuous Integration / Continuous Deployment (CI/CD) pipelines, Docker, and deployments on Firebase/AWS.\n\n## My Philosophy\n> \"Slow to be fast in urgent cases.\"\nI believe in building robust and maintainable architectures to minimize technical debt and facilitate long-term business scalability.\n",
 
-    // Resume
-    "resume.title": "Resume",
-    "resume.education": "Education",
-    "resume.edu1.title": "Full Stack Developer Course",
-    "resume.edu1.date": "2018 — 2022",
-    "resume.edu1.text": "Comprehensive training in modern web and mobile development technologies, focused on JavaScript, Python, databases, and agile methodologies.",
-    "resume.edu2.title": "I.T.C.S.G. Masullo - Theti",
-    "resume.edu2.date": "2015 — 2021",
-    "resume.edu2.text": "IT Specialist with a score of 96/100. In-depth technical training in programming, networking, databases, and computer systems.",
+    "files.tech": "{\n  \"name\": \"Fabio Danubbio\",\n  \"role\": \"Full Stack Developer\",\n  \"skills\": {\n    \"Mobile\": [\"Flutter\", \"Dart\", \"Android SDK\", \"Swift/iOS basics\"],\n    \"Frontend\": [\"React.js\", \"Next.js\", \"JavaScript (ES6+)\", \"HTML5 & CSS3\"],\n    \"Backend\": [\"Node.js\", \"Express.js\", \"Java\", \"Spring Boot\", \"RESTful APIs\"],\n    \"Databases\": [\"MongoDB\", \"PostgreSQL\", \"MySQL\", \"MSSQL\"],\n    \"DevOps\": [\"Docker\", \"Firebase\", \"CI/CD (GitHub Actions)\", \"Git & GitFlow\"]\n  },\n  \"certifications\": [\n    \"Meta Coding Interview Preparation (2025)\",\n    \"Meta React & JavaScript Programming (2025)\",\n    \"Google Developer Program Member\",\n    \"Apple Developer Program Accredited\",\n    \"Oracle Java & Vaadin Accredited\"\n  ]\n}\n",
 
-    // Certifications
-    "resume.certs": "Certifications & Licenses",
-    "resume.cert1.title": "Meta - Coding Interview Preparation",
-    "resume.cert1.date": "May 2025",
-    "resume.cert1.text": "Meta certification for technical interview preparation. ID: TIS0YZD5UEY0",
-    "resume.cert2.title": "Meta - React Fundamentals & JavaScript Programming",
-    "resume.cert2.date": "April - May 2025",
-    "resume.cert2.text": "Meta certifications in React (ID: 2DG6BU3W0Q5A) and JavaScript Programming (ID: LSS9IL5F1INI). Advanced skills in modern frontend development.",
-    "resume.cert3.title": "Meta - Frontend Development & Version Control",
-    "resume.cert3.date": "March 2025",
-    "resume.cert3.text": "Introduction to Front-End Development (ID: PP1IISC3WJDH) and Version Control (ID: 6KQB1JPT6ZFX). Development methodologies and version control.",
-    "resume.cert4.title": "Google Developer Program",
-    "resume.cert4.date": "September 2021",
-    "resume.cert4.text": "Google Developer Program member with expertise in Android, Flutter, and Angular. Access to advanced resources and Google community.",
-    "resume.cert5.title": "Apple Developer Program",
-    "resume.cert5.date": "January 2024 - January 2025",
-    "resume.cert5.text": "Certified Apple Developer with expertise in Flutter and Swift for iOS. Authorized for App Store publishing.",
-    "resume.cert6.title": "Oracle Java & Vaadin Certification",
-    "resume.cert6.date": "2017 - 2024",
-    "resume.cert6.text": "Oracle Java (2017) and Vaadin (2024) certifications. Enterprise expertise in Java, Kotlin, Android, and modern frameworks.",
+    "files.experience": "import { Developer, Job, Education } from './fabio-danubbio';\n\n// Professional history and education timeline\n\nconst jobs: Job[] = [\n  {\n    role: \"Full Stack Developer\",\n    company: \"PROMEDYA SRL - Partner WKI\",\n    period: \"October 2022 — Present\",\n    description: \"Development and evolution of systems integrated with the Arca Evolution ERP. Integrations in JavaScript, desktop modules, and mobile apps in Flutter.\"\n  },\n  {\n    role: \"Full Stack Developer\",\n    company: \"Accenture Italia\",\n    period: \"May 2022 — October 2022\",\n    description: \"Managed enterprise authentication and authorization on the italia.it portal using Adobe Experience Manager and Spring MVC Java microservices.\"\n  },\n  {\n    role: \"App Developer\",\n    company: \"Jotto S.r.l.\",\n    period: \"September 2021 — February 2022\",\n    description: \"Built enterprise mobile apps in Flutter integrated with smart home IoT devices via WiFi and Bluetooth BLE protocols.\"\n  }\n];\n\nconst education: Education[] = [\n  {\n    course: \"Java Enterprise & Clean Code Specialization\",\n    institute: \"Matrix Consulting / Oracle Academy\",\n    period: \"2022\",\n    details: \"Architectural design patterns, advanced OOP, and microservices.\"\n  },\n  {\n    course: \"High School Diploma in Computer Science\",\n    institute: \"I.T.C.S.G. Masullo - Theti (Nola)\",\n    period: \"2015 — 2021\",\n    score: \"96/100\"\n  }\n];\n",
 
-    // Courses
-    "resume.courses": "Specialized Courses",
-    "resume.course1.title": "Flutter & Dart - Complete Guide [2023 Edition]",
-    "resume.course1.date": "September 2022",
-    "resume.course1.text": "Advanced Udemy course on Flutter and Dart focused on design patterns, scalable architectures, and best practices for modern mobile apps.",
-    "resume.course2.title": "Java Full Stack Course - Matrix Consulting",
-    "resume.course2.date": "April - May 2022",
-    "resume.course2.text": "Specialized Java enterprise course during collaboration with Matrix, with deep dives into Spring Boot and microservices architectures.",
-    "resume.course3.title": "Java EE & Clean Code Principles Course",
-    "resume.course3.date": "2020",
-    "resume.course3.text": "Advanced training in Java EE, HTML5, CSS, Linux, and Clean Code principles. Influenced by Robert C. Martin's (Uncle Bob) principles.",
-    "resume.course4.title": "ICDL - European Computer Driving Licence",
-    "resume.course4.date": "May 2015",
-    "resume.course4.text": "European certification for basic computer skills, with focus on Linux systems and office tools.",
+    "files.projects": "// Highlighted Projects Module\n\nexport const getProjects = () => {\n  return [\n    {\n      id: 1,\n      title: \"ERP Arca Evolution (Promedya)\",\n      category: \"App Mobile\",\n      techStack: [\"Flutter\", \"Dart\", \"SQLite\", \"Node.js\"],\n      description: \"Mobile reconstruction of the Arca Evolution ERP for sales agents. Supports offline cart management and background document syncing to server.\"\n    },\n    {\n      id: 2,\n      title: \"Dhonko Travel Platform\",\n      category: \"Web Development\",\n      techStack: [\"React\", \"Node.js\", \"Express\", \"MongoDB\", \"WebSockets\"],\n      description: \"Social network for trip planning, custom itineraries, and real-time user interaction.\"\n    },\n    {\n      id: 3,\n      title: \"Smart Server API\",\n      category: \"Backend\",\n      techStack: [\"Java\", \"Spring Boot\", \"PostgreSQL\", \"Docker\", \"JWT\"],\n      description: \"Secure and robust backend enterprise layer communicating desktop ERP databases with mobile clients.\"\n    },\n    {\n      id: 4,\n      title: \"Adobe AEM Custom Auth (Accenture)\",\n      category: \"Backend\",\n      techStack: [\"Java\", \"Spring MVC\", \"Adobe AEM\", \"SPID / CIE Auth\"],\n      description: \"Development of microservices integrations for credentials verification and institutional portal security.\"\n    },\n    {\n      id: 5,\n      title: \"WiFi-BLE Domotics App (Jotto)\",\n      category: \"App Mobile\",\n      techStack: [\"Flutter\", \"Dart\", \"Bluetooth BLE\", \"WiFi Link\"],\n      description: \"Cross-platform app for remote control and local pairing of heating and appliance gateways.\"\n    }\n  ];\n};\n",
 
-    // Experience
-    "resume.experience": "Work Experience",
-    "resume.exp1.title": "Full Stack Developer @ PROMEDYA SRL - Partner WKI",
-    "resume.exp1.date": "October 2022 — Present",
-    "resume.exp1.text": "Experience in the ERP world, customizing and designing applications for all Italian clients using various programming languages and technologies within the Arca Evolution ecosystem. Expertise in JavaScript, Flutter, and scalable enterprise solutions.",
-    "resume.exp2.title": "Full Stack Developer @ Accenture Italia",
-    "resume.exp2.date": "May 2022 — October 2022",
-    "resume.exp2.text": "Experience with Adobe Experience Manager technology focusing on authentication, authorization, and Spring MVC microservices management. Skills in Git, MySQL, enterprise security, and distributed architectures.",
-    "resume.exp3.title": "App Developer @ Jotto S.r.l.",
-    "resume.exp3.date": "September 2021 — February 2022",
-    "resume.exp3.text": "Cross-platform experience in Flutter for building enterprise apps. Acquired knowledge in UI components, WiFi-BLE technologies, architectural patterns, and state management of mobile application lifecycle.",
+    "files.articles": "=== TECHNICAL LINKEDIN ARTICLES ===\n\n1. The \"Shiny Object\" Syndrome in Software Development\n   - Published: 25 Nov, 2024\n   - Link: https://www.linkedin.com/pulse/la-sindrome-da-shiny-object-nello-sviluppo-software-quando-danubbio-tw81f/\n   - Summary: An analysis of how chasing new framework trends can slow down real production-grade progress.\n\n2. Robert Cecil Martin: The Man Behind Clean Code\n   - Published: 15 Oct, 2024\n   - Link: https://www.linkedin.com/pulse/robert-cecil-martin-luomo-dietro-il-clean-code-fabio-danubbio-azylf/\n   - Summary: In-depth focus on clean, readable, and maintainable software practices as outlined by Uncle Bob.\n\n3. The \"Comparison Trap\" in Software Development\n   - Published: 20 Set, 2024\n   - Link: https://www.linkedin.com/pulse/la-comparison-trap-nello-sviluppo-software-perch%C3%A9-agli-fabio-danubbio-fd7pf/\n   - Summary: Psychological impacts of comparing oneself constantly to profiles on GitHub or LinkedIn.\n\n4. Impostor Syndrome in Programming\n   - Published: 30 Ago, 2024\n   - Link: https://www.linkedin.com/pulse/la-sindrome-dellimpostore-nel-mondo-della-quando-il-talento-danubbio-lwtsf/\n   - Summary: Exploring why developers frequently doubt their talents and strategies to overcome it.\n",
 
-    // Skills
-    "resume.skills": "Tech Stack",
+    "files.contact": "/* CONTACT STYLESHEET - FABIO DANUBBIO */\n\n#profile-card {\n  fullname: \"Fabio Danubbio\";\n  title: \"Full Stack Developer\";\n  email: \"fabio.danubbio@gmail.com\";\n  phone: \"+39 340 194 9331\";\n  birthday: \"April 23, 2000\";\n  location: \"Nola, Naples, Italy\";\n}\n\n#social-networks {\n  linkedin: \"linkedin.com/in/fabio-danubbio\";\n  github: \"github.com/RonaldoCMS\";\n  instagram: \"instagram.com/fabio.danubbio\";\n}\n\n/*\n  You can send a real message by filling in the fields\n  in the contact panel on the screen and clicking Send!\n*/\n.form-sender {\n  status: \"Idle\";\n  action: \"Fill in the name, email, and message inputs to send.\";\n}\n",
 
-    // Portfolio
-    "portfolio.title": "Portfolio",
-    "portfolio.filterAll": "All",
-    "portfolio.selectCategory": "Select category",
+    "files.sandbox": "// ==================================================================\n// JavaScript Sandbox - Fabio Danubbio\n// ==================================================================\n//\n// Write JavaScript code here and run it by clicking the \"Run\" button\n// on the top right, or typing 'node Sandbox.js' in the terminal.\n//\n\nfunction greetVisitor(name) {\n  console.log(\"Initializing sandbox execution...\");\n  console.log(\"Hello, \" + name + \"!\");\n  console.log(\"Fabio's Status: Open to interesting career opportunities.\");\n  console.log(\"Motto: 'Slow to be fast in urgent cases.'\");\n  \n  return \"Sandbox successfully run.\";\n}\n\ngreetVisitor(\"Tech Guest\");\n",
 
-    // Blog
-    "blog.title": "Blog",
-    "blog.cat1": "Software Development",
-    "blog.post1.title": "The \"Shiny Object\" Syndrome in Software Development",
-    "blog.post1.text": "When curiosity becomes counterproductive: analysis of the phenomenon that drives developers to constantly jump between new technologies.",
-    "blog.cat2": "Clean Code",
-    "blog.post2.title": "Robert Cecil Martin: The Man Behind Clean Code",
-    "blog.post2.text": "Deep dive into the figure of Uncle Bob and the fundamental principles that revolutionized the approach to writing clean code.",
-    "blog.cat3": "Career Development",
-    "blog.post3.title": "The \"Comparison Trap\" in Software Development",
-    "blog.post3.text": "Why comparing yourself with other developers can be harmful: reflections on the dangers of constant comparison in the tech world.",
-    "blog.cat4": "Psychology",
-    "blog.post4.title": "Impostor Syndrome in the World of Programming",
-    "blog.post4.text": "When talent hides behind insecurity: analysis of a common phenomenon among developers and strategies to overcome it.",
-    "blog.cat5": "Technology",
-    "blog.post5.title": "Flutter: Best Practices for Enterprise Apps",
-    "blog.post5.text": "Guide to the best practices for developing scalable Flutter applications in business and enterprise contexts.",
-    "blog.cat6": "All Articles",
-    "blog.post6.title": "Discover All My Articles on LinkedIn",
-    "blog.post6.text": "Access the complete collection of my technical articles and reflections on the world of modern software development.",
-
-    // Contact
-    "contact.title": "Contact",
-    "contact.formTitle": "Contact Form",
-    "contact.namePlaceholder": "Full name",
-    "contact.emailPlaceholder": "Email address",
-    "contact.messagePlaceholder": "Your message",
-    "contact.sendBtn": "Send Message"
+    "files.settings": "{\n  \"theme\": \"cyber-glow\",\n  \"fontSize\": \"14px\",\n  \"terminalCursor\": \"block\",\n  \"hologramEffect\": true,\n  \"language\": \"en\"\n}\n",
+    "files.github": "[\n  {\n    \"info\": \"Fetching live repositories from api.github.com...\",\n    \"user\": \"RonaldoCMS\"\n  }\n]\n"
   }
 };
 
@@ -276,69 +110,37 @@ class I18nManager {
   }
 
   init() {
-    // Apply saved language
+    // Apply language setting
     this.applyLanguage(this.currentLang);
-    this.updateSwitcherUI();
-
-    // Setup language switcher
-    const switcher = document.getElementById('lang-switcher');
-    if (switcher) {
-      switcher.addEventListener('click', () => this.toggle());
-    }
   }
 
   toggle() {
     this.currentLang = this.currentLang === 'it' ? 'en' : 'it';
     localStorage.setItem('fabio-lang', this.currentLang);
     this.applyLanguage(this.currentLang);
-    this.updateSwitcherUI();
-  }
-
-  updateSwitcherUI() {
-    const flagActive = document.querySelector('.lang-flag-active');
-    const flagInactive = document.querySelector('.lang-flag-inactive');
-    const labelActive = document.querySelector('.lang-label-active');
-    const labelInactive = document.querySelector('.lang-label-inactive');
     
-    if (flagActive && flagInactive) {
-      if (this.currentLang === 'it') {
-        flagActive.textContent = '🇮🇹';
-        flagInactive.textContent = '🇬🇧';
-        if (labelActive) labelActive.textContent = 'IT';
-        if (labelInactive) labelInactive.textContent = 'EN';
-      } else {
-        flagActive.textContent = '🇬🇧';
-        flagInactive.textContent = '🇮🇹';
-        if (labelActive) labelActive.textContent = 'EN';
-        if (labelInactive) labelInactive.textContent = 'IT';
-      }
-    }
-
-    // Update html lang attribute
-    document.documentElement.lang = this.currentLang;
+    // Dispatch custom event to notify script.js to refresh active tab file contents
+    const event = new CustomEvent('languageChanged', { detail: { lang: this.currentLang } });
+    window.dispatchEvent(event);
   }
 
   applyLanguage(lang) {
+    this.currentLang = lang;
     const dict = translations[lang];
     if (!dict) return;
 
-    // Text content
+    // Standard translation mappings
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) {
-        el.textContent = dict[key];
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = dict[key];
+        } else {
+          el.textContent = dict[key];
+        }
       }
     });
 
-    // HTML content (for elements with <br> etc.)
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.getAttribute('data-i18n-html');
-      if (dict[key] !== undefined) {
-        el.innerHTML = dict[key];
-      }
-    });
-
-    // Placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       if (dict[key] !== undefined) {
@@ -346,18 +148,11 @@ class I18nManager {
       }
     });
 
-    // Update page title based on active article
-    const activeArticle = document.querySelector('article.active');
-    if (activeArticle) {
-      const titleEl = activeArticle.querySelector('.article-title');
-      if (titleEl) {
-        document.title = `Fabio Danubbio - ${titleEl.textContent}`;
-      }
-    }
+    // Update html lang tag
+    document.documentElement.lang = this.currentLang;
   }
 }
 
-// Initialize i18n when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  window.i18n = new I18nManager();
-});
+// Instantiate globally
+window.i18nManager = new I18nManager();
+window.translations = translations;
