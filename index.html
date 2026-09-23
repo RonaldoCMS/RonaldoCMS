@@ -3,748 +3,788 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fabio Danubbio - Full Stack Developer IDE</title>
+  <title>Fabio Danubbio — Full Stack Developer</title>
+  <meta name="description"
+    content="Fabio Danubbio, Full Stack Developer a Nola (Napoli). App mobile in Flutter, piattaforme web in React e Node.js, backend enterprise in Java Spring Boot." />
+  <meta name="theme-color" content="#f8f6f1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fabio Danubbio — Full Stack Developer" />
+  <meta property="og:description"
+    content="App mobile, piattaforme web e sistemi backend per aziende che hanno bisogno di software solido e facile da far crescere." />
+  <meta property="og:url" content="https://www.ronaldocms.it/" />
+  <meta property="og:image" content="https://www.ronaldocms.it/assets/images/my-avatar.jpg" />
+  <meta property="og:locale" content="it_IT" />
 
-  <!-- Custom CSS -->
+  <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="./assets/images/logo.ico" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
   <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Applica subito il tema salvato per evitare il flash al caricamento -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var q = new URLSearchParams(location.search).get('theme');
+        var t = (q === 'light' || q === 'dark') ? q : localStorage.getItem('fd-theme');
+        if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fabio Danubbio",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://www.ronaldocms.it/",
+    "email": "mailto:fabio.danubbio@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Nola", "addressRegion": "NA", "addressCountry": "IT" },
+    "sameAs": [
+      "https://github.com/RonaldoCMS",
+      "https://www.linkedin.com/in/fabio-danubbio-52149219a/",
+      "https://www.instagram.com/is_not_a_developer/"
+    ]
+  }
+  </script>
 </head>
 
-<body class="theme-cyber-glow">
-  <!-- Particle Background Canvas -->
-  <canvas id="particles-canvas"></canvas>
+<body>
+  <!-- Sprite icone (stroke = feather-like, fill = loghi) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M6 11l6-6 6 6" />
+      </symbol>
+      <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+      </symbol>
+      <symbol id="i-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 3v12M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9a9 9 0 0 1-9 9" />
+      </symbol>
+      <symbol id="i-repo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+      </symbol>
+      <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="2.5" />
+        <path d="M11 18h2" />
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+      </symbol>
+      <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="7" rx="2" />
+        <rect x="2" y="14" width="20" height="7" rx="2" />
+        <path d="M6 6.5h.01M6 17.5h.01" />
+      </symbol>
+      <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3" />
+        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+      </symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+      </symbol>
+      <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M3 9h18M9 21V9" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m4 17 6-6-6-6M12 19h8" />
+      </symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+      </symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m22 2-7 20-4-9-9-4 20-7z" />
+        <path d="M22 2 11 13" />
+      </symbol>
+    </defs>
+  </svg>
 
-  <div class="ide-container">
+  <a class="skip-link" href="#main" data-i18n="ui.skip">Vai al contenuto</a>
 
-    <!-- ==========================================
-           1. LEFT ACTIVITY BAR
-           ========================================== -->
-    <aside class="activity-bar">
-      <div class="activity-group">
-        <!-- Window Controls Decoration -->
-        <div class="window-controls-dec">
-          <span class="control-dot dot-red"></span>
-          <span class="control-dot dot-yellow"></span>
-          <span class="control-dot dot-green"></span>
+  <!-- ==========================================================
+       HEADER
+       ========================================================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Navigazione principale" data-i18n-attr="aria-label:ui.navLabel">
+      <a class="brand" href="#top">
+        <img src="./assets/images/logo.svg" alt="" width="30" height="30" />
+        <span>Fabio Danubbio</span>
+        <span class="brand__handle">@RonaldoCMS</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" data-i18n="nav.about">Chi sono</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Competenze</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Percorso</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Progetti</a></li>
+        <li><a href="#articles" data-i18n="nav.articles">Articoli</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contatti</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Lingua" data-i18n-attr="aria-label:ui.langLabel">
+          <button type="button" data-lang="it" aria-pressed="true">IT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
-
-        <!-- Explorer Button -->
-        <button class="activity-btn active" id="btn-explorer" title="Explorer">
-          <ion-icon name="folder-open-outline"></ion-icon>
-          <span class="activity-tooltip" data-i18n="ui.explorerTitle">Esploratore</span>
+        <button type="button" class="icon-btn theme-toggle" aria-label="Cambia tema" data-i18n-attr="aria-label:ui.themeToggle">
+          <svg class="icon icon-sun"><use href="#i-sun" /></svg>
+          <svg class="icon icon-moon"><use href="#i-moon" /></svg>
         </button>
-
-        <!-- Git/Timeline Button -->
-        <button class="activity-btn" id="btn-git" title="Source Control / Git Log">
-          <ion-icon name="git-branch-outline"></ion-icon>
-          <span class="activity-tooltip">Git Log</span>
+        <button type="button" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Apri menu" data-i18n-attr="aria-label:ui.menuToggle">
+          <svg class="icon icon-menu"><use href="#i-menu" /></svg>
+          <svg class="icon icon-close"><use href="#i-close" /></svg>
         </button>
       </div>
+    </nav>
+  </header>
 
-      <div class="activity-group">
-        <!-- Language Switcher Button -->
-        <button class="activity-btn" id="lang-switcher" title="Switch Language (IT/EN)">
-          <ion-icon name="globe-outline"></ion-icon>
-          <span class="activity-tooltip">Language / Lingua</span>
-        </button>
+  <main id="main">
 
-        <!-- Settings Cog -->
-        <button class="activity-btn" id="btn-settings" title="Settings (Settings.json)">
-          <ion-icon name="settings-outline"></ion-icon>
-          <span class="activity-tooltip">Settings.json</span>
-        </button>
-      </div>
-    </aside>
-
-    <!-- ==========================================
-           2. FILE EXPLORER SIDEBAR
-           ========================================== -->
-    <aside class="sidebar-explorer" id="sidebar-explorer">
-      <div class="explorer-header">
-        <span data-i18n="ui.explorerTitle">ESPLORATORE</span>
-        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-      </div>
-
-      <!-- Open Editors Section -->
-      <div class="explorer-section">
-        <div class="explorer-section-title">
-          <ion-icon name="chevron-down-outline"></ion-icon>
-          <span data-i18n="ui.openEditors">EDITOR APERTI</span>
-        </div>
-        <ul class="file-list" id="open-editors-list">
-          <!-- Dynamic list of open tabs -->
-        </ul>
-      </div>
-
-      <!-- Project Directory Section -->
-      <div class="explorer-section" style="flex: 1;">
-        <div class="explorer-section-title">
-          <ion-icon name="chevron-down-outline"></ion-icon>
-          <span data-i18n="ui.ronaldocms">RONALDO_CMS</span>
-        </div>
-        <ul class="file-list">
-          <li class="file-item active" data-file="Welcome.txt">
-            <span class="file-icon txt"><ion-icon name="document-text-outline"></ion-icon></span>
-            <span>Welcome.txt</span>
-          </li>
-          <li class="file-item" data-file="About_Me.md">
-            <span class="file-icon md"><ion-icon name="logo-markdown"></ion-icon></span>
-            <span>About_Me.md</span>
-          </li>
-          <li class="file-item" data-file="Tech_Stack.json">
-            <span class="file-icon json"><ion-icon name="code-working-outline"></ion-icon></span>
-            <span>Tech_Stack.json</span>
-          </li>
-          <li class="file-item" data-file="Experience.ts">
-            <span class="file-icon ts"><ion-icon name="logo-typescript"></ion-icon></span>
-            <span>Experience.ts</span>
-          </li>
-          <li class="file-item" data-file="Projects_Showcase.js">
-            <span class="file-icon js"><ion-icon name="logo-javascript"></ion-icon></span>
-            <span>Projects_Showcase.js</span>
-          </li>
-          <li class="file-item" data-file="Articles.txt">
-            <span class="file-icon txt"><ion-icon name="reader-outline"></ion-icon></span>
-            <span>Articles.txt</span>
-          </li>
-          <li class="file-item" data-file="Contact.css">
-            <span class="file-icon css"><ion-icon name="logo-css3"></ion-icon></span>
-            <span>Contact.css</span>
-          </li>
-          <li class="file-item" data-file="GitHub_Repos.json">
-            <span class="file-icon json" style="color: #bc70a4;"><ion-icon name="logo-github"></ion-icon></span>
-            <span>GitHub_Repos.json</span>
-          </li>
-          <li class="file-item" data-file="Sandbox.js">
-            <span class="file-icon js" style="color: #ffca28;"><ion-icon name="play-circle-outline"></ion-icon></span>
-            <span style="font-weight: 600;">Sandbox.js</span>
-          </li>
-          <li class="file-item" data-file="Settings.json">
-            <span class="file-icon json"><ion-icon name="settings-outline"></ion-icon></span>
-            <span>Settings.json</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Sidebar Summary Profile Badge -->
-      <div class="explorer-profile-summary">
-        <div class="profile-avatar-box">
-          <img src="./assets/images/my-avatar.jpg" alt="Fabio Danubbio" />
-        </div>
-        <div class="profile-info-name">Fabio Danubbio</div>
-        <div class="profile-info-title">🚀 Full Stack Developer</div>
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span>Active &amp; Coding</span>
-        </div>
-      </div>
-    </aside>
-
-    <!-- ==========================================
-           3. MAIN CODE EDITOR AREA
-           ========================================== -->
-    <section class="editor-workspace">
-
-      <!-- Editor Tabs bar -->
-      <nav class="tabs-bar" id="tabs-bar">
-        <!-- Generated Dynamically via JS -->
-      </nav>
-
-      <!-- Editor Toolbar Actions -->
-      <div class="editor-action-bar">
-        <!-- View Toggle Button (Code / UI Preview) -->
-        <button class="editor-btn secondary" id="btn-toggle-view" title="Toggle Code / Preview" style="display: none;">
-          <ion-icon name="eye-outline" id="toggle-view-icon"></ion-icon>
-          <span id="toggle-view-text">UI Preview</span>
-        </button>
-
-        <!-- Run Sandbox Button (Only for Sandbox.js) -->
-        <button class="editor-btn" id="btn-run-code" style="display: none;" title="Execute JS Sandbox Code">
-          <ion-icon name="play-outline"></ion-icon>
-          <span data-i18n="ui.runCodeBtn">Esegui</span>
-        </button>
-
-        <!-- Save Settings Button (Only for Settings.json) -->
-        <button class="editor-btn" id="btn-save-settings" style="display: none;" title="Save and Apply Settings">
-          <ion-icon name="save-outline"></ion-icon>
-          <span data-i18n="ui.saveSettingsBtn">Salva</span>
-        </button>
-      </div>
-
-      <!-- Editor Content Workspace -->
-      <div class="editor-content-container">
-
-        <!-- Editor Code View (For editing/viewing raw text) -->
-        <div class="editor-pane" id="editor-pane">
-          <div class="line-numbers" id="line-numbers">
-            <!-- JS generates numbers in sync -->
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">// full stack developer · Nola, Italia</p>
+          <h1 class="hero__title" id="hero-title">
+            <span data-i18n-html="hero.title">Ciao, sono <span class="accent">Fabio</span>.<br />Costruisco software che dura.</span><span class="caret" aria-hidden="true"></span>
+          </h1>
+          <p class="hero__lead" data-i18n="hero.lead">
+            Sviluppatore full stack: progetto e realizzo app mobile, piattaforme web e sistemi backend
+            per aziende che hanno bisogno di strumenti solidi, chiari e facili da far crescere.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">
+              <span data-i18n="hero.cta1">Guarda i progetti</span>
+              <svg class="icon"><use href="#i-arrow" /></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta2">Scrivimi</a>
           </div>
-          <div class="code-container" id="code-container">
-            <!-- Read-only text output or editable textarea -->
+          <div class="hero__meta">
+            <span class="status">
+              <span class="status__dot" aria-hidden="true"></span>
+              <span data-i18n="hero.status">Disponibile per nuovi progetti</span>
+            </span>
+            <ul class="social" aria-label="Profili social">
+              <li><a href="https://github.com/RonaldoCMS" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github" /></svg></a></li>
+              <li><a href="https://www.linkedin.com/in/fabio-danubbio-52149219a/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a></li>
+              <li><a href="https://www.instagram.com/is_not_a_developer/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram" /></svg></a></li>
+              <li><a href="mailto:fabio.danubbio@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail" /></svg></a></li>
+            </ul>
           </div>
         </div>
 
-        <!-- ==========================================
-               VIRTUAL PREVIEWS / DYNAMIC OVERLAYS
-               ========================================== -->
-
-        <!-- About Me Rendered HTML Preview -->
-        <div class="ui-overlay-view" id="overlay-About_Me.md">
-          <article class="markdown-view" style="display: block;">
-            <header class="view-section-header">
-              <h1 id="about-md-title">Chi Sono</h1>
-            </header>
-            <section id="about-md-content">
-              <!-- Translated dynamically -->
-            </section>
-
-            <!-- Services grid cards -->
-            <h2 style="margin-top: 40px; margin-bottom: 20px;" data-i18n="service.title">Cosa porto nei progetti</h2>
-            <div class="skills-grid-view">
-              <div class="skill-card">
-                <div class="skill-card-title">
-                  <ion-icon name="phone-portrait-outline"></ion-icon>
-                  <span data-i18n="service.1.title">Frontend &amp; Mobile</span>
-                </div>
-                <div style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);"
-                  data-i18n-html="service.1.text">
-                  🔹 Flutter per app cross-platform performanti<br>
-                  🔹 React e Next.js per interfacce moderne<br>
-                  🔹 Gestione dello stato e design pattern solidi
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-card-title">
-                  <ion-icon name="server-outline"></ion-icon>
-                  <span data-i18n="service.2.title">Backend Development</span>
-                </div>
-                <div style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);"
-                  data-i18n-html="service.2.text">
-                  🔹 Node.js, Express per API scalabili<br>
-                  🔹 Java Spring Boot per soluzioni enterprise<br>
-                  🔹 Architetture robuste e manutenibili
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-card-title">
-                  <ion-icon name="analytics-outline"></ion-icon>
-                  <span data-i18n="service.3.title">Database &amp; Performance</span>
-                </div>
-                <div style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);"
-                  data-i18n-html="service.3.text">
-                  🔹 MongoDB, PostgreSQL, MySQL, MSSQL<br>
-                  🔹 Query ottimizzate e performance tuning<br>
-                  🔹 Sicurezza avanzata (JWT, OAuth2, WebSocket)
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-card-title">
-                  <ion-icon name="cloud-done-outline"></ion-icon>
-                  <span data-i18n="service.4.title">Cloud &amp; DevOps</span>
-                </div>
-                <div style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);"
-                  data-i18n-html="service.4.text">
-                  🔹 Firebase, Docker, CI/CD pipeline<br>
-                  🔹 Git workflow e metodologie Agile<br>
-                  🔹 Deployment automatizzato e monitoraggio
-                </div>
-              </div>
+        <div class="hero__visual">
+          <figure class="portrait">
+            <img src="./assets/images/my-avatar.jpg" alt="Fabio Danubbio" width="615" height="1024" fetchpriority="high" />
+          </figure>
+          <div class="code-card" aria-hidden="true">
+            <div class="code-card__bar">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span>fabio.ts</span>
             </div>
-
-
-
-            <!-- Tech Stack Interactive Rendered Preview -->
-            <div class="ui-overlay-view" id="overlay-Tech_Stack.json">
-              <div class="view-section-header">
-                <h1 class="view-section-title" data-i18n="resume.skills">Stack Tecnologico</h1>
-                <p class="view-section-desc">Visualizzazione grafica e percentuale delle mie competenze principali.</p>
-              </div>
-
-              <div class="skills-grid-view">
-                <div class="skill-card">
-                  <div class="skill-card-title">Flutter &amp; Mobile Development</div>
-                  <div
-                    style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow:hidden; margin-bottom: 8px;">
-                    <div
-                      style="width: 95%; height:100%; background: var(--accent-gradient); box-shadow: var(--border-glow);">
-                    </div>
-                  </div>
-                  <div
-                    style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-secondary);">
-                    <span>Expert</span>
-                    <span>95%</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card-title">Node.js &amp; Express</div>
-                  <div
-                    style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow:hidden; margin-bottom: 8px;">
-                    <div
-                      style="width: 90%; height:100%; background: var(--accent-gradient); box-shadow: var(--border-glow);">
-                    </div>
-                  </div>
-                  <div
-                    style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-secondary);">
-                    <span>Advanced</span>
-                    <span>90%</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card-title">Java &amp; Spring Boot</div>
-                  <div
-                    style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow:hidden; margin-bottom: 8px;">
-                    <div
-                      style="width: 85%; height:100%; background: var(--accent-gradient); box-shadow: var(--border-glow);">
-                    </div>
-                  </div>
-                  <div
-                    style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-secondary);">
-                    <span>Advanced</span>
-                    <span>85%</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card-title">React &amp; Next.js</div>
-                  <div
-                    style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow:hidden; margin-bottom: 8px;">
-                    <div
-                      style="width: 85%; height:100%; background: var(--accent-gradient); box-shadow: var(--border-glow);">
-                    </div>
-                  </div>
-                  <div
-                    style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-secondary);">
-                    <span>Advanced</span>
-                    <span>85%</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card-title">Databases (Postgres, Mongo, MySQL)</div>
-                  <div
-                    style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow:hidden; margin-bottom: 8px;">
-                    <div
-                      style="width: 90%; height:100%; background: var(--accent-gradient); box-shadow: var(--border-glow);">
-                    </div>
-                  </div>
-                  <div
-                    style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-secondary);">
-                    <span>Advanced</span>
-                    <span>90%</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card-title">Cloud &amp; DevOps (Docker, Firebase, CI/CD)</div>
-                  <div
-                    style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow:hidden; margin-bottom: 8px;">
-                    <div
-                      style="width: 80%; height:100%; background: var(--accent-gradient); box-shadow: var(--border-glow);">
-                    </div>
-                  </div>
-                  <div
-                    style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-secondary);">
-                    <span>Intermediate</span>
-                    <span>80%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Experience Timeline Rendered Preview -->
-            <div class="ui-overlay-view" id="overlay-Experience.ts">
-              <div class="view-section-header">
-                <h1 class="view-section-title" data-i18n="resume.title">Curriculum Vitae</h1>
-                <p class="view-section-desc">Cronologia delle mie esperienze, formazione e certificazioni acquisite.</p>
-              </div>
-
-              <div class="contact-screen-layout">
-                <div>
-                  <h2
-                    style="font-size: 16px; margin-bottom: 15px; border-left: 3px solid var(--accent-2); padding-left: 8px;"
-                    data-i18n="resume.experience">Esperienza Lavorativa</h2>
-                  <div class="experience-timeline">
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.exp1.title">Full Stack Developer @ PROMEDYA SRL -
-                          Partner WKI</div>
-                        <div class="timeline-meta" data-i18n="resume.exp1.date">Ottobre 2022 — Presente</div>
-                        <p class="timeline-desc" data-i18n="resume.exp1.text">Esperienza nel mondo ERP...</p>
-                      </div>
-                    </div>
-
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.exp2.title">Full Stack Developer @ Accenture
-                          Italia</div>
-                        <div class="timeline-meta" data-i18n="resume.exp2.date">Maggio 2022 — Ottobre 2022</div>
-                        <p class="timeline-desc" data-i18n="resume.exp2.text">Esperienza nella tecnologia Adobe
-                          Experience Manager...</p>
-                      </div>
-                    </div>
-
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.exp3.title">App Developer @ Jotto S.r.l.</div>
-                        <div class="timeline-meta" data-i18n="resume.exp3.date">Settembre 2021 — Febbraio 2022</div>
-                        <p class="timeline-desc" data-i18n="resume.exp3.text">Esperienza nel campo CrossPlatform in
-                          Flutter...</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h2
-                    style="font-size: 16px; margin-bottom: 15px; border-left: 3px solid var(--accent-1); padding-left: 8px;"
-                    data-i18n="resume.education">Formazione</h2>
-                  <div class="experience-timeline">
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.edu1.title">Corso Full Stack Developer</div>
-                        <div class="timeline-meta" data-i18n="resume.edu1.date">2018 — 2022</div>
-                        <p class="timeline-desc" data-i18n="resume.edu1.text">Formazione completa...</p>
-                      </div>
-                    </div>
-
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.edu2.title">I.T.C.S.G. Masullo - Theti</div>
-                        <div class="timeline-meta" data-i18n="resume.edu2.date">2015 — 2021</div>
-                        <p class="timeline-desc" data-i18n="resume.edu2.text">Perito Informatico...</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <h2
-                    style="font-size: 16px; margin-top: 25px; margin-bottom: 15px; border-left: 3px solid var(--accent-1); padding-left: 8px;"
-                    data-i18n="resume.certs">Certificazioni</h2>
-                  <div class="experience-timeline">
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.cert1.title">Meta - Coding Interview Preparation
-                        </div>
-                        <div class="timeline-meta" data-i18n="resume.cert1.date">Maggio 2025</div>
-                        <p class="timeline-desc" data-i18n="resume.cert1.text">Certificazione Meta...</p>
-                      </div>
-                    </div>
-
-                    <div class="timeline-node">
-                      <div class="timeline-card">
-                        <div class="timeline-title" data-i18n="resume.cert2.title">Meta - React Fundamentals &amp;
-                          JavaScript Programming</div>
-                        <div class="timeline-meta" data-i18n="resume.cert2.date">Aprile - Maggio 2025</div>
-                        <p class="timeline-desc" data-i18n="resume.cert2.text">Certificazioni Meta...</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projects Showcase Rendered Preview -->
-            <div class="ui-overlay-view" id="overlay-Projects_Showcase.js">
-              <div class="view-section-header">
-                <h1 class="view-section-title" data-i18n="portfolio.title">Progetti</h1>
-                <p class="view-section-desc">Selezione dei lavori principali sviluppati ed integrati in vari ambiti
-                  commerciali.</p>
-              </div>
-
-              <div class="projects-filter-bar">
-                <button class="filter-chip active" data-filter="all" data-i18n="portfolio.filterAll">Tutti</button>
-                <button class="filter-chip" data-filter="app mobile">App Mobile</button>
-                <button class="filter-chip" data-filter="web development">Web Development</button>
-                <button class="filter-chip" data-filter="backend">Backend</button>
-              </div>
-
-              <div class="projects-grid">
-                <div class="project-card-view" data-cat="app mobile">
-                  <div class="project-image-box">
-                    <img src="./assets/images/project-1.jpg" alt="Smart Agent" />
-                  </div>
-                  <div class="project-card-details">
-                    <div class="project-card-title">ERP Arca Evolution (Promedya)</div>
-                    <p class="project-card-desc">Client mobile per agenti di vendita collegato ad Arca Evolution, per la
-                      gestione offline di carrello e sincronizzazione automatica dei preventivi.</p>
-                    <div class="project-tag-wrap">
-                      <span class="project-tag">Flutter</span>
-                      <span class="project-tag">Dart</span>
-                      <span class="project-tag">SQLite</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card-view" data-cat="web development">
-                  <div class="project-image-box">
-                    <img src="./assets/images/project-2.png" alt="Dhonko Travel" />
-                  </div>
-                  <div class="project-card-details">
-                    <div class="project-card-title">Dhonko Social Platform</div>
-                    <p class="project-card-desc">Social network per pianificare viaggi, invitare amici ad itinerari
-                      turistici ed interagire in real-time tra partecipanti.</p>
-                    <div class="project-tag-wrap">
-                      <span class="project-tag">React</span>
-                      <span class="project-tag">Node.js</span>
-                      <span class="project-tag">MongoDB</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card-view" data-cat="backend">
-                  <div class="project-image-box">
-                    <img src="./assets/images/project-3.jpg" alt="Smart Server" />
-                  </div>
-                  <div class="project-card-details">
-                    <div class="project-card-title">Smart Server (Spring Boot)</div>
-                    <p class="project-card-desc">Server enterprise sicuro e a bassa latenza che sincronizza dati SQL
-                      Server aziendali a dispositivi client mobili esterni.</p>
-                    <div class="project-tag-wrap">
-                      <span class="project-tag">Java</span>
-                      <span class="project-tag">Spring Boot</span>
-                      <span class="project-tag">PostgreSQL</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card-view" data-cat="web development">
-                  <div class="project-image-box">
-                    <img src="./assets/images/project-4.png" alt="SPID Integration" />
-                  </div>
-                  <div class="project-card-details">
-                    <div class="project-card-title">AEM + Spring MVC (Accenture)</div>
-                    <p class="project-card-desc">Sviluppo di filtri di sicurezza e layer di mascheramento URI per
-                      l'integrazione di login SPID/CIE su italia.it.</p>
-                    <div class="project-tag-wrap">
-                      <span class="project-tag">Java</span>
-                      <span class="project-tag">Spring MVC</span>
-                      <span class="project-tag">Adobe AEM</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card-view" data-cat="app mobile">
-                  <div class="project-image-box">
-                    <img src="./assets/images/project-5.png" alt="Jotto App" />
-                  </div>
-                  <div class="project-card-details">
-                    <div class="project-card-title">App Aziendale Domotica Jotto+</div>
-                    <p class="project-card-desc">Interfaccia mobile Bluetooth BLE e WiFi per la configurazione locale di
-                      riscaldamento ed elettrodomestici IoT.</p>
-                    <div class="project-tag-wrap">
-                      <span class="project-tag">Flutter</span>
-                      <span class="project-tag">Dart</span>
-                      <span class="project-tag">WiFi BLE</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-card-view" data-cat="backend">
-                  <div class="project-image-box">
-                    <img src="./assets/images/project-6.png" alt="Firebase integration" />
-                  </div>
-                  <div class="project-card-details">
-                    <div class="project-card-title">Firebase Cloud Integration</div>
-                    <p class="project-card-desc">Configurazione database real-time e invio di notifiche push
-                      push-notification massivo tramite Firebase Cloud Messaging.</p>
-                    <div class="project-tag-wrap">
-                      <span class="project-tag">NodeJS</span>
-                      <span class="project-tag">FCM</span>
-                      <span class="project-tag">RealtimeDB</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- GitHub Live Repos Showcase Rendered Preview -->
-            <div class="ui-overlay-view" id="overlay-GitHub_Repos.json">
-              <div class="view-section-header">
-                <h1 class="view-section-title">GitHub Repositories</h1>
-                <p class="view-section-desc" data-i18n-html="github.desc">Progetti live estratti direttamente dal mio
-                  profilo GitHub (@RonaldoCMS).</p>
-              </div>
-              <div class="projects-grid" id="github-repos-grid">
-                <!-- Dynamically populated via fetch in script.js -->
-              </div>
-            </div>
-
-            <!-- Contact Rendered Preview -->
-            <div class="ui-overlay-view" id="overlay-Contact.css">
-              <div class="view-section-header">
-                <h1 class="view-section-title" data-i18n="contact.title">Contatti</h1>
-                <p class="view-section-desc">Mettiti in contatto con me o seguimi sui canali social.</p>
-              </div>
-
-              <div class="contact-screen-layout">
-                <div class="contact-details-box">
-                  <div class="contact-detail-row">
-                    <div class="contact-detail-icon"><ion-icon name="mail-outline"></ion-icon></div>
-                    <div>
-                      <div class="contact-detail-label" data-i18n="sidebar.email">Email</div>
-                      <a href="mailto:fabio.danubbio@gmail.com" class="contact-detail-val">fabio.danubbio@gmail.com</a>
-                    </div>
-                  </div>
-
-                  <div class="contact-detail-row">
-                    <div class="contact-detail-icon"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-                    <div>
-                      <div class="contact-detail-label" data-i18n="sidebar.phone">Telefono</div>
-                      <a href="tel:+393401949331" class="contact-detail-val">+39 340 194 9331</a>
-                    </div>
-                  </div>
-
-                  <div class="contact-detail-row">
-                    <div class="contact-detail-icon"><ion-icon name="calendar-outline"></ion-icon></div>
-                    <div>
-                      <div class="contact-detail-label" data-i18n="sidebar.birthday">Compleanno</div>
-                      <div class="contact-detail-val" data-i18n="sidebar.birthdayDate">23 Aprile, 2000</div>
-                    </div>
-                  </div>
-
-                  <div class="contact-detail-row">
-                    <div class="contact-detail-icon"><ion-icon name="location-outline"></ion-icon></div>
-                    <div>
-                      <div class="contact-detail-label" data-i18n="sidebar.location">Località</div>
-                      <div class="contact-detail-val">Nola, Napoli, Italia</div>
-                    </div>
-                  </div>
-
-                  <!-- Map Frame -->
-                  <div
-                    style="border-radius: 8px; overflow:hidden; border:1px solid var(--border-color); height:140px; margin-top: 20px;">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548.4244183659315!2d8.647773315691!3d49.87268892572525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd708d2ad8ffa5%3A0xa8f1c7a71e3b2b4a!2sDarmstadt%2C%20Germania!5e0!3m2!1sit!2sit!4v1647608789441!5m2!1sit!2sit"
-                      style="width:100%; height:100%; border:none; filter: invert(90%) hue-rotate(180deg);"
-                      loading="lazy"></iframe>
-                  </div>
-                </div>
-
-                <div class="contact-form-box">
-                  <h3 style="font-size: 15px; font-weight:600; margin-bottom: 15px;" data-i18n="contact.formTitle">
-                    Modulo di Contatto</h3>
-                  <form id="contact-form">
-                    <div class="contact-form-group">
-                      <label class="contact-form-label" data-i18n="contact.namePlaceholder">Nome completo</label>
-                      <input type="text" id="contact-name" class="contact-form-input" required />
-                    </div>
-                    <div class="contact-form-group">
-                      <label class="contact-form-label" data-i18n="contact.emailPlaceholder">Indirizzo email</label>
-                      <input type="email" id="contact-email" class="contact-form-input" required />
-                    </div>
-                    <div class="contact-form-group">
-                      <label class="contact-form-label" data-i18n="contact.messagePlaceholder">Il tuo messaggio</label>
-                      <textarea id="contact-message" class="contact-form-input contact-form-textarea"
-                        required></textarea>
-                    </div>
-                    <button type="submit" class="editor-btn" style="width:100%; display:flex; justify-content:center;">
-                      <ion-icon name="paper-plane-outline" style="margin-right: 6px;"></ion-icon>
-                      <span data-i18n="contact.sendBtn">Invia Messaggio</span>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-
+<pre class="code-card__body"><code><span class="tk-kw">const</span> <span class="tk-var">fabio</span> = {
+  <span class="tk-prop">role</span>: <span class="tk-str">"Full Stack Developer"</span>,
+  <span class="tk-prop">base</span>: <span class="tk-str">"Nola, IT"</span>,
+  <span class="tk-prop">stack</span>: [<span class="tk-str">"Flutter"</span>, <span class="tk-str">"React"</span>, <span class="tk-str">"Node"</span>, <span class="tk-str">"Java"</span>],
+  <span class="tk-prop">motto</span>: <span class="tk-str" data-i18n="hero.codeMotto">"lento per essere veloci"</span>,
+  <span class="tk-prop">openToWork</span>: <span class="tk-bool">true</span>,
+};</code></pre>
+          </div>
         </div>
+      </div>
     </section>
 
-  </div>
-
-  <!-- ==========================================
-         4. RESIZABLE TERMINAL CONSOLE PANEL
-         ========================================== -->
-  <footer class="terminal-panel" id="terminal-panel">
-    <div class="terminal-header">
-      <div class="terminal-tabs">
-        <button class="terminal-tab-btn active" data-terminal-tab="terminal">
-          <span data-i18n="ui.terminalTitle">Terminale</span>
-        </button>
-        <button class="terminal-tab-btn" data-terminal-tab="output">
-          <span data-i18n="ui.outputTitle">Output</span>
-        </button>
-        <button class="terminal-tab-btn" data-terminal-tab="problems">
-          <span data-i18n="ui.problemsTitle">Problemi</span> (0)
-        </button>
-      </div>
-      <div class="terminal-controls">
-        <button class="terminal-control-btn" id="btn-clear-terminal" title="Clear Console"><ion-icon
-            name="trash-outline"></ion-icon></button>
-        <button class="terminal-control-btn" id="btn-toggle-terminal" title="Toggle Terminal Height"><ion-icon
-            name="chevron-up-outline" id="icon-toggle-term"></ion-icon></button>
+    <!-- Striscia tecnologie -->
+    <div class="tech-strip">
+      <div class="container tech-strip__inner">
+        <span class="tech-strip__label" data-i18n="hero.techLabel">ogni giorno lavoro con →</span>
+        <ul aria-label="Tecnologie principali">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>React</li>
+          <li>Next.js</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Java</li>
+          <li>Spring Boot</li>
+          <li>PostgreSQL</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>Docker</li>
+          <li>Firebase</li>
+          <li>Git</li>
+        </ul>
       </div>
     </div>
 
-    <div class="terminal-body" id="terminal-body">
-      <!-- Terminal Tab View -->
-      <div class="terminal-tab-view active" id="view-terminal-tab">
-        <div class="terminal-output-log" id="terminal-log">
-          <!-- Startup welcome is loaded here -->
-        </div>
-        <div class="terminal-input-line">
-          <span class="terminal-prompt">guest@ronaldocms:~$</span>
-          <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false" />
+    <!-- ==========================================================
+         01 · CHI SONO
+         ========================================================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">01 · chi sono</p>
+          <h2 class="section__title" id="about-title" data-i18n="about.title">Tradurre problemi reali in software chiaro e manutenibile.</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text reveal">
+            <p data-i18n-html="about.p1">Sono <strong>Fabio Danubbio</strong>, Full Stack Developer con base a Nola, in provincia di Napoli. Lavoro su tutta l'architettura di un'applicazione: dal modello dei dati alla sicurezza, dalle API fino all'interfaccia che le persone usano davvero.</p>
+            <p data-i18n="about.p2">Negli ultimi anni ho costruito app mobile per agenti di vendita collegate a gestionali ERP, un layer di sicurezza per il portale italia.it e app di domotica che dialogano con l'hardware via WiFi e Bluetooth. Mi piacciono i progetti in cui la tecnologia deve semplificare il lavoro di qualcuno.</p>
+            <p data-i18n="about.p3">Fuori dal codice: palestra, chitarra (sto imparando), cinema, teatro e almeno un viaggio al mese verso un posto nuovo.</p>
+
+            <ul class="facts">
+              <li><b>2021 → <span data-i18n="about.factNow">oggi</span></b><span data-i18n="about.fact1">sviluppo professionale</span></li>
+              <li><b>Nola (NA)</b><span data-i18n="about.fact2">Italia, anche da remoto</span></li>
+              <li><b>IT · EN</b><span data-i18n="about.fact3">lingue di lavoro</span></li>
+            </ul>
+
+            <figure class="quote">
+              <p class="quote__label" data-i18n="about.quoteLabel">// la mia filosofia</p>
+              <blockquote style="margin:0">
+                <p data-i18n="about.quote">"Lento per essere veloci nei casi di urgenza."</p>
+              </blockquote>
+              <small data-i18n="about.quoteDesc">Progettare bene all'inizio significa meno debito tecnico dopo e un sistema che può crescere insieme all'azienda.</small>
+            </figure>
+          </div>
+
+          <div class="services">
+            <article class="card service reveal" style="--i:0">
+              <div class="icon-box"><svg class="icon"><use href="#i-smartphone" /></svg></div>
+              <h3 data-i18n="about.s1.title">Frontend &amp; Mobile</h3>
+              <p data-i18n="about.s1.text">App cross-platform in Flutter e interfacce web con React e Next.js, con gestione dello stato e design pattern solidi.</p>
+            </article>
+            <article class="card service reveal" style="--i:1">
+              <div class="icon-box"><svg class="icon"><use href="#i-server" /></svg></div>
+              <h3 data-i18n="about.s2.title">Backend &amp; API</h3>
+              <p data-i18n="about.s2.text">API scalabili con Node.js ed Express e soluzioni enterprise con Java Spring Boot: architetture robuste e manutenibili.</p>
+            </article>
+            <article class="card service reveal" style="--i:2">
+              <div class="icon-box"><svg class="icon"><use href="#i-shield" /></svg></div>
+              <h3 data-i18n="about.s3.title">Database &amp; Sicurezza</h3>
+              <p data-i18n="about.s3.text">MongoDB, PostgreSQL, MySQL e MSSQL con query ottimizzate, autenticazione JWT/OAuth2 e comunicazione in tempo reale via WebSocket.</p>
+            </article>
+            <article class="card service reveal" style="--i:3">
+              <div class="icon-box"><svg class="icon"><use href="#i-cloud" /></svg></div>
+              <h3 data-i18n="about.s4.title">Cloud &amp; DevOps</h3>
+              <p data-i18n="about.s4.text">Firebase, Docker e pipeline CI/CD, con workflow Git e metodologie Agile per deploy automatizzati e monitorati.</p>
+            </article>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Output Tab View (For Sandbox compilation outputs) -->
-      <div class="terminal-tab-view" id="view-output-tab" style="display: none;">
-        <div class="terminal-output-log" id="sandbox-output" style="color: #a6e22e; font-family: var(--ff-mono);">
-          [System Log] Console output is idle. Run Sandbox.js to capture runtime logs here.
+    <!-- ==========================================================
+         02 · COMPETENZE
+         ========================================================== -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="skills.eyebrow">02 · competenze</p>
+          <h2 class="section__title" id="skills-title" data-i18n="skills.title">Gli strumenti che uso davvero.</h2>
+          <p class="section__intro" data-i18n="skills.intro">Le tecnologie con cui lavoro in produzione, raggruppate per area. Quelle evidenziate sono il mio nucleo quotidiano.</p>
+        </header>
+
+        <div class="skills">
+          <article class="card skill reveal" style="--i:0">
+            <h3><svg class="icon"><use href="#i-smartphone" /></svg> <span data-i18n="skills.c1">Mobile</span></h3>
+            <p class="skill__path">~/mobile</p>
+            <ul class="chips">
+              <li class="chip is-core">Flutter</li>
+              <li class="chip is-core">Dart</li>
+              <li class="chip">Android SDK</li>
+              <li class="chip" data-i18n="skills.ios">iOS (basi)</li>
+              <li class="chip">Bluetooth BLE</li>
+            </ul>
+          </article>
+          <article class="card skill reveal" style="--i:1">
+            <h3><svg class="icon"><use href="#i-layout" /></svg> <span data-i18n="skills.c2">Frontend</span></h3>
+            <p class="skill__path">~/frontend</p>
+            <ul class="chips">
+              <li class="chip is-core">React</li>
+              <li class="chip">Next.js</li>
+              <li class="chip is-core">JavaScript (ES6+)</li>
+              <li class="chip">HTML5 &amp; CSS3</li>
+              <li class="chip">Redux / BLoC</li>
+            </ul>
+          </article>
+          <article class="card skill reveal" style="--i:2">
+            <h3><svg class="icon"><use href="#i-server" /></svg> <span data-i18n="skills.c3">Backend</span></h3>
+            <p class="skill__path">~/backend</p>
+            <ul class="chips">
+              <li class="chip is-core">Node.js</li>
+              <li class="chip">Express</li>
+              <li class="chip is-core">Java</li>
+              <li class="chip is-core">Spring Boot</li>
+              <li class="chip">REST API</li>
+              <li class="chip">WebSocket</li>
+              <li class="chip">JWT / OAuth2</li>
+            </ul>
+          </article>
+          <article class="card skill reveal" style="--i:3">
+            <h3><svg class="icon"><use href="#i-database" /></svg> <span data-i18n="skills.c4">Database</span></h3>
+            <p class="skill__path">~/database</p>
+            <ul class="chips">
+              <li class="chip is-core">PostgreSQL</li>
+              <li class="chip is-core">MongoDB</li>
+              <li class="chip">MySQL</li>
+              <li class="chip">MSSQL</li>
+              <li class="chip">SQLite</li>
+            </ul>
+          </article>
+          <article class="card skill reveal" style="--i:4">
+            <h3><svg class="icon"><use href="#i-cloud" /></svg> <span data-i18n="skills.c5">Cloud &amp; DevOps</span></h3>
+            <p class="skill__path">~/devops</p>
+            <ul class="chips">
+              <li class="chip is-core">Docker</li>
+              <li class="chip">Firebase</li>
+              <li class="chip">CI/CD (GitHub Actions)</li>
+              <li class="chip">Git &amp; GitFlow</li>
+              <li class="chip">Agile / Scrum</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="skills__legend reveal">
+          <span class="chip is-core" data-i18n="skills.legendChip">esempio</span>
+          <span data-i18n="skills.legend">= uso quotidiano in produzione</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         03 · PERCORSO
+         ========================================================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="exp.eyebrow">03 · percorso</p>
+          <h2 class="section__title" id="experience-title" data-i18n="exp.title">Dove ho lavorato e cosa ho costruito.</h2>
+        </header>
+
+        <div class="journey">
+          <div class="reveal">
+            <h3 class="sub"><svg class="icon"><use href="#i-briefcase" /></svg> <span data-i18n="exp.jobs">Esperienza</span></h3>
+            <ol class="timeline">
+              <li class="tl is-current">
+                <p class="tl__period"><span data-i18n="exp.j1.period">ott 2022 — oggi</span> <span class="tag-now" data-i18n="exp.now">in corso</span></p>
+                <h4>Full Stack Developer</h4>
+                <p class="tl__company">Promedya S.r.l. · Partner WKI</p>
+                <p data-i18n="exp.j1.text">Sviluppo ed evoluzione di soluzioni collegate al gestionale ERP Arca Evolution: integrazioni JavaScript, moduli desktop e app mobile cross-platform in Flutter per agenti di vendita e reparti di produzione.</p>
+              </li>
+              <li class="tl">
+                <p class="tl__period"><span data-i18n="exp.j2.period">mag 2022 — ott 2022</span></p>
+                <h4>Full Stack Developer</h4>
+                <p class="tl__company">Accenture Italia</p>
+                <p data-i18n="exp.j2.text">Autenticazione e autorizzazione enterprise sul portale italia.it con Adobe Experience Manager e microservizi Java Spring MVC: filtri di sicurezza e mascheramento degli URI verso il backend.</p>
+              </li>
+              <li class="tl">
+                <p class="tl__period"><span data-i18n="exp.j3.period">set 2021 — feb 2022</span></p>
+                <h4>App Developer</h4>
+                <p class="tl__company">Jotto S.r.l.</p>
+                <p data-i18n="exp.j3.text">App mobile aziendali in Flutter integrate con hardware di domotica tramite WiFi e Bluetooth BLE, pubblicate su Google Play e App Store (Jotto+).</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="reveal" style="--i:1">
+            <h3 class="sub"><svg class="icon"><use href="#i-book" /></svg> <span data-i18n="exp.edu">Formazione</span></h3>
+            <ul class="edu">
+              <li>
+                <p class="edu__period">2022</p>
+                <h4 data-i18n="exp.e1.title">Corso specialistico Java Enterprise &amp; Clean Code</h4>
+                <p><span data-i18n="exp.e1.school">Matrix Consulting / Oracle Academy</span> · <span data-i18n="exp.e1.text">pattern architetturali, OOP avanzata e microservizi.</span></p>
+              </li>
+              <li>
+                <p class="edu__period">2015 — 2021</p>
+                <h4 data-i18n="exp.e2.title">Diploma di Perito Informatico · 96/100</h4>
+                <p>I.T.C.S.G. Masullo – Theti, Nola</p>
+              </li>
+            </ul>
+
+            <h3 class="sub"><svg class="icon"><use href="#i-award" /></svg> <span data-i18n="exp.certs">Certificazioni e programmi</span></h3>
+            <ul class="certs">
+              <li><svg class="icon"><use href="#i-award" /></svg> Meta · Coding Interview Preparation (2025)</li>
+              <li><svg class="icon"><use href="#i-award" /></svg> Meta · React &amp; JavaScript Programming (2025)</li>
+              <li><svg class="icon"><use href="#i-award" /></svg> Google Developer Program</li>
+              <li><svg class="icon"><use href="#i-award" /></svg> Apple Developer Program</li>
+              <li><svg class="icon"><use href="#i-award" /></svg> Oracle Java &amp; Vaadin</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Problems Tab View -->
-      <div class="terminal-tab-view" id="view-problems-tab" style="display: none; color: var(--text-secondary);">
-        No problems have been detected in the workspace. Build successful!
+    <!-- ==========================================================
+         04 · PROGETTI
+         ========================================================== -->
+    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="projects.eyebrow">04 · progetti</p>
+          <h2 class="section__title" id="projects-title" data-i18n="projects.title">Una selezione di lavori.</h2>
+          <p class="section__intro" data-i18n="projects.intro">Progetti realizzati per aziende e clienti, tra app mobile, piattaforme web e sistemi backend.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtra progetti" data-i18n-attr="aria-label:projects.filterLabel">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true" data-i18n="projects.fAll">Tutti</button>
+          <button type="button" class="filter" data-filter="mobile" aria-pressed="false" data-i18n="projects.fMobile">App mobile</button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false" data-i18n="projects.fWeb">Web</button>
+          <button type="button" class="filter" data-filter="backend" aria-pressed="false" data-i18n="projects.fBackend">Backend</button>
+        </div>
+
+        <div class="projects">
+          <article class="card project reveal" data-cat="mobile" style="--i:0">
+            <div class="project__cover">
+              <svg class="icon" aria-hidden="true"><use href="#i-smartphone" /></svg>
+              <span class="project__cat"><svg class="icon"><use href="#i-smartphone" /></svg> <span data-i18n="projects.catMobile">app mobile</span></span>
+            </div>
+            <div class="project__body">
+              <p class="project__context" data-i18n="projects.p1.ctx">Promedya · 2022 — oggi</p>
+              <h3>Smart Agent · ERP Arca Evolution</h3>
+              <p data-i18n="projects.p1.text">Client mobile per agenti di vendita collegato al gestionale Arca Evolution: clienti, listini e documenti anche offline, carrello e sincronizzazione automatica dei preventivi verso il gestionale.</p>
+              <ul class="tags"><li>Flutter</li><li>Dart</li><li>SQLite</li><li>Node.js</li></ul>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="backend" style="--i:1">
+            <div class="project__cover">
+              <svg class="icon" aria-hidden="true"><use href="#i-server" /></svg>
+              <span class="project__cat"><svg class="icon"><use href="#i-server" /></svg> <span data-i18n="projects.catBackend">backend</span></span>
+            </div>
+            <div class="project__body">
+              <p class="project__context" data-i18n="projects.p2.ctx">Promedya · sistema enterprise</p>
+              <h3>Smart Server API</h3>
+              <p data-i18n="projects.p2.text">Backend enterprise sicuro e a bassa latenza che espone i dati del gestionale ai client mobili fuori dalla rete aziendale, con autenticazione JWT e deploy in container.</p>
+              <ul class="tags"><li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>Docker</li><li>JWT</li></ul>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="web" style="--i:2">
+            <div class="project__cover">
+              <svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg>
+              <span class="project__cat"><svg class="icon"><use href="#i-globe" /></svg> web</span>
+            </div>
+            <div class="project__body">
+              <p class="project__context" data-i18n="projects.p3.ctx">Progetto personale · in sviluppo</p>
+              <h3>Dhonko</h3>
+              <p data-i18n="projects.p3.text">Social network per pianificare viaggi: crei l'itinerario, inviti gli amici e interagisci in tempo reale con i partecipanti.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>WebSocket</li></ul>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="backend" style="--i:3">
+            <div class="project__cover">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg>
+              <span class="project__cat"><svg class="icon"><use href="#i-server" /></svg> <span data-i18n="projects.catBackend">backend</span></span>
+            </div>
+            <div class="project__body">
+              <p class="project__context" data-i18n="projects.p4.ctx">Accenture · italia.it</p>
+              <h3 data-i18n="projects.p4.title">Layer di sicurezza SPID / CIE</h3>
+              <p data-i18n="projects.p4.text">Filtri di sicurezza e mascheramento degli URI per l'integrazione del login SPID/CIE sul portale istituzionale, su Adobe Experience Manager e Spring MVC.</p>
+              <ul class="tags"><li>Java</li><li>Spring MVC</li><li>Adobe AEM</li><li>SPID / CIE</li></ul>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="mobile" style="--i:4">
+            <div class="project__cover">
+              <svg class="icon" aria-hidden="true"><use href="#i-smartphone" /></svg>
+              <span class="project__cat"><svg class="icon"><use href="#i-smartphone" /></svg> <span data-i18n="projects.catMobile">app mobile</span></span>
+            </div>
+            <div class="project__body">
+              <p class="project__context" data-i18n="projects.p5.ctx">Jotto S.r.l. · Google Play &amp; App Store</p>
+              <h3>Jotto+</h3>
+              <p data-i18n="projects.p5.text">App di domotica per configurare e controllare gateway di riscaldamento ed elettrodomestici, in locale via Bluetooth BLE e WiFi.</p>
+              <ul class="tags"><li>Flutter</li><li>Dart</li><li>Bluetooth BLE</li><li>WiFi</li></ul>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-cat="backend" style="--i:5">
+            <div class="project__cover">
+              <svg class="icon" aria-hidden="true"><use href="#i-cloud" /></svg>
+              <span class="project__cat"><svg class="icon"><use href="#i-server" /></svg> <span data-i18n="projects.catBackend">backend</span></span>
+            </div>
+            <div class="project__body">
+              <p class="project__context" data-i18n="projects.p6.ctx">Integrazione cloud · notifiche push</p>
+              <h3>Firebase Cloud Integration</h3>
+              <p data-i18n="projects.p6.text">Database in tempo reale e invio massivo di notifiche push con Firebase Cloud Messaging, integrato con un backend Node.js.</p>
+              <ul class="tags"><li>Node.js</li><li>Firebase</li><li>FCM</li><li>Realtime DB</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         05 · ARTICOLI
+         ========================================================== -->
+    <section class="section" id="articles" aria-labelledby="articles-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="articles.eyebrow">05 · articoli</p>
+          <h2 class="section__title" id="articles-title" data-i18n="articles.title">Scrivo di software, ma soprattutto di chi lo scrive.</h2>
+          <p class="section__intro" data-i18n="articles.intro">Riflessioni pubblicate su LinkedIn su carriera, mentalità e buone pratiche nello sviluppo.</p>
+        </header>
+
+        <div class="articles">
+          <a class="card article reveal" style="--i:0" href="https://www.linkedin.com/pulse/la-sindrome-da-shiny-object-nello-sviluppo-software-quando-danubbio-tw81f/" target="_blank" rel="noopener">
+            <p class="article__meta"><span data-i18n="articles.a1.date">25 nov 2024</span><span>LinkedIn</span></p>
+            <h3 data-i18n="articles.a1.title">La sindrome da "Shiny Object" nello sviluppo software</h3>
+            <p data-i18n="articles.a1.text">Quando la rincorsa continua all'ultima libreria o framework frammenta le competenze e rallenta i progetti reali in produzione.</p>
+            <span class="article__more"><span data-i18n="articles.read">Leggi su LinkedIn</span> <svg class="icon"><use href="#i-arrow" /></svg></span>
+          </a>
+          <a class="card article reveal" style="--i:1" href="https://www.linkedin.com/pulse/robert-cecil-martin-luomo-dietro-il-clean-code-fabio-danubbio-azylf/" target="_blank" rel="noopener">
+            <p class="article__meta"><span data-i18n="articles.a2.date">15 ott 2024</span><span>LinkedIn</span></p>
+            <h3 data-i18n="articles.a2.title">Robert Cecil Martin: l'uomo dietro il Clean Code</h3>
+            <p data-i18n="articles.a2.text">Scrivere codice ordinato, leggibile e manutenibile: le buone pratiche di sviluppo raccontate attraverso chi le ha rese celebri.</p>
+            <span class="article__more"><span data-i18n="articles.read">Leggi su LinkedIn</span> <svg class="icon"><use href="#i-arrow" /></svg></span>
+          </a>
+          <a class="card article reveal" style="--i:2" href="https://www.linkedin.com/pulse/la-comparison-trap-nello-sviluppo-software-perch%C3%A9-agli-fabio-danubbio-fd7pf/" target="_blank" rel="noopener">
+            <p class="article__meta"><span data-i18n="articles.a3.date">20 set 2024</span><span>LinkedIn</span></p>
+            <h3 data-i18n="articles.a3.title">La "Comparison Trap" nello sviluppo software</h3>
+            <p data-i18n="articles.a3.text">Le ripercussioni psicologiche e di carriera del paragonarsi costantemente agli altri su GitHub o LinkedIn.</p>
+            <span class="article__more"><span data-i18n="articles.read">Leggi su LinkedIn</span> <svg class="icon"><use href="#i-arrow" /></svg></span>
+          </a>
+          <a class="card article reveal" style="--i:3" href="https://www.linkedin.com/pulse/la-sindrome-dellimpostore-nel-mondo-della-quando-il-talento-danubbio-lwtsf/" target="_blank" rel="noopener">
+            <p class="article__meta"><span data-i18n="articles.a4.date">30 ago 2024</span><span>LinkedIn</span></p>
+            <h3 data-i18n="articles.a4.title">La sindrome dell'impostore nel mondo della programmazione</h3>
+            <p data-i18n="articles.a4.text">Perché chi programma si sente spesso inadeguato e come superare questa barriera psicologica.</p>
+            <span class="article__more"><span data-i18n="articles.read">Leggi su LinkedIn</span> <svg class="icon"><use href="#i-arrow" /></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         06 · GITHUB
+         ========================================================== -->
+    <section class="section section--alt" id="github" aria-labelledby="github-title">
+      <div class="container">
+        <header class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow" data-i18n="github.eyebrow">06 · open source</p>
+            <h2 class="section__title" id="github-title" data-i18n="github.title">Dal mio GitHub.</h2>
+            <p class="section__intro" data-i18n="github.intro">Gli ultimi repository aggiornati sul mio profilo, caricati in tempo reale.</p>
+          </div>
+          <a class="section__link" href="https://github.com/RonaldoCMS" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-github" /></svg> <span data-i18n="github.profile">Vai al profilo</span>
+          </a>
+        </header>
+
+        <div class="repos reveal" id="repos" aria-live="polite">
+          <div class="repos__msg">
+            <a href="https://github.com/RonaldoCMS" target="_blank" rel="noopener">github.com/RonaldoCMS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         07 · CONTATTI
+         ========================================================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">07 · contatti</p>
+          <h2 class="section__title" id="contact-title" data-i18n="contact.title">Parliamone.</h2>
+        </header>
+
+        <div class="contact">
+          <div class="reveal">
+            <p class="contact__intro" data-i18n="contact.intro">Hai un'idea, un progetto o una posizione aperta? Scrivimi una mail o usa il modulo qui accanto.</p>
+            <ul class="contact-list">
+              <li>
+                <div class="icon-box"><svg class="icon"><use href="#i-mail" /></svg></div>
+                <div><small>Email</small><a href="mailto:fabio.danubbio@gmail.com">fabio.danubbio@gmail.com</a></div>
+              </li>
+              <li>
+                <div class="icon-box"><svg class="icon"><use href="#i-phone" /></svg></div>
+                <div><small data-i18n="contact.phone">Telefono</small><a href="tel:+393401949331">+39 340 194 9331</a></div>
+              </li>
+              <li>
+                <div class="icon-box"><svg class="icon"><use href="#i-pin" /></svg></div>
+                <div><small data-i18n="contact.where">Dove sono</small><b data-i18n="contact.location">Nola (Napoli), Italia</b></div>
+              </li>
+            </ul>
+
+            <div class="contact__social">
+              <h3 class="sub" data-i18n="contact.social">Social</h3>
+              <ul class="social" aria-label="Profili social">
+                <li><a href="https://github.com/RonaldoCMS" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github" /></svg></a></li>
+                <li><a href="https://www.linkedin.com/in/fabio-danubbio-52149219a/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a></li>
+                <li><a href="https://www.instagram.com/is_not_a_developer/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram" /></svg></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!--
+            Modulo di contatto.
+            - Senza data-endpoint: apre il client di posta con il messaggio precompilato (mailto).
+            - Con data-endpoint="https://formspree.io/f/XXXX" (o servizio simile): invia via fetch in JSON.
+          -->
+          <form class="card form reveal" id="contact-form" data-endpoint="" novalidate style="--i:1">
+            <h3 data-i18n="contact.formTitle">Inviami un messaggio</h3>
+            <div class="field">
+              <label for="f-name" data-i18n="contact.name">Nome</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="f-message" data-i18n="contact.message">Messaggio</label>
+              <textarea id="f-message" name="message" required></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+            <div class="form__foot">
+              <button type="submit" class="btn btn--primary">
+                <span data-i18n="contact.send">Invia</span>
+                <svg class="icon"><use href="#i-send" /></svg>
+              </button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </div>
+            <p class="form__note" data-i18n="contact.note">// si aprirà il tuo client di posta con il messaggio già pronto</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#top">
+            <img src="./assets/images/logo.svg" alt="" width="30" height="30" />
+            <span>Fabio Danubbio</span>
+          </a>
+          <p class="footer__tag" data-i18n="footer.tag">Full Stack Developer · Nola, Italia</p>
+        </div>
+        <ul class="footer__nav">
+          <li><a href="#about" data-i18n="nav.about">Chi sono</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Competenze</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Percorso</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Progetti</a></li>
+          <li><a href="#articles" data-i18n="nav.articles">Articoli</a></li>
+          <li><a href="#github">GitHub</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Fabio Danubbio · <span data-i18n="footer.rights">tutti i diritti riservati</span></p>
+        <p class="footer__built" data-i18n="footer.built">// fatto a mano con HTML, CSS e JavaScript</p>
+        <div class="footer__actions">
+          <button type="button" class="term-btn" data-terminal-open>
+            <svg class="icon"><use href="#i-terminal" /></svg>
+            <span data-i18n="footer.terminal">terminale</span>
+            <kbd>`</kbd>
+          </button>
+          <a class="to-top" href="#top"><svg class="icon"><use href="#i-arrow-up" /></svg> <span data-i18n="footer.top">Torna su</span></a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================
-         5. TESTIMONIALS SLIDE MODAL
-         ========================================== -->
-  <div class="modal-container" id="testimonials-modal-container">
-    <div class="modal-overlay" id="modal-overlay" style="position: absolute; inset: 0;"></div>
-    <section class="testimonials-modal">
-      <button class="modal-close-btn" id="modal-close-btn">
-        <ion-icon name="close-outline"></ion-icon>
+  <!-- ==========================================================
+       TERMINALE (easter egg)
+       ========================================================== -->
+  <div class="terminal" id="terminal" hidden role="dialog" aria-label="Terminale" data-i18n-attr="aria-label:footer.terminal">
+    <div class="terminal__bar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span>guest@ronaldocms: ~</span>
+      <button type="button" class="icon-btn" id="terminal-close" aria-label="Chiudi" data-i18n-attr="aria-label:ui.close">
+        <svg class="icon"><use href="#i-close" /></svg>
       </button>
-
-      <div class="modal-img-wrapper">
-        <figure class="modal-avatar-box">
-          <img src="./assets/images/avatar-1.png" alt="Marco Rossi" id="modal-img" />
-        </figure>
-        <div>
-          <h4 class="modal-title" id="modal-title">Marco Rossi</h4>
-          <div style="font-size: 11px; color: var(--accent-2);" id="modal-meta">Partner WKI - PM</div>
-        </div>
-      </div>
-
-      <div class="modal-content">
-        <p id="modal-text">
-          Fabio ha dimostrato eccellenti competenze in Flutter e architetture backend. Il suo approccio al clean code e
-          alle best practice ha migliorato significativamente la qualità del nostro progetto Smart Agent.
-        </p>
-      </div>
-    </section>
+    </div>
+    <div class="terminal__log" id="terminal-log" aria-live="polite"></div>
+    <label class="terminal__line">
+      <span class="terminal__prompt">$</span>
+      <input type="text" class="terminal__input" id="terminal-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Comando" data-i18n-attr="aria-label:ui.command" />
+    </label>
   </div>
 
-  <!-- Scripts -->
   <script src="./assets/js/i18n.js"></script>
   <script src="./assets/js/script.js"></script>
-
-  <!-- IonIcons integration -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
