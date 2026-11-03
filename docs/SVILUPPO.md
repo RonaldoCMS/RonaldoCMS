@@ -54,7 +54,7 @@ Vedi [`.env.example`](../.env.example). Senza `RESEND_API_KEY` il modulo di cont
 
 ## Pubblicazione
 
-Il sito è pensato per [Vercel](https://vercel.com). Il dominio principale è `www.danubbio.it`; `danubbio.it`, `ronaldocms.it` e `www.ronaldocms.it` reindirizzano lì (vedi `next.config.ts`). Per far partire gli invii serve un dominio verificato su Resend.
+Il sito è pensato per [Vercel](https://vercel.com); `vercel.json` fissa il preset su Next.js (un progetto Vercel nato per il vecchio sito statico altrimenti cerca una cartella `public`). Il dominio principale è `www.danubbio.it`; `danubbio.it`, `ronaldocms.it` e `www.ronaldocms.it` reindirizzano lì (vedi `next.config.ts`). Per far partire gli invii serve un dominio verificato su Resend.
 
 La versione precedente del sito, statica, è nel tag `legacy-static`.
 
