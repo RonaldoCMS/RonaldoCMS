@@ -7,7 +7,7 @@
 
 const contact = (location) => [
   { label: "Email", value: "fabio@danubbio.it", href: "mailto:fabio@danubbio.it" },
-  { label: "Web", value: "danubbio.it", href: "https://www.danubbio.it" },
+  { label: "Web", value: "danubbio.it", href: "https://danubbio.it" },
   { label: "LinkedIn", value: "fabio-danubbio", href: "https://www.linkedin.com/in/fabio-danubbio/" },
   { label: "GitHub", value: "RonaldoCMS", href: "https://github.com/RonaldoCMS" },
   { label: location.label, value: location.value },

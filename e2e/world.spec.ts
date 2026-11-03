@@ -175,10 +175,10 @@ test.describe("contenuti e SEO", () => {
 
   test("sitemap e robots rispondono con l'indirizzo del sito", async ({ request }) => {
     const sitemap = await (await request.get("/sitemap.xml")).text();
-    expect(sitemap).toContain("https://www.danubbio.it/it/storia");
-    expect(sitemap).toContain("https://www.danubbio.it/en/contatti");
+    expect(sitemap).toContain("https://danubbio.it/it/storia");
+    expect(sitemap).toContain("https://danubbio.it/en/contatti");
     const robots = await (await request.get("/robots.txt")).text();
-    expect(robots).toContain("Sitemap: https://www.danubbio.it/sitemap.xml");
+    expect(robots).toContain("Sitemap: https://danubbio.it/sitemap.xml");
   });
 
   test("l'immagine di anteprima e le icone si generano", async ({ request }) => {

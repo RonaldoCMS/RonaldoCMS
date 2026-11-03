@@ -13,7 +13,7 @@
 
 <br>
 
-[![Sito](https://img.shields.io/badge/Sito-danubbio.it-F5B942?style=for-the-badge&labelColor=1C1300)](https://www.danubbio.it)
+[![Sito](https://img.shields.io/badge/Sito-danubbio.it-F5B942?style=for-the-badge&labelColor=1C1300)](https://danubbio.it)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-fabio--danubbio-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fabio-danubbio/)
 [![Email](https://img.shields.io/badge/Email-fabio%40danubbio.it-1C1300?style=for-the-badge&logo=gmail&logoColor=F5B942)](mailto:fabio@danubbio.it)
 
@@ -53,12 +53,12 @@ Uso anche assistenti AI nello sviluppo: definisco io requisiti e architettura e 
 
 ## Questo repository
 
-È il mio sito, **[danubbio.it](https://www.danubbio.it)**: un piccolo mondo 2D da esplorare, dove ogni edificio è un luogo della mia storia. È fatto con Next.js, SVG e un ciclo di gioco scritto a mano, ed è in italiano e inglese, con tema giorno e notte.
+È il mio sito, **[danubbio.it](https://danubbio.it)**: un piccolo mondo 2D da esplorare, dove ogni edificio è un luogo della mia storia. È fatto con Next.js, SVG e un ciclo di gioco scritto a mano, ed è in italiano e inglese, con tema giorno e notte.
 
 Come è costruito e come si lavora: [`docs/SVILUPPO.md`](docs/SVILUPPO.md). Il mio curriculum in PDF è nella cartella [`cv/`](cv/).
 
 ---
 
 <div align="center">
-<sub>Nola (NA) · <a href="https://www.danubbio.it">danubbio.it</a> · <a href="https://www.linkedin.com/in/fabio-danubbio/">LinkedIn</a></sub>
+<sub>Nola (NA) · <a href="https://danubbio.it">danubbio.it</a> · <a href="https://www.linkedin.com/in/fabio-danubbio/">LinkedIn</a></sub>
 </div>

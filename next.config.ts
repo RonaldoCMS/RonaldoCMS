@@ -1,22 +1,11 @@
 import type { NextConfig } from "next";
 
-const SITE_HOST = "www.danubbio.it";
-
-/** Host come espressione regolare ancorata ("danubbio.it" -> "^danubbio\.it$"). */
-const hostPattern = (host: string) => "^" + host.split(".").join("\\.") + "$";
-
+// I redirect tra domini (www.danubbio.it, ronaldocms.it...) non stanno qui: si configurano
+// su Vercel/DNS. Due redirect in direzioni opposte mandano il sito in un ciclo infinito.
+// Il dominio principale è danubbio.it (vedi SITE_URL in src/i18n/config.ts).
 const nextConfig: NextConfig = {
   // Non genera il file AGENTS.md a ogni avvio di `next dev`.
   agentRules: false,
-  async redirects() {
-    // Il vecchio dominio e il dominio senza "www" finiscono sul sito nuovo.
-    return ["ronaldocms.it", "www.ronaldocms.it", "danubbio.it"].map((host) => ({
-      source: "/:path*",
-      has: [{ type: "host" as const, value: hostPattern(host) }],
-      destination: `https://${SITE_HOST}/:path*`,
-      permanent: true,
-    }));
-  },
 };
 
 export default nextConfig;

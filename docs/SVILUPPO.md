@@ -1,6 +1,6 @@
 # Sviluppo del sito
 
-Il sito [danubbio.it](https://www.danubbio.it) è in questo repository. Questa pagina spiega come è fatto e come si lavora.
+Il sito [danubbio.it](https://danubbio.it) è in questo repository. Questa pagina spiega come è fatto e come si lavora.
 
 ## Come è fatto
 
@@ -54,7 +54,7 @@ Vedi [`.env.example`](../.env.example). Senza `RESEND_API_KEY` il modulo di cont
 
 ## Pubblicazione
 
-Il sito è pensato per [Vercel](https://vercel.com); `vercel.json` fissa il preset su Next.js (un progetto Vercel nato per il vecchio sito statico altrimenti cerca una cartella `public`). Il dominio principale è `www.danubbio.it`; `danubbio.it`, `ronaldocms.it` e `www.ronaldocms.it` reindirizzano lì (vedi `next.config.ts`). Per far partire gli invii serve un dominio verificato su Resend.
+Il sito è pensato per [Vercel](https://vercel.com); `vercel.json` fissa il preset su Next.js (un progetto Vercel nato per il vecchio sito statico altrimenti cerca una cartella `public`). Il dominio principale è `danubbio.it` (senza `www`, lo stesso di `SITE_URL`). I redirect degli altri indirizzi (`www.danubbio.it`, `ronaldocms.it`, `www.ronaldocms.it`) si configurano su Vercel e nel DNS, non nel codice: due redirect in direzioni opposte mandano il sito in un ciclo infinito. Per far partire gli invii serve un dominio verificato su Resend.
 
 La versione precedente del sito, statica, è nel tag `legacy-static`.
 
