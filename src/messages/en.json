@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Fabio Danubbio — Full Stack Developer",
+    "description": "Fabio Danubbio, full stack developer from Nola, Italy. I take products from idea to release: mobile apps, web and backend, from the cloud to the store."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "close": "Close",
+    "backToWorld": "Back to the world",
+    "language": "Language",
+    "themeToLight": "Switch to the light theme (day)",
+    "themeToDark": "Switch to the dark theme (night)",
+    "worldLabel": "Fabio's world, a map to explore"
+  },
+  "hud": {
+    "handle": "@RonaldoCMS",
+    "plaza": "In the square",
+    "nearPlace": "In front of: {place}",
+    "visited": "Places visited",
+    "visitedCount": "{n}/{total}",
+    "allDone": "You've seen it all! Drop me a line if you like.",
+    "fastTravel": "Fast travel",
+    "fastTravelTitle": "Where to?",
+    "go": "Go",
+    "terminal": "Terminal",
+    "help": "How to play",
+    "enter": "Enter",
+    "prompt": "Enter {place}",
+    "hintKeys": "Arrows or WASD to move · E or Enter to go in",
+    "hintTouch": "Use the pad to move, or tap the ground",
+    "dpad": "Movement controls",
+    "up": "Up",
+    "down": "Down",
+    "left": "Left",
+    "right": "Right"
+  },
+  "help": {
+    "title": "How to play",
+    "move": "Move with the arrow keys or WASD. On a phone use the pad, or tap a spot on the ground and you'll walk there.",
+    "enter": "Get close to a building's door and press E (or Enter) to go in: the page for that place opens. Clicking the building works too.",
+    "fast": "Fast travel takes you straight where you want, and Tab steps through the places one by one.",
+    "extra": "The ` key opens the terminal, Esc closes panels.",
+    "ok": "Got it"
+  },
+  "places": {
+    "casa": { "name": "Home", "hint": "My story" },
+    "scuola": { "name": "School", "hint": "Education and certifications" },
+    "jotto": { "name": "Jotto workshop", "hint": "Jotto · 2021–2022" },
+    "accenture": { "name": "Accenture tower", "hint": "Accenture · 2022" },
+    "promedya": { "name": "Promedya warehouse", "hint": "Promedya · since 2022" },
+    "lab": { "name": "Lab", "hint": "Dhonko and other projects" },
+    "biblioteca": { "name": "Library", "hint": "Articles" },
+    "posta": { "name": "Mailbox", "hint": "Contact" },
+    "scrivania": { "name": "Desk", "hint": "Terminal" }
+  },
+  "home": {
+    "title": "Hi, I'm Fabio.",
+    "tagline": "I take products from idea to release.",
+    "lead": "Full stack developer from Nola, Italy: mobile apps, web and backend, from the cloud to the store.",
+    "status": "Available for new projects",
+    "start": "How to play"
+  },
+  "projects": {
+    "filterLabel": "Filter projects",
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile apps",
+    "backend": "Backend",
+    "games": "Games and AI",
+    "none": "No projects in this category.",
+    "open": "Read the case"
+  },
+  "contact": {
+    "formTitle": "Write to me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending…",
+    "success": "Message sent. I'll get back to you as soon as I can.",
+    "errorGeneric": "I couldn't send the message. Try again or write to fabio@danubbio.it.",
+    "errorMissing": "Please fill in name, email and message.",
+    "errorEmail": "Please check the email address.",
+    "errorNotConfigured": "The form isn't active yet. Write to me directly at fabio@danubbio.it.",
+    "note": "I usually reply within a couple of working days.",
+    "built": "Built with Next.js, SVG and a bit of patience."
+  },
+  "terminal": {
+    "title": "guest@danubbio: ~",
+    "input": "Command",
+    "welcome": "danubbio.it · Fabio's world\nType 'help' for the commands. Esc to close.",
+    "help": "available commands:\n  about              who I am in two lines\n  stack              the technologies I use\n  projects           the main projects\n  contact            how to reach me\n  ls                 the places in the world\n  go <place>         go to a place (e.g. go scuola)\n  theme <light|dark> change theme\n  lang <it|en>       change language\n  clear              clear the screen\n  exit               close the terminal",
+    "about": "Fabio Danubbio, full stack developer from Nola, Italy.\nI take products from idea to release: mobile apps, web and backend.",
+    "stack": "Flutter · Dart · Next.js · React · TypeScript · NestJS · Java Spring Boot · PostgreSQL · Prisma · Redis · Stripe · Firebase · Docker",
+    "projects": "1. Dhonko (Next.js, NestJS, Capacitor)\n2. Promedya products (Spring Boot, Flutter, NestJS, Next.js)\n3. Bandierina (prototype)\n4. amalia\n5. hbds\n6. GigliGame (Unreal Engine 5)",
+    "contact": "email      fabio@danubbio.it\nlinkedin   linkedin.com/in/fabio-danubbio\ngithub     github.com/RonaldoCMS\ninstagram  @fabio.danubbio",
+    "going": "going to {place}…",
+    "noPlace": "place '{place}' not found. Try 'ls'.",
+    "theme": "theme set to '{theme}'.",
+    "themeUsage": "usage: theme <light|dark>",
+    "lang": "language set to '{lang}'.",
+    "langUsage": "usage: lang <it|en>",
+    "sudo": "Nice try. You're just a guest here.",
+    "unknown": "command not found: {cmd}. Try 'help'."
+  },
+  "notFound": {
+    "title": "Nothing here",
+    "text": "The page you're looking for doesn't exist or has moved.",
+    "back": "Back to the world"
+  }
+}
