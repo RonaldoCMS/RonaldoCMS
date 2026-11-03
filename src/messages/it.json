@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Fabio Danubbio — Full Stack Developer",
+    "description": "Fabio Danubbio, sviluppatore full stack di Nola. Porto i prodotti dall'idea alla pubblicazione: app mobile, web e backend, dal cloud fino allo store."
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "close": "Chiudi",
+    "backToWorld": "Torna al mondo",
+    "language": "Lingua",
+    "themeToLight": "Passa al tema chiaro (giorno)",
+    "themeToDark": "Passa al tema scuro (notte)",
+    "worldLabel": "Il mondo di Fabio, una mappa da esplorare"
+  },
+  "hud": {
+    "handle": "@RonaldoCMS",
+    "plaza": "In piazza",
+    "nearPlace": "Davanti a: {place}",
+    "visited": "Luoghi visitati",
+    "visitedCount": "{n}/{total}",
+    "allDone": "Hai visto tutto! Se ti va, scrivimi.",
+    "fastTravel": "Viaggio rapido",
+    "fastTravelTitle": "Dove vuoi andare?",
+    "go": "Vai",
+    "terminal": "Terminale",
+    "help": "Come si gioca",
+    "enter": "Entra",
+    "prompt": "Entra in {place}",
+    "hintKeys": "Frecce o WASD per muoverti · E o Invio per entrare",
+    "hintTouch": "Usa la croce per muoverti, oppure tocca il terreno",
+    "dpad": "Controlli di movimento",
+    "up": "Su",
+    "down": "Giù",
+    "left": "Sinistra",
+    "right": "Destra"
+  },
+  "help": {
+    "title": "Come si gioca",
+    "move": "Muoviti con le frecce o con WASD. Su telefono usa la croce, oppure tocca un punto del terreno e ci vai da solo.",
+    "enter": "Avvicinati alla porta di un edificio e premi E (o Invio) per entrare: si apre la pagina di quel luogo. Anche un clic sull'edificio ti ci porta.",
+    "fast": "Il viaggio rapido ti porta subito dove vuoi, e con Tab scorri i luoghi uno alla volta.",
+    "extra": "Il tasto ` apre il terminale, Esc chiude i pannelli.",
+    "ok": "Ho capito"
+  },
+  "places": {
+    "casa": { "name": "Casa", "hint": "La mia storia" },
+    "scuola": { "name": "Scuola", "hint": "Formazione e certificazioni" },
+    "jotto": { "name": "Officina Jotto", "hint": "Jotto · 2021–2022" },
+    "accenture": { "name": "Torre Accenture", "hint": "Accenture · 2022" },
+    "promedya": { "name": "Magazzino Promedya", "hint": "Promedya · dal 2022" },
+    "lab": { "name": "Laboratorio", "hint": "Dhonko e altri progetti" },
+    "biblioteca": { "name": "Biblioteca", "hint": "Articoli" },
+    "posta": { "name": "Cassetta delle lettere", "hint": "Contatti" },
+    "scrivania": { "name": "Scrivania", "hint": "Terminale" }
+  },
+  "home": {
+    "title": "Ciao, sono Fabio.",
+    "tagline": "Porto i prodotti dall'idea alla pubblicazione.",
+    "lead": "Sviluppatore full stack di Nola: app mobile, web e backend, dal cloud fino allo store.",
+    "status": "Disponibile per nuovi progetti",
+    "start": "Come si gioca"
+  },
+  "projects": {
+    "filterLabel": "Filtra i progetti",
+    "all": "Tutti",
+    "web": "Web",
+    "mobile": "App mobile",
+    "backend": "Backend",
+    "games": "Giochi e AI",
+    "none": "Nessun progetto in questa categoria.",
+    "open": "Leggi il caso"
+  },
+  "contact": {
+    "formTitle": "Scrivimi",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "send": "Invia",
+    "sending": "Invio in corso…",
+    "success": "Messaggio inviato. Ti rispondo appena posso.",
+    "errorGeneric": "Non sono riuscito a inviare il messaggio. Riprova o scrivimi a fabio@danubbio.it.",
+    "errorMissing": "Compila nome, email e messaggio.",
+    "errorEmail": "Controlla l'indirizzo email.",
+    "errorNotConfigured": "Il modulo non è ancora attivo. Scrivimi direttamente a fabio@danubbio.it.",
+    "note": "Rispondo di solito entro un paio di giorni lavorativi.",
+    "built": "Costruito con Next.js, SVG e un po' di pazienza."
+  },
+  "terminal": {
+    "title": "guest@danubbio: ~",
+    "input": "Comando",
+    "welcome": "danubbio.it · il mondo di Fabio\nDigita 'help' per i comandi. Esc per chiudere.",
+    "help": "comandi disponibili:\n  about              chi sono in due righe\n  stack              le tecnologie che uso\n  projects           i progetti principali\n  contact            come contattarmi\n  ls                 i luoghi del mondo\n  go <luogo>         vai a un luogo (es. go scuola)\n  theme <light|dark> cambia tema\n  lang <it|en>       cambia lingua\n  clear              pulisce lo schermo\n  exit               chiude il terminale",
+    "about": "Fabio Danubbio, sviluppatore full stack di Nola.\nPorto i prodotti dall'idea alla pubblicazione: app mobile, web e backend.",
+    "stack": "Flutter · Dart · Next.js · React · TypeScript · NestJS · Java Spring Boot · PostgreSQL · Prisma · Redis · Stripe · Firebase · Docker",
+    "projects": "1. Dhonko (Next.js, NestJS, Capacitor)\n2. Prodotti Promedya (Spring Boot, Flutter, NestJS, Next.js)\n3. Bandierina (prototipo)\n4. amalia\n5. hbds\n6. GigliGame (Unreal Engine 5)",
+    "contact": "email      fabio@danubbio.it\nlinkedin   linkedin.com/in/fabio-danubbio\ngithub     github.com/RonaldoCMS\ninstagram  @fabio.danubbio",
+    "going": "vado a {place}…",
+    "noPlace": "luogo '{place}' non trovato. Prova 'ls'.",
+    "theme": "tema impostato su '{theme}'.",
+    "themeUsage": "uso: theme <light|dark>",
+    "lang": "lingua impostata su '{lang}'.",
+    "langUsage": "uso: lang <it|en>",
+    "sudo": "Bel tentativo. Qui sei solo un ospite.",
+    "unknown": "comando non trovato: {cmd}. Prova 'help'."
+  },
+  "notFound": {
+    "title": "Qui non c'è niente",
+    "text": "La pagina che cerchi non esiste o si è spostata.",
+    "back": "Torna al mondo"
+  }
+}
