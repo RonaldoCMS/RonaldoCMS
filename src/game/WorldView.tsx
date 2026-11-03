@@ -132,6 +132,8 @@ export function WorldView({
   const near = useRef<PlaceId | null>(null);
   const facingRef = useRef<Facing>("down");
   const [facing, setFacing] = useState<Facing>("down");
+  /** Cerchio che appare dove si è toccato il terreno. */
+  const [marker, setMarker] = useState<{ x: number; y: number; id: number } | null>(null);
 
   // Gli ultimi valori delle proprietà, letti dal ciclo senza doverlo riavviare.
   const pausedRef = useRef(paused);
@@ -206,6 +208,8 @@ export function WorldView({
       const rect = el.getBoundingClientRect();
       view.current = { w: rect.width, h: rect.height };
       scale.current = worldScale(rect.width);
+      worldEl.current?.style.setProperty("--inv", String(1 / scale.current));
+      worldEl.current?.style.setProperty("--pscale", String(Math.max(1, 0.85 / scale.current)));
       snapCamera();
       apply();
     };
@@ -234,15 +238,17 @@ export function WorldView({
     const stepGame = (dt: number) => {
       const keys = input.current;
       const vec = inputVector(keys);
+      // Con la mappa rimpicciolita (telefoni) si cammina più in fretta, per non sembrare lenti.
+      const speed = SPEED * Math.min(1.6, Math.max(1, 1 / scale.current));
       let move: Vec = { x: 0, y: 0 };
       let arrivedCallback: (() => void) | undefined;
 
       if (vec.x !== 0 || vec.y !== 0) {
         route.current = null;
-        move = { x: vec.x * SPEED * dt, y: vec.y * SPEED * dt };
+        move = { x: vec.x * speed * dt, y: vec.y * speed * dt };
       } else if (route.current) {
         const target = route.current.points[0];
-        const step = stepToward(pos.current, target, SPEED * dt);
+        const step = stepToward(pos.current, target, speed * dt);
         move = { x: step.pos.x - pos.current.x, y: step.pos.y - pos.current.y };
         if (step.arrived) {
           route.current.points.shift();
@@ -351,7 +357,9 @@ export function WorldView({
     const rect = groundEl.current?.getBoundingClientRect();
     if (!rect) return;
     const s = scale.current;
-    walkTo({ x: (e.clientX - rect.left) / s, y: (e.clientY - rect.top) / s });
+    const point = { x: (e.clientX - rect.left) / s, y: (e.clientY - rect.top) / s };
+    setMarker({ ...point, id: e.timeStamp });
+    walkTo(point);
   };
 
   const onHotspotClick = (place: Place) => (e: MouseEvent<HTMLElement>) => {
@@ -377,6 +385,12 @@ export function WorldView({
         <div className="world__ground" ref={groundEl} onPointerDown={onGroundPointerDown}>
           <Ground nearId={nearId} />
         </div>
+
+        {marker && (
+          <div key={marker.id} className="tap-marker" style={{ left: marker.x, top: marker.y }} aria-hidden="true">
+            <span onAnimationEnd={() => setMarker(null)} />
+          </div>
+        )}
 
         {TREES.map((t, i) => (
           <div

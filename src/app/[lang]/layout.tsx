@@ -26,6 +26,8 @@ export const viewport: Viewport = {
   ],
   width: "device-width",
   initialScale: 1,
+  // Il sito arriva anche sotto la tacca e la barra di sistema dei telefoni: i margini sicuri li gestisce il CSS.
+  viewportFit: "cover",
 };
 
 export async function generateMetadata({ params }: Pick<Props, "params">): Promise<Metadata> {

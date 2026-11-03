@@ -248,12 +248,15 @@ a {
   position: absolute;
   z-index: 3000;
   transform: translate(-50%, -100%);
-  padding: 4px 14px;
+  padding: calc(4px * var(--inv, 1)) calc(14px * var(--inv, 1));
   border-radius: 999px;
-  border: 2px solid var(--line-strong);
+  border: calc(2px * var(--inv, 1)) solid var(--line-strong);
   background: color-mix(in srgb, var(--surface) 94%, transparent);
   color: var(--text);
-  font: 700 21px/1.2 var(--font-ui);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: calc(var(--label-px, 21px) * var(--inv, 1));
+  line-height: 1.2;
   white-space: nowrap;
   pointer-events: none;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -296,6 +299,8 @@ a {
 .player__art {
   display: block;
   overflow: visible;
+  transform: scale(var(--pscale, 1));
+  transform-origin: 22px 60px;
 }
 .player__leg {
   fill: #394155;
@@ -440,6 +445,30 @@ a {
 @keyframes beacon { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 @keyframes dash { to { stroke-dashoffset: -28; } }
 @keyframes ripple { 0% { transform: scale(0.6); opacity: 0.9; } 100% { transform: scale(1.25); opacity: 0; } }
+
+/* punto toccato */
+.tap-marker {
+  position: absolute;
+  z-index: 3500;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transform: scale(var(--inv, 1));
+}
+.tap-marker span {
+  position: absolute;
+  left: -26px;
+  top: -26px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 4px solid var(--accent-fill);
+  animation: tap 0.65s ease-out forwards;
+}
+@keyframes tap {
+  from { transform: scale(0.3); opacity: 1; }
+  to { transform: scale(1.15); opacity: 0; }
+}
 
 /* marchio */
 .brand-mark { display: block; flex: none; }
@@ -792,6 +821,9 @@ a {
   gap: 12px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--line);
+}
+.panel__body:focus-visible {
+  outline-offset: -4px;
 }
 .panel__tools {
   display: flex;
@@ -1221,68 +1253,179 @@ a {
 
 /* ------------------------------------------------------------------
    7. TOCCO E SCHERMI PICCOLI
+   Telefoni: barra dei luoghi in basso, joystick a sinistra, interfaccia che si ritira.
    ------------------------------------------------------------------ */
-.dpad {
+:root {
+  --dock-h: 0px;
+}
+
+.stick {
   display: none;
   position: fixed;
-  left: 14px;
-  bottom: 14px;
+  left: calc(18px + env(safe-area-inset-left));
+  bottom: calc(var(--dock-h) + 22px + env(safe-area-inset-bottom));
   z-index: 60;
-  grid-template-columns: repeat(3, 58px);
-  grid-template-rows: repeat(3, 58px);
-  gap: 4px;
-  pointer-events: auto;
-}
-.dpad__btn {
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line-strong);
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  border: 2px solid var(--line-strong);
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
   touch-action: none;
+  pointer-events: auto;
   -webkit-tap-highlight-color: transparent;
 }
-.dpad__btn:active {
+.stick__knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  border-radius: 50%;
+  background: var(--accent-fill);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.dock {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--surface) 93%, transparent);
+  border-top: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+.dock__list {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0 calc(12px + env(safe-area-inset-right)) 0 calc(12px + env(safe-area-inset-left));
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  /* una leggera sfumatura a destra fa capire che la barra scorre */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+}
+.dock__list::-webkit-scrollbar {
+  display: none;
+}
+.dock__item {
+  position: relative;
+  flex: none;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface-2);
+  color: var(--text);
+  font: 700 0.92rem var(--font-ui);
+  -webkit-tap-highlight-color: transparent;
+}
+.dock__item.is-visited::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ok);
+}
+.dock__item:active {
   background: var(--accent-fill);
   color: var(--accent-ink);
 }
-.dpad__btn--up { grid-column: 2; grid-row: 1; }
-.dpad__btn--left { grid-column: 1; grid-row: 2; }
-.dpad__btn--right { grid-column: 3; grid-row: 2; }
-.dpad__btn--down { grid-column: 2; grid-row: 3; }
 
-@media (pointer: coarse) {
-  .dpad { display: grid; }
+/* tocco o schermo stretto: barra dei luoghi e indicazioni adatte */
+@media (pointer: coarse), (max-width: 860px) {
+  :root { --dock-h: 60px; }
+  .dock { display: block; }
+  .hud-desktop { display: none; }
   .hint__keys { display: none; }
   .hint__touch { display: inline; }
   .enter-btn kbd { display: none; }
-  .hud__bottom { bottom: 22px; justify-content: flex-end; padding-right: 14px; }
-  .hint { max-width: min(46vw, 260px); border-radius: 16px; text-align: center; }
+  .hud__bottom { bottom: calc(var(--dock-h) + 22px + env(safe-area-inset-bottom)); }
+  .terminal { bottom: calc(var(--dock-h) + 10px); }
+}
+
+/* solo con il tocco: il joystick, e le indicazioni lasciano spazio a destra */
+@media (pointer: coarse) {
+  .stick { display: block; }
+  .hud__bottom { justify-content: flex-end; padding: 0 calc(16px + env(safe-area-inset-right)) 0 0; }
+  .hint { max-width: calc(100vw - 190px); border-radius: 16px; text-align: center; font-size: 0.8rem; }
+  .enter-btn { padding: 14px 20px; font-size: 1rem; }
+}
+
+@media (max-width: 900px) {
+  .panel { width: 100%; }
 }
 
 @media (max-width: 860px) {
+  .hud {
+    top: calc(10px + env(safe-area-inset-top));
+    left: calc(10px + env(safe-area-inset-left));
+    right: calc(10px + env(safe-area-inset-right));
+    gap: 8px;
+  }
+  .brand { padding: 5px; }
   .brand__text { display: none; }
-  .brand { padding: 6px; }
-  .pill__label { display: none; }
-  .hud { gap: 8px; }
   .hud__where { display: none; }
   .hud__tools { margin-left: auto; gap: 2px; }
-  .intro { top: 68px; }
-  .intro__lead { display: none; }
-  .intro__card { padding: 16px 18px; }
-  .intro__places { display: none; }
-  .status { margin-bottom: 0; }
-  .panel__body { padding: 4px 20px 48px; }
-  .place-label { font-size: 22px; }
+  .pill__label { display: none; }
+  .icon-btn, .lang-btn { width: 42px; height: 42px; }
+  .pill { height: 42px; }
+  .world { --label-px: 15px; }
+
+  .intro {
+    top: calc(68px + env(safe-area-inset-top));
+    left: calc(10px + env(safe-area-inset-left));
+    right: calc(10px + env(safe-area-inset-right));
+    width: auto;
+  }
+  .intro__card { padding: 12px 16px; }
+  .intro__title { font-size: 1.3rem; }
+  .intro__title .accent { font-size: 0.78em; margin-top: 2px; }
+  .intro__lead, .intro__places { display: none; }
+  .status { margin: 8px 0 0; font-size: 0.74rem; }
+  /* dopo il primo passo la scheda si ritira, ma il titolo resta per i lettori di schermo */
+  .intro.is-compact {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    opacity: 0;
+  }
+  .panel__body { padding: 4px 20px calc(48px + env(safe-area-inset-bottom)); }
 }
 
 @media (max-width: 520px) {
-  .lang-btn,
-  .icon-btn { width: 34px; height: 34px; }
-  .pill { padding: 0 8px; height: 34px; }
+  .pill { padding: 0 8px; }
+}
+
+/* telefono in orizzontale: poca altezza, si toglie tutto ciò che copre la scena */
+@media (max-height: 520px) and (pointer: coarse) {
+  :root { --dock-h: 52px; }
+  .dock { padding-top: 5px; padding-bottom: calc(5px + env(safe-area-inset-bottom)); }
+  .dock__item { min-height: 38px; padding: 0 14px; font-size: 0.85rem; }
+  .intro { display: none; }
+  .stick { width: 96px; height: 96px; bottom: calc(var(--dock-h) + 14px + env(safe-area-inset-bottom)); }
+  .stick__knob { width: 44px; height: 44px; margin: -22px 0 0 -22px; }
+  .hud__bottom { bottom: calc(var(--dock-h) + 14px + env(safe-area-inset-bottom)); }
+  .hint { display: none; }
+  .icon-btn, .lang-btn { width: 38px; height: 38px; }
+  .pill { height: 38px; }
+  .brand { padding: 4px; }
+  .brand .brand-mark { width: 30px; height: 30px; }
 }
 
 /* ------------------------------------------------------------------

@@ -27,31 +27,63 @@
     "enter": "Entra",
     "prompt": "Entra in {place}",
     "hintKeys": "Frecce o WASD per muoverti · E o Invio per entrare",
-    "hintTouch": "Usa la croce per muoverti, oppure tocca il terreno",
-    "dpad": "Controlli di movimento",
-    "up": "Su",
-    "down": "Giù",
-    "left": "Sinistra",
-    "right": "Destra"
+    "hintTouch": "Tocca il terreno o trascina il joystick, oppure scegli un luogo qui sotto",
+    "stick": "Joystick di movimento"
   },
   "help": {
     "title": "Come si gioca",
-    "move": "Muoviti con le frecce o con WASD. Su telefono usa la croce, oppure tocca un punto del terreno e ci vai da solo.",
+    "move": "Muoviti con le frecce o con WASD. Su telefono trascina il joystick, tocca un punto del terreno oppure scegli un luogo dalla barra in basso.",
     "enter": "Avvicinati alla porta di un edificio e premi E (o Invio) per entrare: si apre la pagina di quel luogo. Anche un clic sull'edificio ti ci porta.",
     "fast": "Il viaggio rapido ti porta subito dove vuoi, e con Tab scorri i luoghi uno alla volta.",
     "extra": "Il tasto ` apre il terminale, Esc chiude i pannelli.",
     "ok": "Ho capito"
   },
   "places": {
-    "casa": { "name": "Casa", "hint": "La mia storia" },
-    "scuola": { "name": "Scuola", "hint": "Formazione e certificazioni" },
-    "jotto": { "name": "Officina Jotto", "hint": "Jotto · 2021–2022" },
-    "accenture": { "name": "Torre Accenture", "hint": "Accenture · 2022" },
-    "promedya": { "name": "Magazzino Promedya", "hint": "Promedya · dal 2022" },
-    "lab": { "name": "Laboratorio", "hint": "Dhonko e altri progetti" },
-    "biblioteca": { "name": "Biblioteca", "hint": "Articoli" },
-    "posta": { "name": "Cassetta delle lettere", "hint": "Contatti" },
-    "scrivania": { "name": "Scrivania", "hint": "Terminale" }
+    "casa": {
+      "name": "Casa",
+      "hint": "La mia storia",
+      "short": "Casa"
+    },
+    "scuola": {
+      "name": "Scuola",
+      "hint": "Formazione e certificazioni",
+      "short": "Scuola"
+    },
+    "jotto": {
+      "name": "Officina Jotto",
+      "hint": "Jotto · 2021–2022",
+      "short": "Jotto"
+    },
+    "accenture": {
+      "name": "Torre Accenture",
+      "hint": "Accenture · 2022",
+      "short": "Accenture"
+    },
+    "promedya": {
+      "name": "Magazzino Promedya",
+      "hint": "Promedya · dal 2022",
+      "short": "Promedya"
+    },
+    "lab": {
+      "name": "Laboratorio",
+      "hint": "Dhonko e altri progetti",
+      "short": "Progetti"
+    },
+    "biblioteca": {
+      "name": "Biblioteca",
+      "hint": "Articoli",
+      "short": "Articoli"
+    },
+    "posta": {
+      "name": "Cassetta delle lettere",
+      "hint": "Contatti",
+      "short": "Contatti"
+    },
+    "scrivania": {
+      "name": "Scrivania",
+      "hint": "Terminale",
+      "short": "Terminale"
+    }
   },
   "home": {
     "title": "Ciao, sono Fabio.",

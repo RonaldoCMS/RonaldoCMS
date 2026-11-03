@@ -27,31 +27,63 @@
     "enter": "Enter",
     "prompt": "Enter {place}",
     "hintKeys": "Arrows or WASD to move · E or Enter to go in",
-    "hintTouch": "Use the pad to move, or tap the ground",
-    "dpad": "Movement controls",
-    "up": "Up",
-    "down": "Down",
-    "left": "Left",
-    "right": "Right"
+    "hintTouch": "Tap the ground or drag the joystick, or pick a place below",
+    "stick": "Movement joystick"
   },
   "help": {
     "title": "How to play",
-    "move": "Move with the arrow keys or WASD. On a phone use the pad, or tap a spot on the ground and you'll walk there.",
+    "move": "Move with the arrow keys or WASD. On a phone drag the joystick, tap a spot on the ground or pick a place from the bar at the bottom.",
     "enter": "Get close to a building's door and press E (or Enter) to go in: the page for that place opens. Clicking the building works too.",
     "fast": "Fast travel takes you straight where you want, and Tab steps through the places one by one.",
     "extra": "The ` key opens the terminal, Esc closes panels.",
     "ok": "Got it"
   },
   "places": {
-    "casa": { "name": "Home", "hint": "My story" },
-    "scuola": { "name": "School", "hint": "Education and certifications" },
-    "jotto": { "name": "Jotto workshop", "hint": "Jotto · 2021–2022" },
-    "accenture": { "name": "Accenture tower", "hint": "Accenture · 2022" },
-    "promedya": { "name": "Promedya warehouse", "hint": "Promedya · since 2022" },
-    "lab": { "name": "Lab", "hint": "Dhonko and other projects" },
-    "biblioteca": { "name": "Library", "hint": "Articles" },
-    "posta": { "name": "Mailbox", "hint": "Contact" },
-    "scrivania": { "name": "Desk", "hint": "Terminal" }
+    "casa": {
+      "name": "Home",
+      "hint": "My story",
+      "short": "Home"
+    },
+    "scuola": {
+      "name": "School",
+      "hint": "Education and certifications",
+      "short": "School"
+    },
+    "jotto": {
+      "name": "Jotto workshop",
+      "hint": "Jotto · 2021–2022",
+      "short": "Jotto"
+    },
+    "accenture": {
+      "name": "Accenture tower",
+      "hint": "Accenture · 2022",
+      "short": "Accenture"
+    },
+    "promedya": {
+      "name": "Promedya warehouse",
+      "hint": "Promedya · since 2022",
+      "short": "Promedya"
+    },
+    "lab": {
+      "name": "Lab",
+      "hint": "Dhonko and other projects",
+      "short": "Projects"
+    },
+    "biblioteca": {
+      "name": "Library",
+      "hint": "Articles",
+      "short": "Articles"
+    },
+    "posta": {
+      "name": "Mailbox",
+      "hint": "Contact",
+      "short": "Contact"
+    },
+    "scrivania": {
+      "name": "Desk",
+      "hint": "Terminal",
+      "short": "Terminal"
+    }
   },
   "home": {
     "title": "Hi, I'm Fabio.",

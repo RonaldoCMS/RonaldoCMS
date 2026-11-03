@@ -17,8 +17,9 @@ export default defineConfig({
     storageState: { cookies: [], origins: [{ origin: baseURL, localStorage: [{ name: "fd-help-seen", value: "1" }] }] },
   },
   projects: [
-    { name: "desktop", use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 } }, testIgnore: /mobile.spec.ts/ },
-    { name: "mobile", use: { ...devices["Pixel 7"] }, testMatch: /mobile\.spec\.ts/ },
+    { name: "desktop", use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 } }, testIgnore: /mobile\.spec\.ts/ },
+    // il telefono esegue i suoi test e anche i controlli di accessibilità
+    { name: "mobile", use: { ...devices["Pixel 7"] }, testMatch: /(mobile|a11y)\.spec\.ts/ },
   ],
   webServer: process.env.E2E_BASE_URL
     ? undefined

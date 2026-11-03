@@ -15,5 +15,5 @@ export function computeCamera(player: Vec, view: Size, world: Size, scale: numbe
 
 /** Scala del mondo in base alla larghezza della finestra: stesso campo visivo su schermi diversi. */
 export function worldScale(viewWidth: number): number {
-  return clamp(viewWidth / 1200, 0.6, 1);
+  return clamp(viewWidth / 1200, 0.5, 1);
 }

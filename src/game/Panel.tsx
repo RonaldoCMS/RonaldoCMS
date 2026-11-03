@@ -50,7 +50,8 @@ export function Panel({
           </button>
         </div>
       </div>
-      <div className="panel__body" ref={bodyRef}>
+      {/* focalizzabile: così chi usa la tastiera può scorrere il testo anche quando non ci sono collegamenti */}
+      <div className="panel__body" ref={bodyRef} tabIndex={0}>
         {children}
       </div>
     </section>

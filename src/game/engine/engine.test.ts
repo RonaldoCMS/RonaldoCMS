@@ -82,7 +82,7 @@ describe("computeCamera", () => {
   });
 
   it("la scala resta tra i limiti", () => {
-    expect(worldScale(200)).toBe(0.6);
+    expect(worldScale(200)).toBe(0.5);
     expect(worldScale(5000)).toBe(1);
   });
 });

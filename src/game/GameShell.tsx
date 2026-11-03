@@ -13,7 +13,8 @@ import { Panel } from "./Panel";
 import { markVisited } from "./progress";
 import { Terminal } from "./Terminal";
 import { setTheme } from "./theme";
-import { TouchPad } from "./TouchPad";
+import { PlaceDock } from "./PlaceDock";
+import { TouchStick } from "./TouchStick";
 import { PLACES, SPAWN, placeById, placeForPath, type Place, type PlaceId } from "./world";
 import { WorldView, type WorldHandle } from "./WorldView";
 
@@ -46,6 +47,10 @@ export function GameShell({ children }: { children: ReactNode }) {
   const worldRef = useRef<WorldHandle>(null);
   const input = useRef<Keys>({ left: false, right: false, up: false, down: false });
   const nearRef = useRef<PlaceId | null>(null);
+  /** Il joystick scrive qui i tasti "premuti", come farebbe la tastiera. */
+  const setKeys = useCallback((keys: Keys) => {
+    Object.assign(input.current, keys);
+  }, []);
 
   const names = Object.fromEntries(PLACES.map((p) => [p.id, t(`places.${p.id}.name`)])) as Record<PlaceId, string>;
 
@@ -54,6 +59,7 @@ export function GameShell({ children }: { children: ReactNode }) {
   /** Entrare in un luogo: la sua pagina, oppure il terminale per la scrivania. */
   const enterPlace = useCallback(
     (place: Place) => {
+      setExplored(true);
       if (place.route) goToPage(place.route);
       else setTerminalOpen(true);
     },
@@ -182,8 +188,11 @@ export function GameShell({ children }: { children: ReactNode }) {
           onHelp={() => setHelpOpen(true)}
           onTerminal={() => setTerminalOpen(true)}
           onEnterNear={() => nearPlace && enterPlace(nearPlace)}
+          panelOpen={panelOpen}
+          explored={explored}
         />
-        <TouchPad input={input} />
+        {!panelOpen && <TouchStick onKeys={setKeys} />}
+        {!panelOpen && <PlaceDock onTravel={travelTo} />}
       </div>
 
       {panelOpen ? (

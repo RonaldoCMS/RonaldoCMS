@@ -15,10 +15,14 @@ interface HudProps {
   onHelp: () => void;
   onTerminal: () => void;
   onEnterNear: () => void;
+  /** Con un pannello aperto le indicazioni in basso non servono. */
+  panelOpen: boolean;
+  /** Dopo il primo passo il suggerimento sparisce. */
+  explored: boolean;
 }
 
 /** Barra in alto, indicazioni in basso e pulsante di ingresso: tutto ciò che sta sopra al mondo. */
-export function Hud({ nearId, onSwitchLocale, onFastTravel, onHelp, onTerminal, onEnterNear }: HudProps) {
+export function Hud({ nearId, onSwitchLocale, onFastTravel, onHelp, onTerminal, onEnterNear, panelOpen, explored }: HudProps) {
   const { t, href } = useI18n();
   const visited = useVisited();
   const count = COUNTED_PLACES.filter((p) => visited.includes(p.id)).length;
@@ -47,10 +51,10 @@ export function Hud({ nearId, onSwitchLocale, onFastTravel, onHelp, onTerminal, 
             <span className="pill__label">{t("hud.visited")}</span>
             <strong>{t("hud.visitedCount", { n: count, total })}</strong>
           </span>
-          <button type="button" className="icon-btn" onClick={onFastTravel} aria-label={t("hud.fastTravel")} title={t("hud.fastTravel")}>
+          <button type="button" className="icon-btn hud-desktop" onClick={onFastTravel} aria-label={t("hud.fastTravel")} title={t("hud.fastTravel")}>
             <IconMap />
           </button>
-          <button type="button" className="icon-btn" onClick={onTerminal} aria-label={t("hud.terminal")} title={t("hud.terminal")}>
+          <button type="button" className="icon-btn hud-desktop" onClick={onTerminal} aria-label={t("hud.terminal")} title={t("hud.terminal")}>
             <IconTerminal />
           </button>
           <button type="button" className="icon-btn" onClick={onHelp} aria-label={t("hud.help")} title={t("hud.help")}>
@@ -61,14 +65,14 @@ export function Hud({ nearId, onSwitchLocale, onFastTravel, onHelp, onTerminal, 
         </div>
       </header>
 
-      <div className="hud__bottom">
+      <div className="hud__bottom" hidden={panelOpen}>
         {nearId ? (
           <button type="button" className="enter-btn" onClick={onEnterNear}>
             <kbd>E</kbd>
             <span>{t("hud.prompt", { place: placeName ?? "" })}</span>
             <IconEnter />
           </button>
-        ) : (
+        ) : explored ? null : (
           <p className="hint">
             <span className="hint__keys">{t("hud.hintKeys")}</span>
             <span className="hint__touch">{t("hud.hintTouch")}</span>
